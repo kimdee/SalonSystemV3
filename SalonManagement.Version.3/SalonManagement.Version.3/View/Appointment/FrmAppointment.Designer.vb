@@ -22,22 +22,24 @@ Partial Class FrmAppointment
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panelMain = New System.Windows.Forms.Panel()
         Me.panelContainer = New System.Windows.Forms.Panel()
         Me.panelGv = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.gvView = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column12 = New System.Windows.Forms.DataGridViewLinkColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewLinkColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewLinkColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.panelbl = New System.Windows.Forms.Panel()
+        Me.panelSearch = New System.Windows.Forms.Panel()
         Me.lblSearch = New System.Windows.Forms.Label()
         Me.btnAddAppointment = New System.Windows.Forms.Button()
         Me.txtSearch = New System.Windows.Forms.TextBox()
@@ -51,7 +53,7 @@ Partial Class FrmAppointment
         Me.panelGv.SuspendLayout()
         CType(Me.gvView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        Me.panelbl.SuspendLayout()
+        Me.panelSearch.SuspendLayout()
         Me.panelTop.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -80,6 +82,7 @@ Partial Class FrmAppointment
         'panelGv
         '
         Me.panelGv.BackColor = System.Drawing.Color.White
+        Me.panelGv.Controls.Add(Me.Label1)
         Me.panelGv.Controls.Add(Me.gvView)
         Me.panelGv.Controls.Add(Me.Panel1)
         Me.panelGv.Font = New System.Drawing.Font("Segoe UI", 15.0!)
@@ -88,6 +91,18 @@ Partial Class FrmAppointment
         Me.panelGv.Name = "panelGv"
         Me.panelGv.Size = New System.Drawing.Size(1063, 595)
         Me.panelGv.TabIndex = 2
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.SystemColors.Control
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(874, 51)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(74, 28)
+        Me.Label1.TabIndex = 32
+        Me.Label1.Text = "Option"
         '
         'gvView
         '
@@ -102,7 +117,7 @@ Partial Class FrmAppointment
         Me.gvView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.gvView.ColumnHeadersHeight = 35
         Me.gvView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.gvView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column11, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column12})
+        Me.gvView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column10, Me.Column7, Me.Column8, Me.Column9})
         Me.gvView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gvView.EnableHeadersVisualStyles = False
         Me.gvView.Location = New System.Drawing.Point(0, 50)
@@ -110,6 +125,12 @@ Partial Class FrmAppointment
         Me.gvView.Name = "gvView"
         Me.gvView.ReadOnly = True
         Me.gvView.RowHeadersVisible = False
+        Me.gvView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black
+        Me.gvView.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.gvView.RowTemplate.Height = 24
         Me.gvView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.gvView.Size = New System.Drawing.Size(1063, 545)
@@ -139,55 +160,58 @@ Partial Class FrmAppointment
         '
         'Column4
         '
-        Me.Column4.HeaderText = "Service"
+        Me.Column4.HeaderText = "Time"
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
-        Me.Column4.Visible = False
         '
-        'Column11
+        'Column5
         '
-        Me.Column11.HeaderText = "Total Amount"
-        Me.Column11.Name = "Column11"
-        Me.Column11.ReadOnly = True
+        Me.Column5.HeaderText = "Date"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Column6.HeaderText = "Appointment Type"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Width = 200
+        '
+        'Column10
+        '
+        Me.Column10.HeaderText = "Total Amount"
+        Me.Column10.Name = "Column10"
+        Me.Column10.ReadOnly = True
         '
         'Column7
         '
-        Me.Column7.HeaderText = "Time"
+        Me.Column7.HeaderText = "Status"
         Me.Column7.Name = "Column7"
         Me.Column7.ReadOnly = True
         '
         'Column8
         '
-        Me.Column8.HeaderText = "Date"
+        Me.Column8.ActiveLinkColor = System.Drawing.Color.DodgerBlue
+        Me.Column8.HeaderText = ""
+        Me.Column8.LinkColor = System.Drawing.Color.DodgerBlue
         Me.Column8.Name = "Column8"
         Me.Column8.ReadOnly = True
+        Me.Column8.Text = "a"
+        Me.Column8.VisitedLinkColor = System.Drawing.Color.DodgerBlue
         '
         'Column9
         '
-        Me.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Column9.HeaderText = "Appointment Type"
+        Me.Column9.ActiveLinkColor = System.Drawing.Color.Crimson
+        Me.Column9.HeaderText = ""
+        Me.Column9.LinkColor = System.Drawing.Color.Crimson
         Me.Column9.Name = "Column9"
         Me.Column9.ReadOnly = True
-        Me.Column9.Width = 200
-        '
-        'Column10
-        '
-        Me.Column10.HeaderText = "Status"
-        Me.Column10.Name = "Column10"
-        Me.Column10.ReadOnly = True
-        '
-        'Column12
-        '
-        Me.Column12.ActiveLinkColor = System.Drawing.Color.Crimson
-        Me.Column12.HeaderText = ""
-        Me.Column12.LinkColor = System.Drawing.Color.Crimson
-        Me.Column12.Name = "Column12"
-        Me.Column12.ReadOnly = True
-        Me.Column12.VisitedLinkColor = System.Drawing.Color.Crimson
+        Me.Column9.VisitedLinkColor = System.Drawing.Color.Crimson
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.panelbl)
+        Me.Panel1.Controls.Add(Me.panelSearch)
         Me.Panel1.Controls.Add(Me.btnAddAppointment)
         Me.Panel1.Controls.Add(Me.txtSearch)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -196,16 +220,18 @@ Partial Class FrmAppointment
         Me.Panel1.Size = New System.Drawing.Size(1063, 50)
         Me.Panel1.TabIndex = 30
         '
-        'panelbl
+        'panelSearch
         '
-        Me.panelbl.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.panelbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.panelbl.Controls.Add(Me.lblSearch)
-        Me.panelbl.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.panelbl.Location = New System.Drawing.Point(979, 8)
-        Me.panelbl.Name = "panelbl"
-        Me.panelbl.Size = New System.Drawing.Size(81, 32)
-        Me.panelbl.TabIndex = 43
+        Me.panelSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.panelSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.panelSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.panelSearch.Controls.Add(Me.lblSearch)
+        Me.panelSearch.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.panelSearch.ForeColor = System.Drawing.Color.White
+        Me.panelSearch.Location = New System.Drawing.Point(978, 8)
+        Me.panelSearch.Name = "panelSearch"
+        Me.panelSearch.Size = New System.Drawing.Size(81, 32)
+        Me.panelSearch.TabIndex = 43
         '
         'lblSearch
         '
@@ -219,10 +245,10 @@ Partial Class FrmAppointment
         '
         'btnAddAppointment
         '
-        Me.btnAddAppointment.BackColor = System.Drawing.Color.Transparent
+        Me.btnAddAppointment.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAddAppointment.Font = New System.Drawing.Font("Segoe UI", 17.0!)
-        Me.btnAddAppointment.ForeColor = System.Drawing.Color.Black
+        Me.btnAddAppointment.ForeColor = System.Drawing.Color.White
         Me.btnAddAppointment.Location = New System.Drawing.Point(7, 5)
         Me.btnAddAppointment.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAddAppointment.Name = "btnAddAppointment"
@@ -292,6 +318,7 @@ Partial Class FrmAppointment
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
+        Me.PictureBox1.Visible = False
         '
         'Panel2
         '
@@ -319,10 +346,11 @@ Partial Class FrmAppointment
         Me.panelMain.ResumeLayout(False)
         Me.panelContainer.ResumeLayout(False)
         Me.panelGv.ResumeLayout(False)
+        Me.panelGv.PerformLayout()
         CType(Me.gvView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.panelbl.ResumeLayout(False)
+        Me.panelSearch.ResumeLayout(False)
         Me.panelTop.ResumeLayout(False)
         Me.panelTop.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -339,19 +367,20 @@ Partial Class FrmAppointment
     Friend WithEvents Panel2 As Panel
     Friend WithEvents panelGv As Panel
     Friend WithEvents gvView As DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column11 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents Column9 As DataGridViewTextBoxColumn
-    Friend WithEvents Column10 As DataGridViewTextBoxColumn
-    Friend WithEvents Column12 As DataGridViewLinkColumn
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents panelbl As Panel
+    Friend WithEvents panelSearch As Panel
     Friend WithEvents lblSearch As Label
     Friend WithEvents btnAddAppointment As Button
     Friend WithEvents txtSearch As TextBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column10 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As System.Windows.Forms.DataGridViewLinkColumn
+    Friend WithEvents Column9 As System.Windows.Forms.DataGridViewLinkColumn
 End Class

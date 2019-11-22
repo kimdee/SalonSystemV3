@@ -13,6 +13,7 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,10 +48,27 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Calendar.NET, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Calendar.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -72,22 +90,131 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="View\Account\FrmAccount.Designer.vb">
-      <DependentUpon>FrmAccount.vb</DependentUpon>
+    <Compile Include="Controller\Accounts.vb" />
+    <Compile Include="Controller\Appointment.vb" />
+    <Compile Include="Controller\Attendance.vb" />
+    <Compile Include="Controller\Billing.vb" />
+    <Compile Include="Controller\Customer.vb" />
+    <Compile Include="Controller\CustomerService.vb" />
+    <Compile Include="Controller\Deduction.vb" />
+    <Compile Include="Controller\Employee.vb" />
+    <Compile Include="Controller\Payroll.vb" />
+    <Compile Include="Controller\Position.vb" />
+    <Compile Include="Controller\Service.vb" />
+    <Compile Include="Model\Connection.vb" />
+    <Compile Include="Model\Method.vb" />
+    <Compile Include="View\Account\frmAccount.Designer.vb">
+      <DependentUpon>frmAccount.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Account\FrmAccount.vb">
+    <Compile Include="View\Account\frmAccount.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Appointment\FrmAppointment.Designer.vb">
-      <DependentUpon>FrmAppointment.vb</DependentUpon>
+    <Compile Include="View\Account\frmAddAccount.designer.vb">
+      <DependentUpon>frmAddAccount.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Appointment\FrmAppointment.vb">
+    <Compile Include="View\Account\frmAddAccount.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Attendance\FrmAttendance.Designer.vb">
-      <DependentUpon>FrmAttendance.vb</DependentUpon>
+    <Compile Include="View\Account\frmEditAccount.designer.vb">
+      <DependentUpon>frmEditAccount.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Attendance\FrmAttendance.vb">
+    <Compile Include="View\Account\frmEditAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Account\frmMyProfile.designer.vb">
+      <DependentUpon>frmMyProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Account\frmMyProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Appointment\frmAddAppointment.Designer.vb">
+      <DependentUpon>frmAddAppointment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Appointment\frmAddAppointment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Appointment\frmAddServices.Designer.vb">
+      <DependentUpon>frmAddServices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Appointment\frmAddServices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Appointment\frmAppointment.Designer.vb">
+      <DependentUpon>frmAppointment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Appointment\frmAppointment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Appointment\frmEditAppointment.Designer.vb">
+      <DependentUpon>frmEditAppointment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Appointment\frmEditAppointment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Appointment\frmSearchAppointment.Designer.vb">
+      <DependentUpon>frmSearchAppointment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Appointment\frmSearchAppointment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Appointment\frmSearchCustomer.Designer.vb">
+      <DependentUpon>frmSearchCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Appointment\frmSearchCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Attendance\frmAddManualTimein.Designer.vb">
+      <DependentUpon>frmAddManualTimein.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Attendance\frmAddManualTimein.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Attendance\frmAttendance.Designer.vb">
+      <DependentUpon>frmAttendance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Attendance\frmAttendance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Attendance\frmAttendanceInfo.designer.vb">
+      <DependentUpon>frmAttendanceInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Attendance\frmAttendanceInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Attendance\frmAttendanceTimein.Designer.vb">
+      <DependentUpon>frmAttendanceTimein.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Attendance\frmAttendanceTimein.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Attendance\frmBrowseEmployee.Designer.vb">
+      <DependentUpon>frmBrowseEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Attendance\frmBrowseEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Attendance\frmEditManualTimein.Designer.vb">
+      <DependentUpon>frmEditManualTimein.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Attendance\frmEditManualTimein.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Attendance\frmReadPasscode.Designer.vb">
+      <DependentUpon>frmReadPasscode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Attendance\frmReadPasscode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Customer\frmAddCustomer.Designer.vb">
+      <DependentUpon>frmAddCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Customer\frmAddCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Customer\frmCustomer.Designer.vb">
+      <DependentUpon>frmCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Customer\frmCustomer.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Dashboard\frmDashboard.Designer.vb">
@@ -96,70 +223,178 @@
     <Compile Include="View\Dashboard\frmDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Payments\FrmCollection.Designer.vb">
-      <DependentUpon>FrmCollection.vb</DependentUpon>
+    <Compile Include="View\Deduction\frmAddDeduction.Designer.vb">
+      <DependentUpon>frmAddDeduction.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Payments\FrmCollection.vb">
+    <Compile Include="View\Deduction\frmAddDeduction.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Customer\FrmCustmerRec.Designer.vb">
-      <DependentUpon>FrmCustmerRec.vb</DependentUpon>
+    <Compile Include="View\Deduction\frmDeduction.Designer.vb">
+      <DependentUpon>frmDeduction.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Customer\FrmCustmerRec.vb">
+    <Compile Include="View\Deduction\frmDeduction.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Deduction\FrmDeduction.Designer.vb">
-      <DependentUpon>FrmDeduction.vb</DependentUpon>
+    <Compile Include="View\Deduction\frmEditDeduction.Designer.vb">
+      <DependentUpon>frmEditDeduction.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Deduction\FrmDeduction.vb">
+    <Compile Include="View\Deduction\frmEditDeduction.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Employee\FrmEmployee.Designer.vb">
-      <DependentUpon>FrmEmployee.vb</DependentUpon>
+    <Compile Include="View\Employee\frmAddEmployee.Designer.vb">
+      <DependentUpon>frmAddEmployee.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Employee\FrmEmployee.vb">
+    <Compile Include="View\Employee\frmAddEmployee.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Help\FrmHelp.Designer.vb">
-      <DependentUpon>FrmHelp.vb</DependentUpon>
+    <Compile Include="View\Employee\frmEditEmployee.Designer.vb">
+      <DependentUpon>frmEditEmployee.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Help\FrmHelp.vb">
+    <Compile Include="View\Employee\frmEditEmployee.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Login\Frmlogin.Designer.vb">
-      <DependentUpon>Frmlogin.vb</DependentUpon>
+    <Compile Include="View\Employee\frmEmployee.Designer.vb">
+      <DependentUpon>frmEmployee.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Login\Frmlogin.vb">
+    <Compile Include="View\Employee\frmEmployee.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Main\FrmMain.Designer.vb">
-      <DependentUpon>FrmMain.vb</DependentUpon>
+    <Compile Include="View\Employee\frmSearchEmployee.Designer.vb">
+      <DependentUpon>frmSearchEmployee.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Main\FrmMain.vb">
+    <Compile Include="View\Employee\frmSearchEmployee.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Payroll\FrmPayroll.Designer.vb">
-      <DependentUpon>FrmPayroll.vb</DependentUpon>
+    <Compile Include="View\Help\frmHelp.Designer.vb">
+      <DependentUpon>frmHelp.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Payroll\FrmPayroll.vb">
+    <Compile Include="View\Help\frmHelp.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Position\FrmPosition.Designer.vb">
-      <DependentUpon>FrmPosition.vb</DependentUpon>
+    <Compile Include="View\Login\frmAddAccountFirst.Designer.vb">
+      <DependentUpon>frmAddAccountFirst.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Position\FrmPosition.vb">
+    <Compile Include="View\Login\frmAddAccountFirst.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Service\FrmService.Designer.vb">
-      <DependentUpon>FrmService.vb</DependentUpon>
+    <Compile Include="View\Login\frmConnection.Designer.vb">
+      <DependentUpon>frmConnection.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Service\FrmService.vb">
+    <Compile Include="View\Login\frmConnection.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Attendance\FrmViewFilterAttendance.Designer.vb">
-      <DependentUpon>FrmViewFilterAttendance.vb</DependentUpon>
+    <Compile Include="View\Login\frmConnectionFirst.Designer.vb">
+      <DependentUpon>frmConnectionFirst.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Attendance\FrmViewFilterAttendance.vb">
+    <Compile Include="View\Login\frmConnectionFirst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login\frmlogin.Designer.vb">
+      <DependentUpon>frmlogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login\frmlogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Main\frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Main\frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Message\ErrorMessage.Designer.vb">
+      <DependentUpon>ErrorMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Message\ErrorMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Message\OKMessage.Designer.vb">
+      <DependentUpon>OKMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Message\OKMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Message\YNMessage.Designer.vb">
+      <DependentUpon>YNMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Message\YNMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Payments\frmAddPayments.Designer.vb">
+      <DependentUpon>frmAddPayments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Payments\frmAddPayments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Payments\frmCollection.Designer.vb">
+      <DependentUpon>frmCollection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Payments\frmCollection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Payments\frmEmployeeServe.Designer.vb">
+      <DependentUpon>frmEmployeeServe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Payments\frmEmployeeServe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Payroll\frmAddEmployeePayroll.Designer.vb">
+      <DependentUpon>frmAddEmployeePayroll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Payroll\frmAddEmployeePayroll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Payroll\frmAddPayroll.Designer.vb">
+      <DependentUpon>frmAddPayroll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Payroll\frmAddPayroll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Payroll\frmEmployeeDeduction.Designer.vb">
+      <DependentUpon>frmEmployeeDeduction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Payroll\frmEmployeeDeduction.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Payroll\frmPayroll.Designer.vb">
+      <DependentUpon>frmPayroll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Payroll\frmPayroll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Position\frmAddPosition.Designer.vb">
+      <DependentUpon>frmAddPosition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Position\frmAddPosition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Position\frmEditPosition.Designer.vb">
+      <DependentUpon>frmEditPosition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Position\frmEditPosition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Position\frmPosition.Designer.vb">
+      <DependentUpon>frmPosition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Position\frmPosition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Service\frmAddService.Designer.vb">
+      <DependentUpon>frmAddService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Service\frmAddService.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Service\frmEditService.Designer.vb">
+      <DependentUpon>frmEditService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Service\frmEditService.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Service\frmService.Designer.vb">
+      <DependentUpon>frmService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Service\frmService.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -179,50 +414,152 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="View\Account\FrmAccount.resx">
-      <DependentUpon>FrmAccount.vb</DependentUpon>
+    <EmbeddedResource Include="View\Account\frmAccount.resx">
+      <DependentUpon>frmAccount.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Appointment\FrmAppointment.resx">
-      <DependentUpon>FrmAppointment.vb</DependentUpon>
+    <EmbeddedResource Include="View\Account\frmAddAccount.resx">
+      <DependentUpon>frmAddAccount.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Attendance\FrmAttendance.resx">
-      <DependentUpon>FrmAttendance.vb</DependentUpon>
+    <EmbeddedResource Include="View\Account\frmEditAccount.resx">
+      <DependentUpon>frmEditAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Account\frmMyProfile.resx">
+      <DependentUpon>frmMyProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Appointment\frmAddAppointment.resx">
+      <DependentUpon>frmAddAppointment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Appointment\frmAddServices.resx">
+      <DependentUpon>frmAddServices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Appointment\frmAppointment.resx">
+      <DependentUpon>frmAppointment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Appointment\frmEditAppointment.resx">
+      <DependentUpon>frmEditAppointment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Appointment\frmSearchAppointment.resx">
+      <DependentUpon>frmSearchAppointment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Appointment\frmSearchCustomer.resx">
+      <DependentUpon>frmSearchCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Attendance\frmAddManualTimein.resx">
+      <DependentUpon>frmAddManualTimein.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Attendance\frmAttendance.resx">
+      <DependentUpon>frmAttendance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Attendance\frmAttendanceInfo.resx">
+      <DependentUpon>frmAttendanceInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Attendance\frmAttendanceTimein.resx">
+      <DependentUpon>frmAttendanceTimein.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Attendance\frmBrowseEmployee.resx">
+      <DependentUpon>frmBrowseEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Attendance\frmEditManualTimein.resx">
+      <DependentUpon>frmEditManualTimein.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Attendance\frmReadPasscode.resx">
+      <DependentUpon>frmReadPasscode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Customer\frmAddCustomer.resx">
+      <DependentUpon>frmAddCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Customer\frmCustomer.resx">
+      <DependentUpon>frmCustomer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Dashboard\frmDashboard.resx">
       <DependentUpon>frmDashboard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Payments\FrmCollection.resx">
-      <DependentUpon>FrmCollection.vb</DependentUpon>
+    <EmbeddedResource Include="View\Deduction\frmAddDeduction.resx">
+      <DependentUpon>frmAddDeduction.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Customer\FrmCustmerRec.resx">
-      <DependentUpon>FrmCustmerRec.vb</DependentUpon>
+    <EmbeddedResource Include="View\Deduction\frmDeduction.resx">
+      <DependentUpon>frmDeduction.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Deduction\FrmDeduction.resx">
-      <DependentUpon>FrmDeduction.vb</DependentUpon>
+    <EmbeddedResource Include="View\Deduction\frmEditDeduction.resx">
+      <DependentUpon>frmEditDeduction.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Employee\FrmEmployee.resx">
-      <DependentUpon>FrmEmployee.vb</DependentUpon>
+    <EmbeddedResource Include="View\Employee\frmAddEmployee.resx">
+      <DependentUpon>frmAddEmployee.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Help\FrmHelp.resx">
-      <DependentUpon>FrmHelp.vb</DependentUpon>
+    <EmbeddedResource Include="View\Employee\frmEditEmployee.resx">
+      <DependentUpon>frmEditEmployee.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Login\Frmlogin.resx">
-      <DependentUpon>Frmlogin.vb</DependentUpon>
+    <EmbeddedResource Include="View\Employee\frmEmployee.resx">
+      <DependentUpon>frmEmployee.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Main\FrmMain.resx">
-      <DependentUpon>FrmMain.vb</DependentUpon>
+    <EmbeddedResource Include="View\Employee\frmSearchEmployee.resx">
+      <DependentUpon>frmSearchEmployee.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Payroll\FrmPayroll.resx">
-      <DependentUpon>FrmPayroll.vb</DependentUpon>
+    <EmbeddedResource Include="View\Help\frmHelp.resx">
+      <DependentUpon>frmHelp.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Position\FrmPosition.resx">
-      <DependentUpon>FrmPosition.vb</DependentUpon>
+    <EmbeddedResource Include="View\Login\frmAddAccountFirst.resx">
+      <DependentUpon>frmAddAccountFirst.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Service\FrmService.resx">
-      <DependentUpon>FrmService.vb</DependentUpon>
+    <EmbeddedResource Include="View\Login\frmConnection.resx">
+      <DependentUpon>frmConnection.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Attendance\FrmViewFilterAttendance.resx">
-      <DependentUpon>FrmViewFilterAttendance.vb</DependentUpon>
+    <EmbeddedResource Include="View\Login\frmConnectionFirst.resx">
+      <DependentUpon>frmConnectionFirst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login\frmlogin.resx">
+      <DependentUpon>frmlogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Main\frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Message\ErrorMessage.resx">
+      <DependentUpon>ErrorMessage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Message\OKMessage.resx">
+      <DependentUpon>OKMessage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Message\YNMessage.resx">
+      <DependentUpon>YNMessage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Payments\frmAddPayments.resx">
+      <DependentUpon>frmAddPayments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Payments\frmCollection.resx">
+      <DependentUpon>frmCollection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Payments\frmEmployeeServe.resx">
+      <DependentUpon>frmEmployeeServe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Payroll\frmAddEmployeePayroll.resx">
+      <DependentUpon>frmAddEmployeePayroll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Payroll\frmAddPayroll.resx">
+      <DependentUpon>frmAddPayroll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Payroll\frmEmployeeDeduction.resx">
+      <DependentUpon>frmEmployeeDeduction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Payroll\frmPayroll.resx">
+      <DependentUpon>frmPayroll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Position\frmAddPosition.resx">
+      <DependentUpon>frmAddPosition.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Position\frmEditPosition.resx">
+      <DependentUpon>frmEditPosition.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Position\frmPosition.resx">
+      <DependentUpon>frmPosition.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Service\frmAddService.resx">
+      <DependentUpon>frmAddService.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Service\frmEditService.resx">
+      <DependentUpon>frmEditService.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Service\frmService.resx">
+      <DependentUpon>frmService.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -368,6 +705,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\x button11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\Commission\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow-plus-symbol-png-computer-icons-clipart-7412c0d6a8835247.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,4 +1,18 @@
-﻿Public Class FrmMain
+﻿Imports MySql.Data.MySqlClient
+Imports System.ComponentModel.Design
+Imports System.Windows.Forms.Form
+
+Public Class FrmMain
+    Public Shared flag As Integer = 0
+    Public Shared UserID As Integer = 0
+    Public Shared fullName As String = "User Admin"
+    Public Shared userType As String = "Administrator"
+    Public Shared dtServer As Date = DateTime.Now
+
+    Private account As New Accounts
+    Private customer As New Customer
+    Private employee As New Employee
+
     Sub loadForm(ByVal form As Form)
         panelContainer.Controls.Clear()
         form.TopLevel = False
@@ -7,7 +21,27 @@
     End Sub
 
     Private Sub FrmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        loadForm(frmDashboard)
+        frmDashboard.timerMain.Start()
+        Me.Hide()
+        Dim obj As New Frmlogin
+        If obj.ShowDialog = System.Windows.Forms.DialogResult.OK Then
+            Me.Show()
+            loadForm(frmDashboard)
+        End If
+
+    End Sub
+
+    Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        If flag = 1 Then
+            If MessageBox.Show("Are you sure you want to exit from the system?", "Message", MessageBoxButtons.YesNo,
+                           MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.No Then
+                e.Cancel = True
+            Else
+                account.SetAccountDetails(UserID)
+                account.LoginStatus = 0
+                account.EditAccount()
+            End If
+        End If
     End Sub
 
     Private Sub tmrMenu_Tick(sender As Object, e As EventArgs) Handles tmrMenu.Tick
@@ -85,72 +119,72 @@
 
     End Sub
 
-    Private Sub btnappoint_click(sender As Object, e As EventArgs) Handles btnappoint.Click
-        pnlIndicator.Height = btnappoint.Height
-        pnlIndicator.Top = btnappoint.Top
+    Private Sub btnappoint_click(sender As Object, e As EventArgs) Handles btnAppointment.Click
+        pnlIndicator.Height = btnAppointment.Height
+        pnlIndicator.Top = btnAppointment.Top
 
         loadForm(FrmAppointment)
     End Sub
 
-    Private Sub btnservice_click(sender As Object, e As EventArgs) Handles btnservice.Click
-        pnlIndicator.Height = btnservice.Height
-        pnlIndicator.Top = btnservice.Top
+    Private Sub btnservice_click(sender As Object, e As EventArgs) Handles btnService.Click
+        pnlIndicator.Height = btnService.Height
+        pnlIndicator.Top = btnService.Top
 
         loadForm(FrmService)
     End Sub
 
-    Private Sub btnemployee_Click(sender As Object, e As EventArgs) Handles btnemployee.Click
-        pnlIndicator.Height = btnemployee.Height
-        pnlIndicator.Top = btnemployee.Top
+    Private Sub btnemployee_Click(sender As Object, e As EventArgs) Handles btnEmployee.Click
+        pnlIndicator.Height = btnEmployee.Height
+        pnlIndicator.Top = btnEmployee.Top
 
         loadForm(FrmEmployee)
     End Sub
 
-    Private Sub btnposition_Click(sender As Object, e As EventArgs) Handles btnposition.Click
-        pnlIndicator.Height = btnposition.Height
-        pnlIndicator.Top = btnposition.Top
+    Private Sub btnposition_Click(sender As Object, e As EventArgs) Handles btnPosition.Click
+        pnlIndicator.Height = btnPosition.Height
+        pnlIndicator.Top = btnPosition.Top
 
         loadForm(FrmPosition)
     End Sub
 
-    Private Sub btndeduct_Click(sender As Object, e As EventArgs) Handles btndeduct.Click
-        pnlIndicator.Height = btndeduct.Height
-        pnlIndicator.Top = btndeduct.Top
+    Private Sub btndeduct_Click(sender As Object, e As EventArgs) Handles btnDeduction.Click
+        pnlIndicator.Height = btnDeduction.Height
+        pnlIndicator.Top = btnDeduction.Top
 
         loadForm(FrmDeduction)
     End Sub
 
-    Private Sub btnAttend_Click(sender As Object, e As EventArgs) Handles btnAttend.Click
-        pnlIndicator.Height = btnAttend.Height
-        pnlIndicator.Top = btnAttend.Top
+    Private Sub btnAttend_Click(sender As Object, e As EventArgs) Handles btnAttendance.Click
+        pnlIndicator.Height = btnAttendance.Height
+        pnlIndicator.Top = btnAttendance.Top
 
-        loadForm(FrmViewFilterAttendance)
+        loadForm(FrmAttendance)
     End Sub
 
-    Private Sub btnPayrol_Click(sender As Object, e As EventArgs) Handles btnPayrol.Click
-        pnlIndicator.Height = btnPayrol.Height
-        pnlIndicator.Top = btnPayrol.Top
+    Private Sub btnPayrol_Click(sender As Object, e As EventArgs) Handles btnPayroll.Click
+        pnlIndicator.Height = btnPayroll.Height
+        pnlIndicator.Top = btnPayroll.Top
 
         loadForm(FrmPayroll)
     End Sub
 
-    Private Sub btnCollect_Click(sender As Object, e As EventArgs) Handles btnCollect.Click
-        pnlIndicator.Height = btnCollect.Height
-        pnlIndicator.Top = btnCollect.Top
+    Private Sub btnCollect_Click(sender As Object, e As EventArgs) Handles btnCollection.Click
+        pnlIndicator.Height = btnCollection.Height
+        pnlIndicator.Top = btnCollection.Top
 
         loadForm(FrmCollection)
     End Sub
 
-    Private Sub btnCustRecord_Click(sender As Object, e As EventArgs) Handles btnCustRecord.Click
-        pnlIndicator.Height = btnCustRecord.Height
-        pnlIndicator.Top = btnCustRecord.Top
+    Private Sub btnCustRecord_Click(sender As Object, e As EventArgs) Handles btnCustomer.Click
+        pnlIndicator.Height = btnCustomer.Height
+        pnlIndicator.Top = btnCustomer.Top
 
-        loadForm(FrmCustmerRec)
+        loadForm(frmCustomer)
     End Sub
 
-    Private Sub btnAccnt_Click(sender As Object, e As EventArgs) Handles btnAccnt.Click
-        pnlIndicator.Height = btnAccnt.Height
-        pnlIndicator.Top = btnAccnt.Top
+    Private Sub btnAccnt_Click(sender As Object, e As EventArgs) Handles btnAccount.Click
+        pnlIndicator.Height = btnAccount.Height
+        pnlIndicator.Top = btnAccount.Top
 
         loadForm(FrmAccount)
     End Sub
@@ -158,7 +192,17 @@
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         Me.Hide()
         Frmlogin.Show()
-        Frmlogin.txtuserName.Text = ""
-        Frmlogin.txtpass.Text = ""
+    End Sub
+
+    Private Sub picboxHelp_Click(sender As Object, e As EventArgs) Handles picboxHelp.Click
+        Dim obj As New FrmHelp
+        obj.ShowDialog()
+    End Sub
+
+    Private Sub picboxMyProfile_Click(sender As Object, e As EventArgs) Handles picboxMyProfile.Click
+        Dim obj As New frmMyProfile
+        account.SetAccountDetails(UserID)
+        obj.account = Me.account
+        obj.ShowDialog()
     End Sub
 End Class

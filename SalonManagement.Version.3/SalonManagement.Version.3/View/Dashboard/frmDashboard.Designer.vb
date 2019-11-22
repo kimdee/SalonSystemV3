@@ -22,9 +22,12 @@ Partial Class frmDashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panelMain = New System.Windows.Forms.Panel()
         Me.panelContainer = New System.Windows.Forms.Panel()
+        Me.pnlLowerBar = New System.Windows.Forms.Panel()
+        Me.lnklblUsername = New System.Windows.Forms.LinkLabel()
         Me.panelGv = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -68,8 +71,10 @@ Partial Class frmDashboard
         Me.btnVwPresnt = New System.Windows.Forms.Button()
         Me.pnlVwEmploy = New System.Windows.Forms.Panel()
         Me.btnVwEmploy = New System.Windows.Forms.Button()
+        Me.timerMain = New System.Windows.Forms.Timer(Me.components)
         Me.panelMain.SuspendLayout()
         Me.panelContainer.SuspendLayout()
+        Me.pnlLowerBar.SuspendLayout()
         Me.panelGv.SuspendLayout()
         Me.Panel7.SuspendLayout()
         CType(Me.gvView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -95,6 +100,7 @@ Partial Class frmDashboard
         'panelContainer
         '
         Me.panelContainer.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.panelContainer.Controls.Add(Me.pnlLowerBar)
         Me.panelContainer.Controls.Add(Me.panelGv)
         Me.panelContainer.Controls.Add(Me.Panel1)
         Me.panelContainer.Controls.Add(Me.Panel6)
@@ -104,6 +110,34 @@ Partial Class frmDashboard
         Me.panelContainer.Name = "panelContainer"
         Me.panelContainer.Size = New System.Drawing.Size(1085, 700)
         Me.panelContainer.TabIndex = 2
+        '
+        'pnlLowerBar
+        '
+        Me.pnlLowerBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.pnlLowerBar.Controls.Add(Me.lnklblUsername)
+        Me.pnlLowerBar.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.pnlLowerBar.Location = New System.Drawing.Point(0, 662)
+        Me.pnlLowerBar.Name = "pnlLowerBar"
+        Me.pnlLowerBar.Size = New System.Drawing.Size(1085, 38)
+        Me.pnlLowerBar.TabIndex = 33
+        '
+        'lnklblUsername
+        '
+        Me.lnklblUsername.ActiveLinkColor = System.Drawing.Color.Black
+        Me.lnklblUsername.BackColor = System.Drawing.Color.Transparent
+        Me.lnklblUsername.Dock = System.Windows.Forms.DockStyle.Right
+        Me.lnklblUsername.Font = New System.Drawing.Font("Segoe UI Semibold", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.lnklblUsername.ForeColor = System.Drawing.Color.Black
+        Me.lnklblUsername.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.lnklblUsername.LinkColor = System.Drawing.Color.White
+        Me.lnklblUsername.Location = New System.Drawing.Point(944, 0)
+        Me.lnklblUsername.Name = "lnklblUsername"
+        Me.lnklblUsername.Size = New System.Drawing.Size(141, 38)
+        Me.lnklblUsername.TabIndex = 15
+        Me.lnklblUsername.TabStop = True
+        Me.lnklblUsername.Text = "  lblUserName"
+        Me.lnklblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lnklblUsername.VisitedLinkColor = System.Drawing.Color.Black
         '
         'panelGv
         '
@@ -118,7 +152,7 @@ Partial Class frmDashboard
         Me.panelGv.Location = New System.Drawing.Point(12, 239)
         Me.panelGv.Margin = New System.Windows.Forms.Padding(2)
         Me.panelGv.Name = "panelGv"
-        Me.panelGv.Size = New System.Drawing.Size(801, 449)
+        Me.panelGv.Size = New System.Drawing.Size(801, 418)
         Me.panelGv.TabIndex = 32
         '
         'Panel7
@@ -133,7 +167,7 @@ Partial Class frmDashboard
         Me.Panel7.Controls.Add(Me.Label10)
         Me.Panel7.Controls.Add(Me.Panel8)
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel7.Location = New System.Drawing.Point(0, 412)
+        Me.Panel7.Location = New System.Drawing.Point(0, 381)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(799, 35)
         Me.Panel7.TabIndex = 29
@@ -224,14 +258,14 @@ Partial Class frmDashboard
         Me.gvView.ColumnHeadersHeight = 60
         Me.gvView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.gvView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column2, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column13, Me.Column14})
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.gvView.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.gvView.DefaultCellStyle = DataGridViewCellStyle2
         Me.gvView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gvView.EnableHeadersVisualStyles = False
         Me.gvView.Location = New System.Drawing.Point(0, 0)
@@ -241,7 +275,7 @@ Partial Class frmDashboard
         Me.gvView.RowHeadersVisible = False
         Me.gvView.RowTemplate.Height = 24
         Me.gvView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.gvView.Size = New System.Drawing.Size(799, 447)
+        Me.gvView.Size = New System.Drawing.Size(799, 416)
         Me.gvView.TabIndex = 28
         '
         'Column1
@@ -348,7 +382,7 @@ Partial Class frmDashboard
         Me.Panel1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(818, 239)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(256, 265)
+        Me.Panel1.Size = New System.Drawing.Size(256, 233)
         Me.Panel1.TabIndex = 31
         '
         'Panel6
@@ -361,7 +395,7 @@ Partial Class frmDashboard
         Me.Panel6.Controls.Add(Me.lblDate)
         Me.Panel6.Controls.Add(Me.lblTime)
         Me.Panel6.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel6.Location = New System.Drawing.Point(818, 510)
+        Me.Panel6.Location = New System.Drawing.Point(819, 478)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(255, 178)
         Me.Panel6.TabIndex = 30
@@ -551,6 +585,9 @@ Partial Class frmDashboard
         Me.btnVwEmploy.Text = "#1 Employee"
         Me.btnVwEmploy.UseVisualStyleBackColor = True
         '
+        'timerMain
+        '
+        '
         'frmDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -563,6 +600,7 @@ Partial Class frmDashboard
         Me.Text = "frmDashboard"
         Me.panelMain.ResumeLayout(False)
         Me.panelContainer.ResumeLayout(False)
+        Me.pnlLowerBar.ResumeLayout(False)
         Me.panelGv.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
@@ -625,4 +663,7 @@ Partial Class frmDashboard
     Friend WithEvents Column12 As DataGridViewTextBoxColumn
     Friend WithEvents Column13 As DataGridViewTextBoxColumn
     Friend WithEvents Column14 As DataGridViewLinkColumn
+    Friend WithEvents pnlLowerBar As Panel
+    Friend WithEvents lnklblUsername As LinkLabel
+    Friend WithEvents timerMain As Timer
 End Class

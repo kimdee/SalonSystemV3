@@ -308,7 +308,7 @@ Public Class Employee
                 While reader.Read()
                     i = i + 1
                     With gv
-                        .Rows.Add(reader(0), cb, i, reader(1) + ", " + reader(2) + " " + reader(3), reader(5), reader(7))
+                        .Rows.Add(reader(0), cb, i, reader(1) + ", " + reader(2) + " " + reader(3), reader(5), reader(7), "Select")
                     End With
                 End While
                 reader.Close()

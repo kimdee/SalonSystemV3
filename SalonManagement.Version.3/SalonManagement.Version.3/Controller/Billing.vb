@@ -42,6 +42,16 @@ Public Class Billing
         End Get
     End Property
 
+    Private _billingTime As Date
+    Public Property BillingTime As Date
+        Set(value As Date)
+            _billingTime = value
+        End Set
+        Get
+            Return _billingTime
+        End Get
+    End Property
+
     Private _billingDate As Date
     Public Property BillingDate As Date
         Set(value As Date)
@@ -72,16 +82,6 @@ Public Class Billing
         End Get
     End Property
 
-    Private _appointmentType As String = "Walk In"
-    Public Property AppointmentType As String
-        Set(value As String)
-            _appointmentType = value
-        End Set
-        Get
-            Return _appointmentType
-        End Get
-    End Property
-
     Public Sub SetBillingID()
         Try
             Dim sql As String
@@ -106,10 +106,10 @@ Public Class Billing
                     AppointmentID = reader(1)
                     CustomerID = reader(2)
                     EmployeeID = reader(3)
-                    BillingDate = reader(4)
-                    BillingAmount = reader(5)
-                    BillingStatus = reader(6)
-                    AppointmentType = reader(7)
+                    BillingTime = reader(4)
+                    BillingDate = reader(5)
+                    BillingAmount = reader(6)
+                    BillingStatus = reader(7)
                 End While
                 reader.Close()
             End If
@@ -120,9 +120,9 @@ Public Class Billing
     Public Function AddBilling() As Boolean
         Try
             Dim bool As Boolean = False
-            Dim sql As String = "INSERT INTO billing (appointmentID,customerID,employeeID,billingdate,billingAmount,billingStatus,appointmentType) VALUES (@0,@1,@2,@3,@4,@5,@6);"
+            Dim sql As String = "INSERT INTO billing (appointmentID,customerID,employeeID,billingTime,billingDate,billingAmount,billingStatus) VALUES (@0,@1,@2,@3,@4,@5,@6);"
             If IsConnected() = True Then
-                ServerExecuteSQL(sql, AppointmentID, CustomerID, EmployeeID, BillingDate, BillingAmount, BillingStatus, AppointmentType)
+                ServerExecuteSQL(sql, AppointmentID, CustomerID, EmployeeID, BillingTime, BillingDate, BillingAmount, BillingStatus)
                 Commit()
                 bool = True
             End If
@@ -137,9 +137,9 @@ Public Class Billing
     Public Function EditBilling() As Boolean
         Try
             Dim bool As Boolean = False
-            Dim sql As String = "UPDATE billing SET appointmentID=@0,employeeID=@1,billingDate=@2,billingAmount=@3,billingStatus=@4,billingType=5 WHERE billingID=@6;"
+            Dim sql As String = "UPDATE billing SET appointmentID=@0,customerID=@1,employeeID=@2,billingTime=@3,billingDate=@4,billingAmount=@5,billingStatus=@6 WHERE billingID=@7;"
             If IsConnected() = True Then
-                ServerExecuteSQL(sql, AppointmentID, EmployeeID, BillingDate, BillingAmount, BillingStatus, AppointmentType, BillingID)
+                ServerExecuteSQL(sql, AppointmentID, CustomerID, EmployeeID, BillingTime, BillingDate, BillingAmount, BillingStatus, BillingID)
                 Commit()
                 bool = True
             End If
@@ -171,7 +171,7 @@ Public Class Billing
         Try
             Dim sql As String
             Dim i As Integer = 0
-            sql = "SELECT billingID,billingDate,billingAmount,billingStatus,billingType FROM billing " _
+            sql = "SELECT billingID,billingTime,billingDate,billingAmount,billingStatus FROM billing " _
                 & "INNER JOIN appointment on billing.appointmentID=appointment.appointmentID WHERE appointment.appointmentID" _
                 & "=" & AppointmentID & "and billingStatus = 0 ORDER BY billingDate DESC;"
             If IsConnected() Then

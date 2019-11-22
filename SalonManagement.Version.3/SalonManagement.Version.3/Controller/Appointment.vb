@@ -86,7 +86,6 @@ Public Class Appointment
                     AppointmentTime = reader(2)
                     AppointmentDate = reader(3)
                     AppointmentType = reader(4)
-                    AppointmentTotalAmount = reader(5)
                 End While
                 reader.Close()
             End If
@@ -96,9 +95,9 @@ Public Class Appointment
     Public Function AddAppointment() As Boolean
         Try
             Dim bool As Boolean = False
-            Dim sql As String = "INSERT INTO Appointment (customerID,appointmentTime,AppointmentDate,appointmentType,appointmentTotalAmount) VALUES (@0,@1,@2,@3,@4);"
+            Dim sql As String = "INSERT INTO Appointment (customerID,appointmentTime,AppointmentDate,appointmentType) VALUES (@0,@1,@2,@3);"
             If IsConnected() = True Then
-                ServerExecuteSQL(sql, CustomerID, AppointmentTime, AppointmentDate, AppointmentType, AppointmentTotalAmount)
+                ServerExecuteSQL(sql, CustomerID, AppointmentTime, AppointmentDate, AppointmentType)
                 Commit()
                 bool = True
             End If
@@ -112,9 +111,9 @@ Public Class Appointment
     Public Function EditAppointment() As Boolean
         Try
             Dim bool As Boolean = False
-            Dim sql As String = "UPDATE Appointment SET customerID=@0,appointmentTime=@1,appointmentDate=@2,appointmentType=@3,appointmentTotalAmount=@4 WHERE appointmentID=@5;"
+            Dim sql As String = "UPDATE Appointment SET customerID=@0,appointmentTime=@1,appointmentDate=@2,appointmentType=@3 WHERE appointmentID=@4;"
             If IsConnected() = True Then
-                ServerExecuteSQL(sql, CustomerID, AppointmentTime, AppointmentDate, AppointmentType, AppointmentTotalAmount, AppointmentID)
+                ServerExecuteSQL(sql, CustomerID, AppointmentTime, AppointmentDate, AppointmentType, AppointmentID)
                 Commit()
                 bool = True
             End If
@@ -155,7 +154,7 @@ Public Class Appointment
                 While reader.Read()
                     i = i + 1
                     With gv
-                        .Rows.Add(reader(0), i, reader("customerName"), reader(2), reader(3), reader(4), reader(5), "Not Paid", "Edit", "Delete")
+                        .Rows.Add(reader(0), i, reader("customerName"), reader(2), reader(3), reader(4), "Not Paid", "Edit", "Delete")
                     End With
                 End While
             End If

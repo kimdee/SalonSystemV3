@@ -32,11 +32,7 @@ Partial Class frmAddPayments
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.panelContainer = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.txtCommission = New System.Windows.Forms.TextBox()
-        Me.lblTime = New System.Windows.Forms.Label()
-        Me.lblDate = New System.Windows.Forms.Label()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.btnAddEmployee = New System.Windows.Forms.Button()
         Me.btnDone = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.TabControl3 = New System.Windows.Forms.TabControl()
@@ -160,7 +156,7 @@ Partial Class frmAddPayments
         Me.panelContainer.Controls.Add(Me.Panel6)
         Me.panelContainer.Controls.Add(Me.Panel5)
         Me.panelContainer.Location = New System.Drawing.Point(11, 73)
-        Me.panelContainer.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.panelContainer.Margin = New System.Windows.Forms.Padding(2)
         Me.panelContainer.Name = "panelContainer"
         Me.panelContainer.Size = New System.Drawing.Size(741, 392)
         Me.panelContainer.TabIndex = 1
@@ -168,49 +164,12 @@ Partial Class frmAddPayments
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel6.Controls.Add(Me.txtCommission)
-        Me.Panel6.Controls.Add(Me.lblTime)
-        Me.Panel6.Controls.Add(Me.lblDate)
         Me.Panel6.Controls.Add(Me.btnCancel)
-        Me.Panel6.Controls.Add(Me.btnAddEmployee)
         Me.Panel6.Controls.Add(Me.btnDone)
         Me.Panel6.Location = New System.Drawing.Point(519, 3)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(214, 384)
         Me.Panel6.TabIndex = 80
-        '
-        'txtCommission
-        '
-        Me.txtCommission.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCommission.Enabled = False
-        Me.txtCommission.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCommission.Location = New System.Drawing.Point(7, 245)
-        Me.txtCommission.Name = "txtCommission"
-        Me.txtCommission.Size = New System.Drawing.Size(199, 34)
-        Me.txtCommission.TabIndex = 78
-        Me.txtCommission.Visible = False
-        '
-        'lblTime
-        '
-        Me.lblTime.AutoSize = True
-        Me.lblTime.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTime.Location = New System.Drawing.Point(7, 91)
-        Me.lblTime.Name = "lblTime"
-        Me.lblTime.Size = New System.Drawing.Size(90, 30)
-        Me.lblTime.TabIndex = 77
-        Me.lblTime.Text = "2:21 AM"
-        Me.lblTime.Visible = False
-        '
-        'lblDate
-        '
-        Me.lblDate.AutoSize = True
-        Me.lblDate.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDate.Location = New System.Drawing.Point(7, 61)
-        Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(117, 30)
-        Me.lblDate.TabIndex = 76
-        Me.lblDate.Text = "11/15/2019"
-        Me.lblDate.Visible = False
         '
         'btnCancel
         '
@@ -218,28 +177,13 @@ Partial Class frmAddPayments
         Me.btnCancel.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btnCancel.ForeColor = System.Drawing.Color.Black
         Me.btnCancel.Location = New System.Drawing.Point(7, 335)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(199, 47)
         Me.btnCancel.TabIndex = 74
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCancel.UseVisualStyleBackColor = True
-        '
-        'btnAddEmployee
-        '
-        Me.btnAddEmployee.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddEmployee.Font = New System.Drawing.Font("Segoe UI", 15.0!)
-        Me.btnAddEmployee.ForeColor = System.Drawing.Color.White
-        Me.btnAddEmployee.Location = New System.Drawing.Point(7, 12)
-        Me.btnAddEmployee.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.btnAddEmployee.Name = "btnAddEmployee"
-        Me.btnAddEmployee.Size = New System.Drawing.Size(199, 47)
-        Me.btnAddEmployee.TabIndex = 64
-        Me.btnAddEmployee.Text = "Stylist Assign"
-        Me.btnAddEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAddEmployee.UseVisualStyleBackColor = False
         '
         'btnDone
         '
@@ -248,7 +192,7 @@ Partial Class frmAddPayments
         Me.btnDone.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btnDone.ForeColor = System.Drawing.Color.White
         Me.btnDone.Location = New System.Drawing.Point(7, 284)
-        Me.btnDone.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnDone.Margin = New System.Windows.Forms.Padding(2)
         Me.btnDone.Name = "btnDone"
         Me.btnDone.Size = New System.Drawing.Size(199, 47)
         Me.btnDone.TabIndex = 75
@@ -282,7 +226,7 @@ Partial Class frmAddPayments
         Me.TabPage3.Controls.Add(Me.Panel4)
         Me.TabPage3.Location = New System.Drawing.Point(4, 34)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage3.Size = New System.Drawing.Size(276, 145)
         Me.TabPage3.TabIndex = 0
         Me.TabPage3.Text = "Billing Information"
@@ -380,7 +324,7 @@ Partial Class frmAddPayments
         Me.TabPage2.Controls.Add(Me.Panel2)
         Me.TabPage2.Location = New System.Drawing.Point(4, 34)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(202, 145)
         Me.TabPage2.TabIndex = 0
         Me.TabPage2.Text = "Customer Information"
@@ -408,7 +352,7 @@ Partial Class frmAddPayments
         Me.rdbFemale.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.rdbFemale.ForeColor = System.Drawing.Color.Black
         Me.rdbFemale.Location = New System.Drawing.Point(87, 92)
-        Me.rdbFemale.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.rdbFemale.Margin = New System.Windows.Forms.Padding(2)
         Me.rdbFemale.Name = "rdbFemale"
         Me.rdbFemale.Size = New System.Drawing.Size(90, 29)
         Me.rdbFemale.TabIndex = 42
@@ -434,7 +378,7 @@ Partial Class frmAddPayments
         Me.txtFName.Font = New System.Drawing.Font("Segoe UI", 15.0!)
         Me.txtFName.ForeColor = System.Drawing.Color.Black
         Me.txtFName.Location = New System.Drawing.Point(14, 32)
-        Me.txtFName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtFName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtFName.Name = "txtFName"
         Me.txtFName.Size = New System.Drawing.Size(163, 34)
         Me.txtFName.TabIndex = 39
@@ -448,7 +392,7 @@ Partial Class frmAddPayments
         Me.rdbMale.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.rdbMale.ForeColor = System.Drawing.Color.Black
         Me.rdbMale.Location = New System.Drawing.Point(14, 92)
-        Me.rdbMale.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.rdbMale.Margin = New System.Windows.Forms.Padding(2)
         Me.rdbMale.Name = "rdbMale"
         Me.rdbMale.Size = New System.Drawing.Size(72, 29)
         Me.rdbMale.TabIndex = 41
@@ -483,7 +427,7 @@ Partial Class frmAddPayments
         Me.TabPage1.Controls.Add(Me.Panel3)
         Me.TabPage1.Location = New System.Drawing.Point(4, 34)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(488, 155)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Employee Serve"
@@ -552,7 +496,7 @@ Partial Class frmAddPayments
         Me.ControlBox = False
         Me.Controls.Add(Me.panelMain)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "frmAddPayments"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.panelMain.ResumeLayout(False)
@@ -563,7 +507,6 @@ Partial Class frmAddPayments
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelContainer.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.TabControl3.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
@@ -610,7 +553,6 @@ Partial Class frmAddPayments
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents btnAddEmployee As Button
     Friend WithEvents btnDone As Button
     Friend WithEvents btnCancel As Button
     Friend WithEvents Panel1 As Panel
@@ -619,7 +561,4 @@ Partial Class frmAddPayments
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Panel5 As Panel
-    Friend WithEvents lblDate As Label
-    Friend WithEvents lblTime As Label
-    Friend WithEvents txtCommission As TextBox
 End Class

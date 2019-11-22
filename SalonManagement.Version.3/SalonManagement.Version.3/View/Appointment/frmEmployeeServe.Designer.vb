@@ -230,6 +230,7 @@ Partial Class frmEmployeeServe
         Me.Column5.HeaderText = "Gender"
         Me.Column5.Name = "Column5"
         Me.Column5.ReadOnly = True
+        Me.Column5.Visible = False
         '
         'Column6
         '
@@ -239,9 +240,13 @@ Partial Class frmEmployeeServe
         '
         'Column7
         '
+        Me.Column7.ActiveLinkColor = System.Drawing.Color.DodgerBlue
         Me.Column7.HeaderText = ""
+        Me.Column7.LinkColor = System.Drawing.Color.DodgerBlue
         Me.Column7.Name = "Column7"
         Me.Column7.ReadOnly = True
+        Me.Column7.Visible = False
+        Me.Column7.VisitedLinkColor = System.Drawing.Color.DodgerBlue
         '
         'frmEmployeeServe
         '
@@ -276,6 +281,10 @@ Partial Class frmEmployeeServe
     Friend WithEvents panelGv As Panel
     Friend WithEvents Label3 As Label
     Friend WithEvents gvView As DataGridView
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents panelTop As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewCheckBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
@@ -283,8 +292,4 @@ Partial Class frmEmployeeServe
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewLinkColumn
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents panelTop As Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox1 As PictureBox
 End Class

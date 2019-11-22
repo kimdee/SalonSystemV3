@@ -62,7 +62,7 @@ Public Class frmAddAppointment
         appointment.AddAppointment()
         appointment.SetAppointmentID()
 
-        For Each r As DataGridViewRow In gvView.Rows
+        For Each r As DataGridViewRow In gvViewService.Rows
             With service
                 .AppointmentID = appointment.AppointmentID
                 .ServiceName = r.Cells(2).Value
@@ -98,7 +98,6 @@ Public Class frmAddAppointment
         btnAddservice.Enabled = False
 
         btnSave.Enabled = False
-        btnEdit.Enabled = False
 
         btnClose.Enabled = True
         btnClose.BackColor = Color.WhiteSmoke
@@ -115,7 +114,6 @@ Public Class frmAddAppointment
         btnAddservice.Enabled = True
 
         btnSave.Enabled = True
-        btnEdit.Enabled = False
 
         btnClose.Enabled = True
         btnClose.BackColor = Color.WhiteSmoke
@@ -136,10 +134,6 @@ Public Class frmAddAppointment
 
         'dtpDate.Value = dtServer.ToShortDateString
         'dtpTime.Value = dtServer.ToString("h:mm tt")
-    End Sub
-
-    Private Sub btnSearch_Click(sender As Object, e As EventArgs)
-
     End Sub
 
     Private Sub btnNewCustomer_Click(sender As Object, e As EventArgs) Handles btnNewCustomer.Click
@@ -167,19 +161,23 @@ Public Class frmAddAppointment
             btnClose.Text = "Cancel"
         End If
 
-        gvView.Rows.Clear()
+        gvViewService.Rows.Clear()
+        gvViewEmployee.Rows.Clear()
 
         EnableInput(Me)
+
         txtName.Enabled = False
         rdbMale.Enabled = False
         rdbFemale.Enabled = False
         txtCN.Enabled = False
 
-
+        txtTotalAmount.Enabled = False
+        txtRecieve.Enabled = False
+        txtChange.Enabled = False
     End Sub
 
     Private Sub btnBrowseCustomer_Click(sender As Object, e As EventArgs) Handles btnBrowseCustomer.Click
-        gvView.Rows.Clear()
+        gvViewService.Rows.Clear()
         ClearInput(Me)
 
         EnableInput(Me)
@@ -222,23 +220,22 @@ Public Class frmAddAppointment
     Sub recount()
         Dim i As Integer = 1
         Dim c As Decimal = 0
-        For Each r As DataGridViewRow In gvView.Rows
+        For Each r As DataGridViewRow In gvViewService.Rows
             r.Cells(1).Value = i
             i = i + 1
             c = c + r.Cells(4).Value
         Next
         txtTotalAmount.Text = c
         'recolor()
-        gvView.ClearSelection()
+        gvViewService.ClearSelection()
     End Sub
-
     Private Sub btnAddservice_Click(sender As Object, e As EventArgs) Handles btnAddservice.Click
         Dim obj As New frmAddServices
         If obj.ShowDialog = System.Windows.Forms.DialogResult.OK Then
             Dim index As Integer = 1
             For Each row As DataGridViewRow In obj.gvView.Rows
                 If row.Cells(1).Value = True Then
-                    With gvView
+                    With gvViewService
                         .Rows.Add(row.Cells(0).Value.ToString,
                                        index.ToString,
                                        row.Cells(3).Value.ToString,
@@ -250,6 +247,35 @@ Public Class frmAddAppointment
                     recount()
                 End If
             Next
+        End If
+    End Sub
+    Private Sub gvView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles gvViewService.CellContentClick
+        If e.ColumnIndex = 5 Then
+            gvViewService.Rows.RemoveAt(service.ServiceID)
+            recount()
+        End If
+    End Sub
+
+    Private Sub btnAddEmployee_Click(sender As Object, e As EventArgs) Handles btnAddEmployee.Click
+        Dim obj As New frmEmployeeServe
+        If obj.ShowDialog = System.Windows.Forms.DialogResult.OK Then
+            Dim index As Integer = 1
+            For Each row As DataGridViewRow In obj.gvView.Rows
+                If row.Cells(1).Value = True Then
+                    With gvViewEmployee
+                        .Rows.Add(row.Cells(0).Value.ToString,
+                                  index.ToString,
+                                  row.Cells(3).Value.ToString,
+                                  "Remove")
+                    End With
+                    index += 1
+                End If
+            Next
+        End If
+    End Sub
+    Private Sub gvViewEmployee_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles gvViewEmployee.CellContentClick
+        If e.ColumnIndex = 3 Then
+            gvViewEmployee.Rows.RemoveAt(billing.EmployeeID)
         End If
     End Sub
 
@@ -290,13 +316,12 @@ Public Class frmAddAppointment
                     .AppointmentTime = dtpTime.Value.ToString("t")
                     .AppointmentDate = dtpDate.Value.ToString("d")
                 End If
-                .AppointmentTotalAmount = txtTotalAmount.Text
                 .AddAppointment()
                 .SetAppointmentID()
             End With
 
             ''Insert CustomerService
-            For Each r As DataGridViewRow In gvView.Rows
+            For Each r As DataGridViewRow In gvViewService.Rows
                 With customerService
                     .AppointmentID = appointment.AppointmentID
                     .CustomerID = customer.CustomerID
@@ -304,68 +329,31 @@ Public Class frmAddAppointment
                     .AddCustomerService()
                 End With
             Next
-        Catch ex As Exception
 
-        End Try
-    End Sub
-    Public Sub doEdit()
-        Try
-            ''Edit CustomerTable
-            With customer
-                .CustomerName = txtName.Text
-                .CustomerCN = txtCN.Text
-                If rdbMale.Checked = True Then
-                    .CustomerSex = "Male"
-                ElseIf rdbFemale.Checked = True Then
-                    .CustomerSex = "Female"
-                End If
-                .EditCustomer()
-                .SetCustomerID()
-            End With
-
-            ''Edit AppointmentTable
-            For Each r As DataGridViewRow In gvView.Rows
-                With appointment
+            ''Insert Billing
+            For Each r As DataGridViewRow In gvViewEmployee.Rows
+                With billing
+                    .AppointmentID = appointment.AppointmentID
                     .CustomerID = customer.CustomerID
-
-                    If rdbWalkin.Checked = True Then
-                        .AppointmentType = "Walk-In"
-                        .AppointmentTime = lblTimeNow.Text
-                        .AppointmentDate = lblDateNow.Text
-                    ElseIf rdbReservation.Checked = True Then
-                        .AppointmentType = "Reservation"
-                        .AppointmentTime = dtpTime.Value.TimeOfDay.ToString
-                        .AppointmentDate = dtpDate.Value.ToString
-                    End If
-
-                    If .EditAppointment() = True Then
-                        Dim ok As New OKMessage
-                        ok = New OKMessage
-                        ok.lblMsg.Text = "Appointment has been updated."
-                        ok.ShowDialog()
-
-                        OnDone()
-
-                        btnPayments.Enabled = True
-                        btnEdit.Enabled = True
-                    Else
-                        Dim err As ErrorMessage
-                        err = New ErrorMessage
-                        err.lblMsg.Text = "Failed to update Appointment."
-                        err.ShowDialog()
-                    End If
+                    .EmployeeID = r.Cells(0).Value.ToString
+                    .BillingTime = lblTimeNow.Text
+                    .BillingDate = lblDateNow.Text
+                    .BillingAmount = txtTotalAmount.Text
+                    .BillingStatus = status
+                    .AddBilling()
                 End With
             Next
+
         Catch ex As Exception
 
         End Try
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If gvView.Rows.Count = 0 And dtpDate.Value.ToString < dtpDate.Value.ToString Then
+        If gvViewService.Rows.Count = 0 And dtpDate.Value.ToString < dtpDate.Value.ToString Then
             MessageBox.Show("Please check your date and services", "Message",
                              MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        ElseIf gvView.Rows.Count = 0 Then
+        ElseIf gvViewService.Rows.Count = 0 Then
             MessageBox.Show("Please add service.", "Message",
                               MessageBoxButtons.OK, MessageBoxIcon.Warning)
         ElseIf dtpDate.Value.ToString < dtpDate.Value.ToString Then
@@ -387,13 +375,14 @@ Public Class frmAddAppointment
                         ClearInput(Me)
                         DisableInput(Me)
 
-                        gvView.Rows.Clear()
+                        gvViewService.Rows.Clear()
+                        gvViewEmployee.Rows.Clear()
+
                         rdbMale.Checked = True
                         rdbWalkin.Checked = True
 
                         btnClose.Text = "Close"
                         btnNewCustomer.Text = "New Customer"
-                        lblStatus.Text = "Paid"
                     End If
                 ElseIf MessageBox.Show("Appointment Save", "Message", MessageBoxButtons.OK, MessageBoxIcon.Question) = DialogResult.OK Then
                     OnDone()
@@ -401,26 +390,18 @@ Public Class frmAddAppointment
                     ClearInput(Me)
                     DisableInput(Me)
 
-                    gvView.Rows.Clear()
+                    gvViewService.Rows.Clear()
+                    gvViewEmployee.Rows.Clear()
+
                     rdbMale.Checked = True
                     rdbWalkin.Checked = True
 
                     btnClose.Text = "Close"
                     btnNewCustomer.Text = "New Customer"
                 End If
-
-            ElseIf edit = True Then
-                doEdit()
             End If
         End If
 
-    End Sub
-
-    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
-        EnableInput(Me)
-        OnActionButton()
-        add = False
-        edit = True
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
@@ -429,7 +410,9 @@ Public Class frmAddAppointment
             ClearInput(Me)
             DisableInput(Me)
 
-            gvView.Rows.Clear()
+            gvViewService.Rows.Clear()
+            gvViewEmployee.Rows.Clear()
+
             rdbMale.Checked = True
             rdbWalkin.Checked = True
 
@@ -438,6 +421,10 @@ Public Class frmAddAppointment
         ElseIf btnClose.Text = "Close" Then
             Me.Close()
         End If
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Me.Close()
     End Sub
 
     Private Sub txtName_TextChanged(sender As Object, e As EventArgs) Handles txtName.TextChanged
@@ -452,12 +439,6 @@ Public Class frmAddAppointment
         txtCN.MaxLength = 13
     End Sub
 
-    Private Sub gvView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles gvView.CellContentClick
-        If e.ColumnIndex = 5 Then
-            gvView.Rows.RemoveAt(service.ServiceID)
-            recount()
-        End If
-    End Sub
 
     Private Sub rdbWalkin_CheckedChanged(sender As Object, e As EventArgs) Handles rdbWalkin.CheckedChanged
         lblTimeNow.Show()
@@ -475,12 +456,10 @@ Public Class frmAddAppointment
         lblDateNow.Hide()
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        Me.Close()
-    End Sub
-
     Private Sub dtpDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpDate.ValueChanged
         dtpDate.MinDate = Date.Now.ToString
         dtpDate.MaxDate = Date.Now.AddMonths(1)
     End Sub
+
+
 End Class

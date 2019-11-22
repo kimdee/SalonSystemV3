@@ -44,7 +44,6 @@ Public Class frmAddPayments
                     .BillingDate = lblDate.Text
                     .BillingAmount = txtTotal.Text
                     .BillingStatus = status
-                    .AppointmentType = appointment.AppointmentType
 
                     If .AddBilling() = True Then
                         Dim ok As New OKMessage
@@ -67,7 +66,7 @@ Public Class frmAddPayments
         Me.Close()
     End Sub
 
-    Private Sub btnAddEmployee_Click(sender As Object, e As EventArgs) Handles btnAddEmployee.Click
+    Private Sub btnAddEmployee_Click(sender As Object, e As EventArgs) 
         Dim obj As New frmEmployeeServe
         If obj.ShowDialog = System.Windows.Forms.DialogResult.OK Then
             Dim index As Integer = 1

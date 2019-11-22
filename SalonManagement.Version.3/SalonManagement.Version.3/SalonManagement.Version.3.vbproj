@@ -145,10 +145,10 @@
     <Compile Include="View\Appointment\frmAppointment.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Appointment\frmEditAppointment.Designer.vb">
+    <Compile Include="View\Payments\frmEditAppointment.Designer.vb">
       <DependentUpon>frmEditAppointment.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Appointment\frmEditAppointment.vb">
+    <Compile Include="View\Payments\frmEditAppointment.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Appointment\frmSearchAppointment.Designer.vb">
@@ -331,10 +331,10 @@
     <Compile Include="View\Payments\frmCollection.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Payments\frmEmployeeServe.Designer.vb">
+    <Compile Include="View\Appointment\frmEmployeeServe.Designer.vb">
       <DependentUpon>frmEmployeeServe.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Payments\frmEmployeeServe.vb">
+    <Compile Include="View\Appointment\frmEmployeeServe.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Payroll\frmAddEmployeePayroll.Designer.vb">
@@ -435,7 +435,7 @@
     <EmbeddedResource Include="View\Appointment\frmAppointment.resx">
       <DependentUpon>frmAppointment.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Appointment\frmEditAppointment.resx">
+    <EmbeddedResource Include="View\Payments\frmEditAppointment.resx">
       <DependentUpon>frmEditAppointment.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Appointment\frmSearchAppointment.resx">
@@ -528,7 +528,7 @@
     <EmbeddedResource Include="View\Payments\frmCollection.resx">
       <DependentUpon>frmCollection.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Payments\frmEmployeeServe.resx">
+    <EmbeddedResource Include="View\Appointment\frmEmployeeServe.resx">
       <DependentUpon>frmEmployeeServe.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Payroll\frmAddEmployeePayroll.resx">

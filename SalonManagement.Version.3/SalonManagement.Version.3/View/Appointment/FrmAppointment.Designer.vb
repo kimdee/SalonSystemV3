@@ -38,13 +38,13 @@ Partial Class FrmAppointment
         Me.lblmanage = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnPrint = New System.Windows.Forms.Button()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewLinkColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewLinkColumn()
         Me.panelMain.SuspendLayout()
@@ -56,6 +56,7 @@ Partial Class FrmAppointment
         Me.panelTop.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'panelMain
@@ -96,7 +97,7 @@ Partial Class FrmAppointment
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.SystemColors.Control
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(874, 51)
+        Me.Label1.Location = New System.Drawing.Point(859, 51)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(74, 28)
@@ -116,7 +117,7 @@ Partial Class FrmAppointment
         Me.gvView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.gvView.ColumnHeadersHeight = 35
         Me.gvView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.gvView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9})
+        Me.gvView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column8, Me.Column9})
         Me.gvView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gvView.EnableHeadersVisualStyles = False
         Me.gvView.Location = New System.Drawing.Point(0, 50)
@@ -248,12 +249,28 @@ Partial Class FrmAppointment
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.btnPrint)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.Location = New System.Drawing.Point(0, 668)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1085, 47)
         Me.Panel2.TabIndex = 1
+        '
+        'btnPrint
+        '
+        Me.btnPrint.BackColor = System.Drawing.Color.White
+        Me.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrint.Font = New System.Drawing.Font("Segoe UI", 17.0!)
+        Me.btnPrint.ForeColor = System.Drawing.Color.Black
+        Me.btnPrint.Location = New System.Drawing.Point(919, 5)
+        Me.btnPrint.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(155, 39)
+        Me.btnPrint.TabIndex = 27
+        Me.btnPrint.Text = "Print"
+        Me.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnPrint.UseVisualStyleBackColor = False
         '
         'Column1
         '
@@ -295,13 +312,7 @@ Partial Class FrmAppointment
         Me.Column6.HeaderText = "Appointment Type"
         Me.Column6.Name = "Column6"
         Me.Column6.ReadOnly = True
-        Me.Column6.Width = 200
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Status"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
+        Me.Column6.Width = 375
         '
         'Column8
         '
@@ -348,6 +359,7 @@ Partial Class FrmAppointment
         Me.panelTop.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -366,13 +378,13 @@ Partial Class FrmAppointment
     Friend WithEvents btnAddAppointment As Button
     Friend WithEvents txtSearch As TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents btnPrint As Button
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewLinkColumn
     Friend WithEvents Column9 As DataGridViewLinkColumn
 End Class

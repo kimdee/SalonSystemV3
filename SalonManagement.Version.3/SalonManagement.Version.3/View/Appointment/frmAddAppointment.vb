@@ -186,6 +186,10 @@ Public Class frmAddAppointment
         rdbFemale.Enabled = False
         txtCN.Enabled = False
 
+        txtTotalAmount.Enabled = False
+        txtRecieve.Enabled = False
+        txtChange.Enabled = False
+
         Dim obj As New frmSearchCustomer
         obj.customer = Me.customer
 
@@ -367,8 +371,10 @@ Public Class frmAddAppointment
                     Dim obj As New frmAddPayments
                     appointment.SetAppointmentDetails(appointment.AppointmentID)
                     customer.SetCustomerDetails(customer.CustomerID)
+                    billing.SetBillingDetails(billing.BillingID)
                     obj.appointment = Me.appointment
                     obj.customer = Me.customer
+                    obj.billing = Me.billing
                     If obj.ShowDialog = DialogResult.OK Then
                         OnDone()
                         ResetButton()

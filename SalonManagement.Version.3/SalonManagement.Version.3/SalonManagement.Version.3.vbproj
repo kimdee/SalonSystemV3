@@ -48,10 +48,15 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Calendar.NET, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Calendar.NET.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\MaterialSkin.dll</HintPath>
@@ -69,6 +74,8 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -94,6 +101,7 @@
     <Compile Include="Controller\Appointment.vb" />
     <Compile Include="Controller\Attendance.vb" />
     <Compile Include="Controller\Billing.vb" />
+    <Compile Include="Controller\Commission.vb" />
     <Compile Include="Controller\Customer.vb" />
     <Compile Include="Controller\CustomerService.vb" />
     <Compile Include="Controller\Deduction.vb" />
@@ -145,10 +153,10 @@
     <Compile Include="View\Appointment\frmAppointment.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Payments\frmEditAppointment.Designer.vb">
+    <Compile Include="View\Appointment\frmEditAppointment.Designer.vb">
       <DependentUpon>frmEditAppointment.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Payments\frmEditAppointment.vb">
+    <Compile Include="View\Appointment\frmEditAppointment.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Appointment\frmSearchAppointment.Designer.vb">
@@ -379,6 +387,26 @@
     <Compile Include="View\Position\frmPosition.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="View\Preview\frmPrintreportpreview.Designer.vb">
+      <DependentUpon>frmPrintreportpreview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Preview\frmPrintreportpreview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Reports\crystalrepAppointment.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crystalrepAppointment.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Reports\dsAppointment.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAppointment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\dsAppointment.vb">
+      <DependentUpon>dsAppointment.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View\Service\frmAddService.Designer.vb">
       <DependentUpon>frmAddService.vb</DependentUpon>
     </Compile>
@@ -435,7 +463,7 @@
     <EmbeddedResource Include="View\Appointment\frmAppointment.resx">
       <DependentUpon>frmAppointment.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Payments\frmEditAppointment.resx">
+    <EmbeddedResource Include="View\Appointment\frmEditAppointment.resx">
       <DependentUpon>frmEditAppointment.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Appointment\frmSearchAppointment.resx">
@@ -552,6 +580,13 @@
     <EmbeddedResource Include="View\Position\frmPosition.resx">
       <DependentUpon>frmPosition.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Preview\frmPrintreportpreview.resx">
+      <DependentUpon>frmPrintreportpreview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\crystalrepAppointment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crystalrepAppointment.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Service\frmAddService.resx">
       <DependentUpon>frmAddService.vb</DependentUpon>
     </EmbeddedResource>
@@ -579,6 +614,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="View\Reports\dsAppointment.xsc">
+      <DependentUpon>dsAppointment.xsd</DependentUpon>
+    </None>
+    <None Include="View\Reports\dsAppointment.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAppointment.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="View\Reports\dsAppointment.xss">
+      <DependentUpon>dsAppointment.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\absent.png" />
@@ -711,6 +757,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\yellow-plus-symbol-png-computer-icons-clipart-7412c0d6a8835247.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -31,57 +31,42 @@ Partial Class frmAddPayments
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.panelContainer = New System.Windows.Forms.Panel()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.btnCancel = New System.Windows.Forms.Button()
-        Me.btnDone = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.TabControl3 = New System.Windows.Forms.TabControl()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.txtChange = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtxRecieve = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtTotal = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txtCN = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtName = New System.Windows.Forms.TextBox()
         Me.rdbFemale = New System.Windows.Forms.RadioButton()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtFName = New System.Windows.Forms.TextBox()
-        Me.rdbMale = New System.Windows.Forms.RadioButton()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.panelGv = New System.Windows.Forms.Panel()
-        Me.gvView = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.rdbMale = New System.Windows.Forms.RadioButton()
+        Me.btnDone = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.TabControl6 = New System.Windows.Forms.TabControl()
+        Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.txtTotalAmount = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtChange = New System.Windows.Forms.TextBox()
+        Me.txtRecieve = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.panelMain.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.panelTop.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelContainer.SuspendLayout()
-        Me.Panel6.SuspendLayout()
         Me.Panel5.SuspendLayout()
-        Me.TabControl3.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
-        Me.Panel4.SuspendLayout()
         Me.TabControl2.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.panelGv.SuspendLayout()
-        CType(Me.gvView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel11.SuspendLayout()
+        Me.TabControl6.SuspendLayout()
+        Me.TabPage6.SuspendLayout()
+        Me.Panel6.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'TimerPayment
-        '
         '
         'panelMain
         '
@@ -91,7 +76,7 @@ Partial Class frmAddPayments
         Me.panelMain.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelMain.Location = New System.Drawing.Point(0, 0)
         Me.panelMain.Name = "panelMain"
-        Me.panelMain.Size = New System.Drawing.Size(762, 474)
+        Me.panelMain.Size = New System.Drawing.Size(567, 406)
         Me.panelMain.TabIndex = 0
         '
         'Panel1
@@ -101,7 +86,7 @@ Partial Class frmAddPayments
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 35)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(762, 33)
+        Me.Panel1.Size = New System.Drawing.Size(567, 33)
         Me.Panel1.TabIndex = 22
         '
         'Label1
@@ -110,7 +95,7 @@ Partial Class frmAddPayments
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 25.0!)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(328, -26)
+        Me.Label1.Location = New System.Drawing.Point(189, -26)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(189, 46)
         Me.Label1.TabIndex = 18
@@ -124,7 +109,7 @@ Partial Class frmAddPayments
         Me.panelTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.panelTop.Location = New System.Drawing.Point(0, 0)
         Me.panelTop.Name = "panelTop"
-        Me.panelTop.Size = New System.Drawing.Size(762, 35)
+        Me.panelTop.Size = New System.Drawing.Size(567, 35)
         Me.panelTop.TabIndex = 21
         '
         'Label3
@@ -133,7 +118,7 @@ Partial Class frmAddPayments
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 25.0!)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(328, 9)
+        Me.Label3.Location = New System.Drawing.Point(189, 9)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(189, 46)
         Me.Label3.TabIndex = 17
@@ -141,9 +126,10 @@ Partial Class frmAddPayments
         '
         'PictureBox1
         '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.BackgroundImage = Global.SalonManagement.Version._3.My.Resources.Resources.x_button1
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(823, 3)
+        Me.PictureBox1.Location = New System.Drawing.Point(546, 3)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(18, 18)
         Me.PictureBox1.TabIndex = 16
@@ -153,37 +139,170 @@ Partial Class frmAddPayments
         '
         Me.panelContainer.BackColor = System.Drawing.Color.White
         Me.panelContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.panelContainer.Controls.Add(Me.Panel6)
         Me.panelContainer.Controls.Add(Me.Panel5)
         Me.panelContainer.Location = New System.Drawing.Point(11, 73)
         Me.panelContainer.Margin = New System.Windows.Forms.Padding(2)
         Me.panelContainer.Name = "panelContainer"
-        Me.panelContainer.Size = New System.Drawing.Size(741, 392)
+        Me.panelContainer.Size = New System.Drawing.Size(545, 322)
         Me.panelContainer.TabIndex = 1
         '
-        'Panel6
+        'Panel5
         '
-        Me.Panel6.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel6.Controls.Add(Me.btnCancel)
-        Me.Panel6.Controls.Add(Me.btnDone)
-        Me.Panel6.Location = New System.Drawing.Point(519, 3)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(214, 384)
-        Me.Panel6.TabIndex = 80
+        Me.Panel5.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel5.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel5.Controls.Add(Me.TabControl2)
+        Me.Panel5.Controls.Add(Me.btnDone)
+        Me.Panel5.Controls.Add(Me.btnCancel)
+        Me.Panel5.Controls.Add(Me.TabControl6)
+        Me.Panel5.Location = New System.Drawing.Point(3, 3)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(537, 314)
+        Me.Panel5.TabIndex = 79
         '
-        'btnCancel
+        'TabControl2
         '
-        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancel.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btnCancel.ForeColor = System.Drawing.Color.Black
-        Me.btnCancel.Location = New System.Drawing.Point(7, 335)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(199, 47)
-        Me.btnCancel.TabIndex = 74
-        Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancel.UseVisualStyleBackColor = True
+        Me.TabControl2.Controls.Add(Me.TabPage2)
+        Me.TabControl2.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.TabControl2.Location = New System.Drawing.Point(15, 15)
+        Me.TabControl2.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabControl2.Name = "TabControl2"
+        Me.TabControl2.SelectedIndex = 0
+        Me.TabControl2.Size = New System.Drawing.Size(251, 232)
+        Me.TabControl2.TabIndex = 92
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.Panel11)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 34)
+        Me.TabPage2.Margin = New System.Windows.Forms.Padding(2)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(2)
+        Me.TabPage2.Size = New System.Drawing.Size(243, 194)
+        Me.TabPage2.TabIndex = 0
+        Me.TabPage2.Text = "Customer Information"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Panel11
+        '
+        Me.Panel11.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel11.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel11.Controls.Add(Me.Label11)
+        Me.Panel11.Controls.Add(Me.txtCN)
+        Me.Panel11.Controls.Add(Me.Label4)
+        Me.Panel11.Controls.Add(Me.txtName)
+        Me.Panel11.Controls.Add(Me.rdbFemale)
+        Me.Panel11.Controls.Add(Me.Label6)
+        Me.Panel11.Controls.Add(Me.Label2)
+        Me.Panel11.Controls.Add(Me.rdbMale)
+        Me.Panel11.Location = New System.Drawing.Point(6, 6)
+        Me.Panel11.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(231, 184)
+        Me.Panel11.TabIndex = 0
+        '
+        'Label11
+        '
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.ForeColor = System.Drawing.Color.Red
+        Me.Label11.Location = New System.Drawing.Point(5, 0)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(13, 18)
+        Me.Label11.TabIndex = 41
+        Me.Label11.Text = "*"
+        '
+        'txtCN
+        '
+        Me.txtCN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCN.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.txtCN.ForeColor = System.Drawing.Color.Black
+        Me.txtCN.Location = New System.Drawing.Point(21, 146)
+        Me.txtCN.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtCN.Name = "txtCN"
+        Me.txtCN.Size = New System.Drawing.Size(180, 32)
+        Me.txtCN.TabIndex = 38
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 15.0!)
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(16, 120)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(112, 28)
+        Me.Label4.TabIndex = 37
+        Me.Label4.Text = "Contact No"
+        '
+        'txtName
+        '
+        Me.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtName.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.txtName.ForeColor = System.Drawing.Color.Black
+        Me.txtName.Location = New System.Drawing.Point(21, 25)
+        Me.txtName.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(180, 32)
+        Me.txtName.TabIndex = 30
+        '
+        'rdbFemale
+        '
+        Me.rdbFemale.AutoSize = True
+        Me.rdbFemale.BackColor = System.Drawing.Color.Transparent
+        Me.rdbFemale.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.rdbFemale.ForeColor = System.Drawing.Color.Black
+        Me.rdbFemale.Location = New System.Drawing.Point(98, 89)
+        Me.rdbFemale.Margin = New System.Windows.Forms.Padding(2)
+        Me.rdbFemale.Name = "rdbFemale"
+        Me.rdbFemale.Size = New System.Drawing.Size(90, 29)
+        Me.rdbFemale.TabIndex = 33
+        Me.rdbFemale.Text = "Female"
+        Me.rdbFemale.UseVisualStyleBackColor = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 15.0!)
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(17, 63)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(42, 28)
+        Me.Label6.TabIndex = 31
+        Me.Label6.Text = "Sex"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 15.0!)
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(16, 0)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(64, 28)
+        Me.Label2.TabIndex = 28
+        Me.Label2.Text = "Name"
+        '
+        'rdbMale
+        '
+        Me.rdbMale.AutoSize = True
+        Me.rdbMale.BackColor = System.Drawing.Color.Transparent
+        Me.rdbMale.Checked = True
+        Me.rdbMale.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.rdbMale.ForeColor = System.Drawing.Color.Black
+        Me.rdbMale.Location = New System.Drawing.Point(22, 89)
+        Me.rdbMale.Margin = New System.Windows.Forms.Padding(2)
+        Me.rdbMale.Name = "rdbMale"
+        Me.rdbMale.Size = New System.Drawing.Size(72, 29)
+        Me.rdbMale.TabIndex = 32
+        Me.rdbMale.TabStop = True
+        Me.rdbMale.Text = "Male"
+        Me.rdbMale.UseVisualStyleBackColor = False
         '
         'btnDone
         '
@@ -191,7 +310,7 @@ Partial Class frmAddPayments
         Me.btnDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDone.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold)
         Me.btnDone.ForeColor = System.Drawing.Color.White
-        Me.btnDone.Location = New System.Drawing.Point(7, 284)
+        Me.btnDone.Location = New System.Drawing.Point(120, 252)
         Me.btnDone.Margin = New System.Windows.Forms.Padding(2)
         Me.btnDone.Name = "btnDone"
         Me.btnDone.Size = New System.Drawing.Size(199, 47)
@@ -200,299 +319,126 @@ Partial Class frmAddPayments
         Me.btnDone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnDone.UseVisualStyleBackColor = False
         '
-        'Panel5
+        'btnCancel
         '
-        Me.Panel5.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel5.Controls.Add(Me.TabControl3)
-        Me.Panel5.Controls.Add(Me.TabControl2)
-        Me.Panel5.Controls.Add(Me.TabControl1)
-        Me.Panel5.Location = New System.Drawing.Point(3, 3)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(510, 384)
-        Me.Panel5.TabIndex = 79
+        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancel.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.btnCancel.ForeColor = System.Drawing.Color.Black
+        Me.btnCancel.Location = New System.Drawing.Point(323, 252)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(199, 47)
+        Me.btnCancel.TabIndex = 74
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'TabControl3
+        'TabControl6
         '
-        Me.TabControl3.Controls.Add(Me.TabPage3)
-        Me.TabControl3.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.TabControl3.Location = New System.Drawing.Point(219, 3)
-        Me.TabControl3.Name = "TabControl3"
-        Me.TabControl3.SelectedIndex = 0
-        Me.TabControl3.Size = New System.Drawing.Size(284, 183)
-        Me.TabControl3.TabIndex = 78
+        Me.TabControl6.Controls.Add(Me.TabPage6)
+        Me.TabControl6.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.TabControl6.Location = New System.Drawing.Point(271, 15)
+        Me.TabControl6.Name = "TabControl6"
+        Me.TabControl6.SelectedIndex = 0
+        Me.TabControl6.Size = New System.Drawing.Size(251, 232)
+        Me.TabControl6.TabIndex = 91
         '
-        'TabPage3
+        'TabPage6
         '
-        Me.TabPage3.Controls.Add(Me.Panel4)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(276, 145)
-        Me.TabPage3.TabIndex = 0
-        Me.TabPage3.Text = "Billing Information"
-        Me.TabPage3.UseVisualStyleBackColor = True
+        Me.TabPage6.Controls.Add(Me.Panel6)
+        Me.TabPage6.Location = New System.Drawing.Point(4, 34)
+        Me.TabPage6.Name = "TabPage6"
+        Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage6.Size = New System.Drawing.Size(243, 194)
+        Me.TabPage6.TabIndex = 0
+        Me.TabPage6.Text = "Billing Information"
+        Me.TabPage6.UseVisualStyleBackColor = True
         '
-        'Panel4
+        'Panel6
         '
-        Me.Panel4.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel4.Controls.Add(Me.txtChange)
-        Me.Panel4.Controls.Add(Me.Label9)
-        Me.Panel4.Controls.Add(Me.txtxRecieve)
-        Me.Panel4.Controls.Add(Me.Label10)
-        Me.Panel4.Controls.Add(Me.txtTotal)
-        Me.Panel4.Controls.Add(Me.Label11)
-        Me.Panel4.Location = New System.Drawing.Point(6, 6)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(264, 133)
-        Me.Panel4.TabIndex = 0
+        Me.Panel6.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel6.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel6.Controls.Add(Me.txtTotalAmount)
+        Me.Panel6.Controls.Add(Me.Label9)
+        Me.Panel6.Controls.Add(Me.txtChange)
+        Me.Panel6.Controls.Add(Me.txtRecieve)
+        Me.Panel6.Controls.Add(Me.Label10)
+        Me.Panel6.Controls.Add(Me.Label12)
+        Me.Panel6.Location = New System.Drawing.Point(6, 6)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(231, 184)
+        Me.Panel6.TabIndex = 0
+        '
+        'txtTotalAmount
+        '
+        Me.txtTotalAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtTotalAmount.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.txtTotalAmount.Location = New System.Drawing.Point(7, 25)
+        Me.txtTotalAmount.Name = "txtTotalAmount"
+        Me.txtTotalAmount.Size = New System.Drawing.Size(180, 32)
+        Me.txtTotalAmount.TabIndex = 27
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.Label9.Location = New System.Drawing.Point(2, 2)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(126, 25)
+        Me.Label9.TabIndex = 26
+        Me.Label9.Text = "Total Amount"
         '
         'txtChange
         '
         Me.txtChange.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtChange.Enabled = False
-        Me.txtChange.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtChange.Location = New System.Drawing.Point(96, 83)
+        Me.txtChange.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.txtChange.Location = New System.Drawing.Point(7, 146)
         Me.txtChange.Name = "txtChange"
-        Me.txtChange.Size = New System.Drawing.Size(150, 34)
+        Me.txtChange.Size = New System.Drawing.Size(180, 32)
         Me.txtChange.TabIndex = 14
         '
-        'Label9
+        'txtRecieve
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(28, 8)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(63, 25)
-        Me.Label9.TabIndex = 9
-        Me.Label9.Text = "Total :"
-        '
-        'txtxRecieve
-        '
-        Me.txtxRecieve.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtxRecieve.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtxRecieve.Location = New System.Drawing.Point(96, 43)
-        Me.txtxRecieve.Name = "txtxRecieve"
-        Me.txtxRecieve.Size = New System.Drawing.Size(150, 34)
-        Me.txtxRecieve.TabIndex = 13
+        Me.txtRecieve.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtRecieve.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.txtRecieve.Location = New System.Drawing.Point(7, 87)
+        Me.txtRecieve.Name = "txtRecieve"
+        Me.txtRecieve.Size = New System.Drawing.Size(180, 32)
+        Me.txtRecieve.TabIndex = 13
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(6, 48)
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.Label10.Location = New System.Drawing.Point(2, 65)
         Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(85, 25)
+        Me.Label10.Size = New System.Drawing.Size(76, 25)
         Me.Label10.TabIndex = 10
-        Me.Label10.Text = "Recieve :"
+        Me.Label10.Text = "Recieve"
         '
-        'txtTotal
+        'Label12
         '
-        Me.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtTotal.Enabled = False
-        Me.txtTotal.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotal.Location = New System.Drawing.Point(96, 3)
-        Me.txtTotal.Name = "txtTotal"
-        Me.txtTotal.Size = New System.Drawing.Size(150, 34)
-        Me.txtTotal.TabIndex = 12
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(5, 88)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(86, 25)
-        Me.Label11.TabIndex = 11
-        Me.Label11.Text = "Change :"
-        '
-        'TabControl2
-        '
-        Me.TabControl2.Controls.Add(Me.TabPage2)
-        Me.TabControl2.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.TabControl2.Location = New System.Drawing.Point(3, 3)
-        Me.TabControl2.Name = "TabControl2"
-        Me.TabControl2.SelectedIndex = 0
-        Me.TabControl2.Size = New System.Drawing.Size(210, 183)
-        Me.TabControl2.TabIndex = 77
-        '
-        'TabPage2
-        '
-        Me.TabPage2.Controls.Add(Me.Panel2)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(202, 145)
-        Me.TabPage2.TabIndex = 0
-        Me.TabPage2.Text = "Customer Information"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.rdbFemale)
-        Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.txtFName)
-        Me.Panel2.Controls.Add(Me.rdbMale)
-        Me.Panel2.Controls.Add(Me.Label6)
-        Me.Panel2.Location = New System.Drawing.Point(6, 6)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(190, 133)
-        Me.Panel2.TabIndex = 0
-        '
-        'rdbFemale
-        '
-        Me.rdbFemale.AutoSize = True
-        Me.rdbFemale.BackColor = System.Drawing.Color.Transparent
-        Me.rdbFemale.Enabled = False
-        Me.rdbFemale.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.rdbFemale.ForeColor = System.Drawing.Color.Black
-        Me.rdbFemale.Location = New System.Drawing.Point(87, 92)
-        Me.rdbFemale.Margin = New System.Windows.Forms.Padding(2)
-        Me.rdbFemale.Name = "rdbFemale"
-        Me.rdbFemale.Size = New System.Drawing.Size(90, 29)
-        Me.rdbFemale.TabIndex = 42
-        Me.rdbFemale.Text = "Female"
-        Me.rdbFemale.UseVisualStyleBackColor = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 15.0!)
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(9, 4)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 28)
-        Me.Label2.TabIndex = 37
-        Me.Label2.Text = "Name"
-        '
-        'txtFName
-        '
-        Me.txtFName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtFName.Enabled = False
-        Me.txtFName.Font = New System.Drawing.Font("Segoe UI", 15.0!)
-        Me.txtFName.ForeColor = System.Drawing.Color.Black
-        Me.txtFName.Location = New System.Drawing.Point(14, 32)
-        Me.txtFName.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtFName.Name = "txtFName"
-        Me.txtFName.Size = New System.Drawing.Size(163, 34)
-        Me.txtFName.TabIndex = 39
-        '
-        'rdbMale
-        '
-        Me.rdbMale.AutoSize = True
-        Me.rdbMale.BackColor = System.Drawing.Color.Transparent
-        Me.rdbMale.Checked = True
-        Me.rdbMale.Enabled = False
-        Me.rdbMale.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.rdbMale.ForeColor = System.Drawing.Color.Black
-        Me.rdbMale.Location = New System.Drawing.Point(14, 92)
-        Me.rdbMale.Margin = New System.Windows.Forms.Padding(2)
-        Me.rdbMale.Name = "rdbMale"
-        Me.rdbMale.Size = New System.Drawing.Size(72, 29)
-        Me.rdbMale.TabIndex = 41
-        Me.rdbMale.TabStop = True
-        Me.rdbMale.Text = "Male"
-        Me.rdbMale.UseVisualStyleBackColor = False
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(9, 68)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(41, 25)
-        Me.Label6.TabIndex = 40
-        Me.Label6.Text = "Sex"
-        '
-        'TabControl1
-        '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.TabControl1.Location = New System.Drawing.Point(3, 188)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(496, 193)
-        Me.TabControl1.TabIndex = 76
-        '
-        'TabPage1
-        '
-        Me.TabPage1.Controls.Add(Me.Panel3)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 34)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(488, 155)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Employee Serve"
-        Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Panel3.Controls.Add(Me.panelGv)
-        Me.Panel3.Location = New System.Drawing.Point(6, 4)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(476, 145)
-        Me.Panel3.TabIndex = 64
-        '
-        'panelGv
-        '
-        Me.panelGv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.panelGv.Controls.Add(Me.gvView)
-        Me.panelGv.Location = New System.Drawing.Point(3, 3)
-        Me.panelGv.Name = "panelGv"
-        Me.panelGv.Size = New System.Drawing.Size(470, 139)
-        Me.panelGv.TabIndex = 65
-        '
-        'gvView
-        '
-        Me.gvView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.gvView.BackgroundColor = System.Drawing.Color.White
-        Me.gvView.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.gvView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.gvView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.gvView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.gvView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3})
-        Me.gvView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.gvView.Location = New System.Drawing.Point(0, 0)
-        Me.gvView.Name = "gvView"
-        Me.gvView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        Me.gvView.RowHeadersVisible = False
-        Me.gvView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.gvView.Size = New System.Drawing.Size(468, 137)
-        Me.gvView.TabIndex = 64
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "ID"
-        Me.Column1.Name = "Column1"
-        Me.Column1.Visible = False
-        '
-        'Column2
-        '
-        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Column2.HeaderText = "No."
-        Me.Column2.Name = "Column2"
-        Me.Column2.Width = 50
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Name"
-        Me.Column3.Name = "Column3"
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.Label12.Location = New System.Drawing.Point(2, 122)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(77, 25)
+        Me.Label12.TabIndex = 11
+        Me.Label12.Text = "Change"
         '
         'frmAddPayments
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(762, 474)
+        Me.ClientSize = New System.Drawing.Size(567, 406)
         Me.ControlBox = False
         Me.Controls.Add(Me.panelMain)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -506,21 +452,15 @@ Partial Class frmAddPayments
         Me.panelTop.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelContainer.ResumeLayout(False)
-        Me.Panel6.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
-        Me.TabControl3.ResumeLayout(False)
-        Me.TabPage3.ResumeLayout(False)
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
         Me.TabControl2.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        Me.TabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        Me.panelGv.ResumeLayout(False)
-        CType(Me.gvView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel11.ResumeLayout(False)
+        Me.Panel11.PerformLayout()
+        Me.TabControl6.ResumeLayout(False)
+        Me.TabPage6.ResumeLayout(False)
+        Me.Panel6.ResumeLayout(False)
+        Me.Panel6.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -528,37 +468,31 @@ Partial Class frmAddPayments
     Friend WithEvents panelMain As Panel
     Friend WithEvents panelContainer As Panel
     Friend WithEvents Label3 As Label
-    Friend WithEvents TabControl3 As TabControl
-    Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents txtChange As TextBox
-    Friend WithEvents Label9 As Label
-    Friend WithEvents txtxRecieve As TextBox
-    Friend WithEvents Label10 As Label
-    Friend WithEvents txtTotal As TextBox
-    Friend WithEvents Label11 As Label
-    Friend WithEvents TabControl2 As TabControl
-    Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents rdbFemale As RadioButton
-    Friend WithEvents Label2 As Label
-    Friend WithEvents txtFName As TextBox
-    Friend WithEvents rdbMale As RadioButton
-    Friend WithEvents Label6 As Label
-    Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents panelGv As Panel
-    Friend WithEvents gvView As DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents btnDone As Button
     Friend WithEvents btnCancel As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents panelTop As Panel
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Panel6 As Panel
     Friend WithEvents Panel5 As Panel
+    Friend WithEvents TabControl6 As TabControl
+    Friend WithEvents TabPage6 As TabPage
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents txtTotalAmount As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents txtChange As TextBox
+    Friend WithEvents txtRecieve As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents TabControl2 As TabControl
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents Label11 As Label
+    Friend WithEvents txtCN As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtName As TextBox
+    Friend WithEvents rdbFemale As RadioButton
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents rdbMale As RadioButton
 End Class

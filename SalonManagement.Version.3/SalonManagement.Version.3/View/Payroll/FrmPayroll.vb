@@ -5,7 +5,7 @@
     End Sub
 
     Private Sub btnGeneratePayroll_Click(sender As Object, e As EventArgs) Handles btnGeneratePayroll.Click
-        Dim obj As New frmAddEmployeePayroll
+        Dim obj As New frmAddPayroll
         If obj.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             payroll.ViewPayroll(gvView, lblResult)
         Else

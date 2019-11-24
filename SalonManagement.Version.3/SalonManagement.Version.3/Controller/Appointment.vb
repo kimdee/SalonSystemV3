@@ -154,7 +154,7 @@ Public Class Appointment
                 While reader.Read()
                     i = i + 1
                     With gv
-                        .Rows.Add(reader(0), i, reader("customerName"), reader(2), reader(3), reader(4), "Not Paid", "Edit", "Delete")
+                        .Rows.Add(reader(0), i, reader("customerName"), reader(2), reader(3), reader(4), "Edit", "Delete")
                     End With
                 End While
             End If

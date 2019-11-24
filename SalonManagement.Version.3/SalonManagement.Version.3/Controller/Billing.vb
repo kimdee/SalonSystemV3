@@ -42,9 +42,9 @@ Public Class Billing
         End Get
     End Property
 
-    Private _billingTime As Date
-    Public Property BillingTime As Date
-        Set(value As Date)
+    Private _billingTime As String
+    Public Property BillingTime As String
+        Set(value As String)
             _billingTime = value
         End Set
         Get
@@ -52,9 +52,9 @@ Public Class Billing
         End Get
     End Property
 
-    Private _billingDate As Date
-    Public Property BillingDate As Date
-        Set(value As Date)
+    Private _billingDate As String
+    Public Property BillingDate As String
+        Set(value As String)
             _billingDate = value
         End Set
         Get
@@ -62,9 +62,9 @@ Public Class Billing
         End Get
     End Property
 
-    Private _billingAmount As Decimal = 0
-    Public Property BillingAmount As Decimal
-        Set(value As Decimal)
+    Private _billingAmount As String
+    Public Property BillingAmount As String
+        Set(value As String)
             _billingAmount = value
         End Set
         Get

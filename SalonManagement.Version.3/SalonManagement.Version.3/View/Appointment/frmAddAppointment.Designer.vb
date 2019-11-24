@@ -292,7 +292,7 @@ Partial Class frmAddAppointment
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(274, 172)
+        Me.Panel2.Size = New System.Drawing.Size(274, 185)
         Me.Panel2.TabIndex = 29
         '
         'btnPayments
@@ -302,7 +302,7 @@ Partial Class frmAddAppointment
         Me.btnPayments.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPayments.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.btnPayments.ForeColor = System.Drawing.Color.Black
-        Me.btnPayments.Location = New System.Drawing.Point(7, 108)
+        Me.btnPayments.Location = New System.Drawing.Point(6, 119)
         Me.btnPayments.Margin = New System.Windows.Forms.Padding(2)
         Me.btnPayments.Name = "btnPayments"
         Me.btnPayments.Size = New System.Drawing.Size(261, 47)
@@ -318,7 +318,7 @@ Partial Class frmAddAppointment
         Me.btnNewCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNewCustomer.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.btnNewCustomer.ForeColor = System.Drawing.Color.Black
-        Me.btnNewCustomer.Location = New System.Drawing.Point(8, 6)
+        Me.btnNewCustomer.Location = New System.Drawing.Point(7, 17)
         Me.btnNewCustomer.Margin = New System.Windows.Forms.Padding(2)
         Me.btnNewCustomer.Name = "btnNewCustomer"
         Me.btnNewCustomer.Size = New System.Drawing.Size(261, 47)
@@ -334,7 +334,7 @@ Partial Class frmAddAppointment
         Me.btnBrowseCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBrowseCustomer.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.btnBrowseCustomer.ForeColor = System.Drawing.Color.Black
-        Me.btnBrowseCustomer.Location = New System.Drawing.Point(7, 57)
+        Me.btnBrowseCustomer.Location = New System.Drawing.Point(6, 68)
         Me.btnBrowseCustomer.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBrowseCustomer.Name = "btnBrowseCustomer"
         Me.btnBrowseCustomer.Size = New System.Drawing.Size(261, 47)
@@ -395,10 +395,10 @@ Partial Class frmAddAppointment
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl7.Controls.Add(Me.TabPage7)
         Me.TabControl7.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.TabControl7.Location = New System.Drawing.Point(504, 288)
+        Me.TabControl7.Location = New System.Drawing.Point(512, 286)
         Me.TabControl7.Name = "TabControl7"
         Me.TabControl7.SelectedIndex = 0
-        Me.TabControl7.Size = New System.Drawing.Size(471, 292)
+        Me.TabControl7.Size = New System.Drawing.Size(486, 294)
         Me.TabControl7.TabIndex = 92
         '
         'TabPage7
@@ -407,7 +407,7 @@ Partial Class frmAddAppointment
         Me.TabPage7.Location = New System.Drawing.Point(4, 34)
         Me.TabPage7.Name = "TabPage7"
         Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage7.Size = New System.Drawing.Size(463, 254)
+        Me.TabPage7.Size = New System.Drawing.Size(478, 256)
         Me.TabPage7.TabIndex = 0
         Me.TabPage7.Text = "Employee Serve"
         Me.TabPage7.UseVisualStyleBackColor = True
@@ -421,9 +421,9 @@ Partial Class frmAddAppointment
         Me.panelGvEmployee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.panelGvEmployee.Controls.Add(Me.gvViewEmployee)
         Me.panelGvEmployee.Controls.Add(Me.btnAddEmployee)
-        Me.panelGvEmployee.Location = New System.Drawing.Point(6, 6)
+        Me.panelGvEmployee.Location = New System.Drawing.Point(4, 5)
         Me.panelGvEmployee.Name = "panelGvEmployee"
-        Me.panelGvEmployee.Size = New System.Drawing.Size(451, 242)
+        Me.panelGvEmployee.Size = New System.Drawing.Size(466, 244)
         Me.panelGvEmployee.TabIndex = 64
         '
         'gvViewEmployee
@@ -444,14 +444,14 @@ Partial Class frmAddAppointment
         Me.gvViewEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.gvViewEmployee.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewLinkColumn1})
         Me.gvViewEmployee.EnableHeadersVisualStyles = False
-        Me.gvViewEmployee.Location = New System.Drawing.Point(-1, -3)
+        Me.gvViewEmployee.Location = New System.Drawing.Point(0, -1)
         Me.gvViewEmployee.Margin = New System.Windows.Forms.Padding(2)
         Me.gvViewEmployee.Name = "gvViewEmployee"
         Me.gvViewEmployee.ReadOnly = True
         Me.gvViewEmployee.RowHeadersVisible = False
         Me.gvViewEmployee.RowTemplate.Height = 24
         Me.gvViewEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.gvViewEmployee.Size = New System.Drawing.Size(451, 199)
+        Me.gvViewEmployee.Size = New System.Drawing.Size(466, 201)
         Me.gvViewEmployee.TabIndex = 67
         '
         'DataGridViewTextBoxColumn1
@@ -492,7 +492,7 @@ Partial Class frmAddAppointment
         Me.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAddEmployee.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.btnAddEmployee.ForeColor = System.Drawing.Color.Black
-        Me.btnAddEmployee.Location = New System.Drawing.Point(261, 200)
+        Me.btnAddEmployee.Location = New System.Drawing.Point(276, 204)
         Me.btnAddEmployee.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAddEmployee.Name = "btnAddEmployee"
         Me.btnAddEmployee.Size = New System.Drawing.Size(181, 36)
@@ -510,7 +510,7 @@ Partial Class frmAddAppointment
         Me.TabControl6.Location = New System.Drawing.Point(681, 17)
         Me.TabControl6.Name = "TabControl6"
         Me.TabControl6.SelectedIndex = 0
-        Me.TabControl6.Size = New System.Drawing.Size(294, 265)
+        Me.TabControl6.Size = New System.Drawing.Size(317, 265)
         Me.TabControl6.TabIndex = 90
         '
         'TabPage6
@@ -519,7 +519,7 @@ Partial Class frmAddAppointment
         Me.TabPage6.Location = New System.Drawing.Point(4, 34)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(286, 227)
+        Me.TabPage6.Size = New System.Drawing.Size(309, 227)
         Me.TabPage6.TabIndex = 0
         Me.TabPage6.Text = "Billing Information"
         Me.TabPage6.UseVisualStyleBackColor = True
@@ -539,7 +539,7 @@ Partial Class frmAddAppointment
         Me.Panel6.Controls.Add(Me.Label12)
         Me.Panel6.Location = New System.Drawing.Point(6, 6)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(274, 217)
+        Me.Panel6.Size = New System.Drawing.Size(297, 217)
         Me.Panel6.TabIndex = 0
         '
         'txtTotalAmount
@@ -676,7 +676,7 @@ Partial Class frmAddAppointment
         Me.TabControl3.Margin = New System.Windows.Forms.Padding(2)
         Me.TabControl3.Name = "TabControl3"
         Me.TabControl3.SelectedIndex = 0
-        Me.TabControl3.Size = New System.Drawing.Size(481, 294)
+        Me.TabControl3.Size = New System.Drawing.Size(486, 294)
         Me.TabControl3.TabIndex = 14
         '
         'TabPage3
@@ -686,7 +686,7 @@ Partial Class frmAddAppointment
         Me.TabPage3.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPage3.Size = New System.Drawing.Size(473, 256)
+        Me.TabPage3.Size = New System.Drawing.Size(478, 256)
         Me.TabPage3.TabIndex = 0
         Me.TabPage3.Text = "Service"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -704,7 +704,7 @@ Partial Class frmAddAppointment
         Me.panelGv.Location = New System.Drawing.Point(4, 5)
         Me.panelGv.Margin = New System.Windows.Forms.Padding(2)
         Me.panelGv.Name = "panelGv"
-        Me.panelGv.Size = New System.Drawing.Size(465, 245)
+        Me.panelGv.Size = New System.Drawing.Size(470, 245)
         Me.panelGv.TabIndex = 0
         '
         'gvViewService
@@ -732,7 +732,7 @@ Partial Class frmAddAppointment
         Me.gvViewService.RowHeadersVisible = False
         Me.gvViewService.RowTemplate.Height = 24
         Me.gvViewService.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.gvViewService.Size = New System.Drawing.Size(463, 201)
+        Me.gvViewService.Size = New System.Drawing.Size(468, 201)
         Me.gvViewService.TabIndex = 24
         '
         'Column1
@@ -787,7 +787,7 @@ Partial Class frmAddAppointment
         Me.btnAddservice.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAddservice.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.btnAddservice.ForeColor = System.Drawing.Color.Black
-        Me.btnAddservice.Location = New System.Drawing.Point(276, 204)
+        Me.btnAddservice.Location = New System.Drawing.Point(280, 204)
         Me.btnAddservice.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAddservice.Name = "btnAddservice"
         Me.btnAddservice.Size = New System.Drawing.Size(181, 36)
@@ -800,11 +800,11 @@ Partial Class frmAddAppointment
         '
         Me.TabControl2.Controls.Add(Me.TabPage2)
         Me.TabControl2.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.TabControl2.Location = New System.Drawing.Point(352, 115)
+        Me.TabControl2.Location = New System.Drawing.Point(352, 119)
         Me.TabControl2.Margin = New System.Windows.Forms.Padding(2)
         Me.TabControl2.Name = "TabControl2"
         Me.TabControl2.SelectedIndex = 0
-        Me.TabControl2.Size = New System.Drawing.Size(317, 167)
+        Me.TabControl2.Size = New System.Drawing.Size(317, 163)
         Me.TabControl2.TabIndex = 9
         '
         'TabPage2
@@ -814,7 +814,7 @@ Partial Class frmAddAppointment
         Me.TabPage2.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(2)
-        Me.TabPage2.Size = New System.Drawing.Size(309, 129)
+        Me.TabPage2.Size = New System.Drawing.Size(309, 125)
         Me.TabPage2.TabIndex = 0
         Me.TabPage2.Text = "Date & Time"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -835,7 +835,7 @@ Partial Class frmAddAppointment
         Me.Panel8.Location = New System.Drawing.Point(4, 5)
         Me.Panel8.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(301, 120)
+        Me.Panel8.Size = New System.Drawing.Size(301, 116)
         Me.Panel8.TabIndex = 0
         '
         'dtpTime
@@ -843,7 +843,7 @@ Partial Class frmAddAppointment
         Me.dtpTime.CustomFormat = "h:mm tt"
         Me.dtpTime.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpTime.Location = New System.Drawing.Point(14, 24)
+        Me.dtpTime.Location = New System.Drawing.Point(14, 23)
         Me.dtpTime.Margin = New System.Windows.Forms.Padding(2)
         Me.dtpTime.Name = "dtpTime"
         Me.dtpTime.ShowUpDown = True
@@ -867,7 +867,7 @@ Partial Class frmAddAppointment
         '
         Me.dtpDate.CustomFormat = ""
         Me.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpDate.Location = New System.Drawing.Point(15, 80)
+        Me.dtpDate.Location = New System.Drawing.Point(15, 79)
         Me.dtpDate.Name = "dtpDate"
         Me.dtpDate.Size = New System.Drawing.Size(180, 32)
         Me.dtpDate.TabIndex = 27
@@ -890,7 +890,7 @@ Partial Class frmAddAppointment
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 15.0!)
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(10, 54)
+        Me.Label7.Location = New System.Drawing.Point(10, 53)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(53, 28)
@@ -902,7 +902,7 @@ Partial Class frmAddAppointment
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 15.0!)
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(10, -1)
+        Me.Label5.Location = New System.Drawing.Point(10, -2)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(54, 28)

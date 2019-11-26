@@ -23,7 +23,7 @@ Partial Class frmDashboard
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panelMain = New System.Windows.Forms.Panel()
         Me.panelContainer = New System.Windows.Forms.Panel()
         Me.pnlLowerBar = New System.Windows.Forms.Panel()
@@ -250,7 +250,7 @@ Partial Class frmDashboard
         Me.gvView.AllowUserToDeleteRows = False
         Me.gvView.AllowUserToResizeColumns = False
         Me.gvView.AllowUserToResizeRows = False
-        Me.gvView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.gvView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.gvView.BackgroundColor = System.Drawing.Color.White
         Me.gvView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.gvView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
@@ -258,14 +258,14 @@ Partial Class frmDashboard
         Me.gvView.ColumnHeadersHeight = 60
         Me.gvView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.gvView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column2, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column13, Me.Column14})
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.gvView.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.gvView.DefaultCellStyle = DataGridViewCellStyle1
         Me.gvView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gvView.EnableHeadersVisualStyles = False
         Me.gvView.Location = New System.Drawing.Point(0, 0)
@@ -273,6 +273,7 @@ Partial Class frmDashboard
         Me.gvView.Name = "gvView"
         Me.gvView.ReadOnly = True
         Me.gvView.RowHeadersVisible = False
+        Me.gvView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.gvView.RowTemplate.Height = 24
         Me.gvView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.gvView.Size = New System.Drawing.Size(799, 416)
@@ -299,6 +300,7 @@ Partial Class frmDashboard
         Me.Column4.HeaderText = "Name"
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
+        Me.Column4.Width = 75
         '
         'Column5
         '
@@ -312,24 +314,28 @@ Partial Class frmDashboard
         Me.Column6.HeaderText = "Morning Time In"
         Me.Column6.Name = "Column6"
         Me.Column6.ReadOnly = True
+        Me.Column6.Width = 123
         '
         'Column2
         '
         Me.Column2.HeaderText = "Morning Time Out"
         Me.Column2.Name = "Column2"
         Me.Column2.ReadOnly = True
+        Me.Column2.Width = 123
         '
         'Column7
         '
         Me.Column7.HeaderText = "Afternoon Time In"
         Me.Column7.Name = "Column7"
         Me.Column7.ReadOnly = True
+        Me.Column7.Width = 129
         '
         'Column8
         '
         Me.Column8.HeaderText = "Afternoon Time Out"
         Me.Column8.Name = "Column8"
         Me.Column8.ReadOnly = True
+        Me.Column8.Width = 132
         '
         'Column9
         '

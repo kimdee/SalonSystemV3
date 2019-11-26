@@ -22,44 +22,34 @@ Partial Class Frmlogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Frmlogin))
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.txtPassword = New System.Windows.Forms.TextBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.btnLogin = New System.Windows.Forms.Button()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.PictureShowPasword = New System.Windows.Forms.PictureBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureNotShowPassword = New System.Windows.Forms.PictureBox()
+        Me.PictureShowPasword = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2.SuspendLayout()
-        CType(Me.PictureShowPasword, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureNotShowPassword, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureShowPasword, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.SalonManagement.Version._3.My.Resources.Resources.avatar_icon1
-        Me.PictureBox3.Location = New System.Drawing.Point(89, -52)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(122, 99)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 3
-        Me.PictureBox3.TabStop = False
         '
         'txtUsername
         '
@@ -85,26 +75,6 @@ Partial Class Frmlogin
         Me.txtPassword.TabIndex = 5
         Me.txtPassword.Text = "Password"
         '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.SalonManagement.Version._3.My.Resources.Resources.username_Blue_
-        Me.PictureBox4.Location = New System.Drawing.Point(24, 76)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(46, 35)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 3
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.Image = Global.SalonManagement.Version._3.My.Resources.Resources.passkey_blue_
-        Me.PictureBox5.Location = New System.Drawing.Point(24, 117)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(46, 35)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox5.TabIndex = 6
-        Me.PictureBox5.TabStop = False
-        '
         'btnLogin
         '
         Me.btnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
@@ -118,17 +88,6 @@ Partial Class Frmlogin
         Me.btnLogin.TabIndex = 7
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = False
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox6.Image = Global.SalonManagement.Version._3.My.Resources.Resources.settings_blue_
-        Me.PictureBox6.Location = New System.Drawing.Point(266, 202)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(30, 29)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox6.TabIndex = 8
-        Me.PictureBox6.TabStop = False
         '
         'LinkLabel1
         '
@@ -146,11 +105,11 @@ Partial Class Frmlogin
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Controls.Add(Me.PictureNotShowPassword)
         Me.Panel2.Controls.Add(Me.PictureShowPasword)
         Me.Panel2.Controls.Add(Me.Panel4)
         Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Controls.Add(Me.LinkLabel1)
-        Me.Panel2.Controls.Add(Me.PictureBox6)
         Me.Panel2.Controls.Add(Me.btnLogin)
         Me.Panel2.Controls.Add(Me.PictureBox5)
         Me.Panel2.Controls.Add(Me.PictureBox4)
@@ -162,19 +121,6 @@ Partial Class Frmlogin
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(313, 249)
         Me.Panel2.TabIndex = 1
-        '
-        'PictureShowPasword
-        '
-        Me.PictureShowPasword.BackColor = System.Drawing.Color.Transparent
-        Me.PictureShowPasword.BackgroundImage = CType(resources.GetObject("PictureShowPasword.BackgroundImage"), System.Drawing.Image)
-        Me.PictureShowPasword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureShowPasword.Location = New System.Drawing.Point(266, 116)
-        Me.PictureShowPasword.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.PictureShowPasword.Name = "PictureShowPasword"
-        Me.PictureShowPasword.Size = New System.Drawing.Size(28, 26)
-        Me.PictureShowPasword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureShowPasword.TabIndex = 120
-        Me.PictureShowPasword.TabStop = False
         '
         'Panel4
         '
@@ -194,27 +140,6 @@ Partial Class Frmlogin
         Me.Panel3.Size = New System.Drawing.Size(219, 3)
         Me.Panel3.TabIndex = 2
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox1.Image = Global.SalonManagement.Version._3.My.Resources.Resources.x_button11
-        Me.PictureBox1.Location = New System.Drawing.Point(707, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(25, 21)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.SalonManagement.Version._3.My.Resources.Resources.avatar_icon
-        Me.PictureBox2.Location = New System.Drawing.Point(177, 81)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(122, 99)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
-        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
@@ -225,6 +150,75 @@ Partial Class Frmlogin
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(491, 176)
         Me.Panel1.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Gray
+        Me.Label1.Location = New System.Drawing.Point(3, 412)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(153, 13)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Press F1 to open connection"
+        Me.Label1.Visible = False
+        '
+        'PictureNotShowPassword
+        '
+        Me.PictureNotShowPassword.BackColor = System.Drawing.Color.Transparent
+        Me.PictureNotShowPassword.BackgroundImage = Global.SalonManagement.Version._3.My.Resources.Resources.icons8_eye_24__1_
+        Me.PictureNotShowPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureNotShowPassword.Location = New System.Drawing.Point(265, 116)
+        Me.PictureNotShowPassword.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureNotShowPassword.Name = "PictureNotShowPassword"
+        Me.PictureNotShowPassword.Size = New System.Drawing.Size(28, 26)
+        Me.PictureNotShowPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureNotShowPassword.TabIndex = 121
+        Me.PictureNotShowPassword.TabStop = False
+        Me.PictureNotShowPassword.Visible = False
+        '
+        'PictureShowPasword
+        '
+        Me.PictureShowPasword.BackColor = System.Drawing.Color.Transparent
+        Me.PictureShowPasword.BackgroundImage = Global.SalonManagement.Version._3.My.Resources.Resources.icons8_eye_24
+        Me.PictureShowPasword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureShowPasword.Location = New System.Drawing.Point(266, 116)
+        Me.PictureShowPasword.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureShowPasword.Name = "PictureShowPasword"
+        Me.PictureShowPasword.Size = New System.Drawing.Size(28, 26)
+        Me.PictureShowPasword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureShowPasword.TabIndex = 120
+        Me.PictureShowPasword.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Image = Global.SalonManagement.Version._3.My.Resources.Resources.passkey_blue_
+        Me.PictureBox5.Location = New System.Drawing.Point(24, 117)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(46, 35)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 6
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.SalonManagement.Version._3.My.Resources.Resources.username_Blue_
+        Me.PictureBox4.Location = New System.Drawing.Point(24, 76)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(46, 35)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox4.TabIndex = 3
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.SalonManagement.Version._3.My.Resources.Resources.avatar_icon1
+        Me.PictureBox3.Location = New System.Drawing.Point(89, -52)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(122, 99)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 3
+        Me.PictureBox3.TabStop = False
         '
         'PictureBox7
         '
@@ -237,6 +231,27 @@ Partial Class Frmlogin
         Me.PictureBox7.TabIndex = 9
         Me.PictureBox7.TabStop = False
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.SalonManagement.Version._3.My.Resources.Resources.avatar_icon
+        Me.PictureBox2.Location = New System.Drawing.Point(177, 81)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(122, 99)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 1
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox1.Image = Global.SalonManagement.Version._3.My.Resources.Resources.x_button11
+        Me.PictureBox1.Location = New System.Drawing.Point(707, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(25, 21)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'Frmlogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -244,23 +259,25 @@ Partial Class Frmlogin
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(149, Byte), Integer), CType(CType(165, Byte), Integer), CType(CType(166, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(491, 430)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Frmlogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.PictureShowPasword, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureNotShowPassword, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureShowPasword, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -270,7 +287,6 @@ Partial Class Frmlogin
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents btnLogin As Button
-    Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents PictureBox1 As PictureBox
@@ -280,4 +296,6 @@ Partial Class Frmlogin
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents PictureShowPasword As System.Windows.Forms.PictureBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents PictureNotShowPassword As PictureBox
 End Class

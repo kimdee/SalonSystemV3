@@ -26,7 +26,6 @@ Partial Class FrmAppointment
         Me.panelMain = New System.Windows.Forms.Panel()
         Me.panelContainer = New System.Windows.Forms.Panel()
         Me.panelGv = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.gvView = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.panelSearch = New System.Windows.Forms.Panel()
@@ -82,7 +81,6 @@ Partial Class FrmAppointment
         'panelGv
         '
         Me.panelGv.BackColor = System.Drawing.Color.White
-        Me.panelGv.Controls.Add(Me.Label1)
         Me.panelGv.Controls.Add(Me.gvView)
         Me.panelGv.Controls.Add(Me.Panel1)
         Me.panelGv.Font = New System.Drawing.Font("Segoe UI", 15.0!)
@@ -92,25 +90,13 @@ Partial Class FrmAppointment
         Me.panelGv.Size = New System.Drawing.Size(1063, 595)
         Me.panelGv.TabIndex = 2
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.Control
-        Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(859, 51)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(74, 28)
-        Me.Label1.TabIndex = 32
-        Me.Label1.Text = "Option"
-        '
         'gvView
         '
         Me.gvView.AllowUserToAddRows = False
         Me.gvView.AllowUserToDeleteRows = False
         Me.gvView.AllowUserToResizeColumns = False
         Me.gvView.AllowUserToResizeRows = False
-        Me.gvView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.gvView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.gvView.BackgroundColor = System.Drawing.Color.White
         Me.gvView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.gvView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
@@ -278,6 +264,7 @@ Partial Class FrmAppointment
         Me.Column1.Name = "Column1"
         Me.Column1.ReadOnly = True
         Me.Column1.Visible = False
+        Me.Column1.Width = 17
         '
         'Column2
         '
@@ -293,18 +280,21 @@ Partial Class FrmAppointment
         Me.Column3.HeaderText = "Name"
         Me.Column3.Name = "Column3"
         Me.Column3.ReadOnly = True
+        Me.Column3.Width = 87
         '
         'Column4
         '
         Me.Column4.HeaderText = "Time"
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
+        Me.Column4.Width = 77
         '
         'Column5
         '
         Me.Column5.HeaderText = "Date"
         Me.Column5.Name = "Column5"
         Me.Column5.ReadOnly = True
+        Me.Column5.Width = 76
         '
         'Column6
         '
@@ -317,12 +307,13 @@ Partial Class FrmAppointment
         'Column8
         '
         Me.Column8.ActiveLinkColor = System.Drawing.Color.DodgerBlue
-        Me.Column8.HeaderText = ""
+        Me.Column8.HeaderText = "           Option"
         Me.Column8.LinkColor = System.Drawing.Color.DodgerBlue
         Me.Column8.Name = "Column8"
         Me.Column8.ReadOnly = True
-        Me.Column8.Text = "a"
+        Me.Column8.Text = ""
         Me.Column8.VisitedLinkColor = System.Drawing.Color.DodgerBlue
+        Me.Column8.Width = 133
         '
         'Column9
         '
@@ -332,6 +323,7 @@ Partial Class FrmAppointment
         Me.Column9.Name = "Column9"
         Me.Column9.ReadOnly = True
         Me.Column9.VisitedLinkColor = System.Drawing.Color.Crimson
+        Me.Column9.Width = 5
         '
         'FrmAppointment
         '
@@ -350,7 +342,6 @@ Partial Class FrmAppointment
         Me.panelMain.ResumeLayout(False)
         Me.panelContainer.ResumeLayout(False)
         Me.panelGv.ResumeLayout(False)
-        Me.panelGv.PerformLayout()
         CType(Me.gvView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -377,14 +368,13 @@ Partial Class FrmAppointment
     Friend WithEvents lblSearch As Label
     Friend WithEvents btnAddAppointment As Button
     Friend WithEvents txtSearch As TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnPrint As Button
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As DataGridViewLinkColumn
-    Friend WithEvents Column9 As DataGridViewLinkColumn
+    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As System.Windows.Forms.DataGridViewLinkColumn
+    Friend WithEvents Column9 As System.Windows.Forms.DataGridViewLinkColumn
 End Class

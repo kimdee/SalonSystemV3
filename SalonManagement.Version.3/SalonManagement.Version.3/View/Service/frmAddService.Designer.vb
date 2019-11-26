@@ -23,28 +23,26 @@ Partial Class frmAddService
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.panelMain = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.panelTop = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txtAmount = New System.Windows.Forms.TextBox()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtName = New System.Windows.Forms.TextBox()
-        Me.nudPrice = New System.Windows.Forms.NumericUpDown()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtDescription = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.panelTop = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.panelMain.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.panelTop.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        CType(Me.nudPrice, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -59,37 +57,15 @@ Partial Class frmAddService
         Me.panelMain.Size = New System.Drawing.Size(302, 381)
         Me.panelMain.TabIndex = 2
         '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(0, 35)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(302, 33)
-        Me.Panel2.TabIndex = 17
-        '
-        'panelTop
-        '
-        Me.panelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.panelTop.Controls.Add(Me.Label3)
-        Me.panelTop.Controls.Add(Me.PictureBox1)
-        Me.panelTop.Dock = System.Windows.Forms.DockStyle.Top
-        Me.panelTop.Location = New System.Drawing.Point(0, 0)
-        Me.panelTop.Name = "panelTop"
-        Me.panelTop.Size = New System.Drawing.Size(302, 35)
-        Me.panelTop.TabIndex = 16
-        '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.txtAmount)
         Me.Panel1.Controls.Add(Me.btnClose)
         Me.Panel1.Controls.Add(Me.btnSave)
         Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.txtName)
-        Me.Panel1.Controls.Add(Me.nudPrice)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.txtDescription)
         Me.Panel1.Controls.Add(Me.Label7)
@@ -100,6 +76,16 @@ Partial Class frmAddService
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(280, 297)
         Me.Panel1.TabIndex = 18
+        '
+        'txtAmount
+        '
+        Me.txtAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtAmount.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAmount.Location = New System.Drawing.Point(16, 205)
+        Me.txtAmount.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtAmount.Name = "txtAmount"
+        Me.txtAmount.Size = New System.Drawing.Size(247, 34)
+        Me.txtAmount.TabIndex = 75
         '
         'btnClose
         '
@@ -144,17 +130,6 @@ Partial Class frmAddService
         Me.Label6.TabIndex = 74
         Me.Label6.Text = "*"
         '
-        'Label4
-        '
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(2, 53)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(13, 18)
-        Me.Label4.TabIndex = 73
-        Me.Label4.Text = "*"
-        '
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.Color.Transparent
@@ -175,19 +150,6 @@ Partial Class frmAddService
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(248, 32)
         Me.txtName.TabIndex = 66
-        '
-        'nudPrice
-        '
-        Me.nudPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.nudPrice.DecimalPlaces = 2
-        Me.nudPrice.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.nudPrice.Location = New System.Drawing.Point(16, 209)
-        Me.nudPrice.Margin = New System.Windows.Forms.Padding(2)
-        Me.nudPrice.Maximum = New Decimal(New Integer() {1000000, 0, 0, 0})
-        Me.nudPrice.Name = "nudPrice"
-        Me.nudPrice.Size = New System.Drawing.Size(248, 32)
-        Me.nudPrice.TabIndex = 68
-        Me.nudPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label2
         '
@@ -243,6 +205,16 @@ Partial Class frmAddService
         Me.Label8.TabIndex = 70
         Me.Label8.Text = "Description"
         '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 35)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(302, 33)
+        Me.Panel2.TabIndex = 17
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -254,6 +226,17 @@ Partial Class frmAddService
         Me.Label1.Size = New System.Drawing.Size(182, 37)
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "NEW SERVICE"
+        '
+        'panelTop
+        '
+        Me.panelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.panelTop.Controls.Add(Me.Label3)
+        Me.panelTop.Controls.Add(Me.PictureBox1)
+        Me.panelTop.Dock = System.Windows.Forms.DockStyle.Top
+        Me.panelTop.Location = New System.Drawing.Point(0, 0)
+        Me.panelTop.Name = "panelTop"
+        Me.panelTop.Size = New System.Drawing.Size(302, 35)
+        Me.panelTop.TabIndex = 16
         '
         'Label3
         '
@@ -288,13 +271,12 @@ Partial Class frmAddService
         Me.Name = "frmAddService"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.panelMain.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.panelTop.ResumeLayout(False)
         Me.panelTop.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.nudPrice, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -308,14 +290,13 @@ Partial Class frmAddService
     Friend WithEvents btnClose As Button
     Friend WithEvents btnSave As Button
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents txtName As TextBox
-    Friend WithEvents nudPrice As NumericUpDown
     Friend WithEvents Label2 As Label
     Friend WithEvents txtDescription As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents txtAmount As System.Windows.Forms.TextBox
 End Class

@@ -8,14 +8,22 @@
         End With
     End Sub
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If IsTextBoxEmpty(txtName, txtAmount) = True Then
+        If txtName.Text = "" And txtAmount.Text = "" Then
             MessageBox.Show("Deduction type and Amount are required.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        ElseIf txtName.Text = "" Then
+            MessageBox.Show("Deduction type is required.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        ElseIf txtAmount.Text = "" Then
+            MessageBox.Show("Deduction amount is required.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        ElseIf txtAmount.Text > 800 Then
+            MessageBox.Show("Maximum deduction is 800.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        ElseIf txtAmount.Text < 50 Then
+            MessageBox.Show("Minimum deduction is 50.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
             With deduction
                 .DeductionType = txtName.Text
                 .DeductionAmount = txtAmount.Text
 
-                If deduction.EditDeduction = True Then
+                If .EditDeduction = True Then
                     MessageBox.Show("Successfully Update.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Me.DialogResult = DialogResult.OK
                     Me.Close()

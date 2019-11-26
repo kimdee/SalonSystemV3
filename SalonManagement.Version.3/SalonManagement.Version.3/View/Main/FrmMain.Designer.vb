@@ -100,8 +100,9 @@ Partial Class FrmMain
         Me.pnlTopbar.Controls.Add(Me.Label1)
         Me.pnlTopbar.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlTopbar.Location = New System.Drawing.Point(0, 0)
+        Me.pnlTopbar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlTopbar.Name = "pnlTopbar"
-        Me.pnlTopbar.Size = New System.Drawing.Size(1386, 65)
+        Me.pnlTopbar.Size = New System.Drawing.Size(1848, 80)
         Me.pnlTopbar.TabIndex = 3
         '
         'picboxHelp
@@ -110,9 +111,10 @@ Partial Class FrmMain
         Me.picboxHelp.Cursor = System.Windows.Forms.Cursors.Hand
         Me.picboxHelp.Dock = System.Windows.Forms.DockStyle.Right
         Me.picboxHelp.Image = Global.SalonManagement.Version._3.My.Resources.Resources.help
-        Me.picboxHelp.Location = New System.Drawing.Point(1286, 0)
+        Me.picboxHelp.Location = New System.Drawing.Point(1715, 0)
+        Me.picboxHelp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.picboxHelp.Name = "picboxHelp"
-        Me.picboxHelp.Size = New System.Drawing.Size(36, 65)
+        Me.picboxHelp.Size = New System.Drawing.Size(48, 80)
         Me.picboxHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.picboxHelp.TabIndex = 17
         Me.picboxHelp.TabStop = False
@@ -124,8 +126,9 @@ Partial Class FrmMain
         Me.PictureBox7.Dock = System.Windows.Forms.DockStyle.Left
         Me.PictureBox7.Image = Global.SalonManagement.Version._3.My.Resources.Resources.comb
         Me.PictureBox7.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(63, 65)
+        Me.PictureBox7.Size = New System.Drawing.Size(84, 80)
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox7.TabIndex = 16
         Me.PictureBox7.TabStop = False
@@ -136,9 +139,10 @@ Partial Class FrmMain
         Me.picboxMyProfile.Cursor = System.Windows.Forms.Cursors.Hand
         Me.picboxMyProfile.Dock = System.Windows.Forms.DockStyle.Right
         Me.picboxMyProfile.Image = Global.SalonManagement.Version._3.My.Resources.Resources.user6
-        Me.picboxMyProfile.Location = New System.Drawing.Point(1322, 0)
+        Me.picboxMyProfile.Location = New System.Drawing.Point(1763, 0)
+        Me.picboxMyProfile.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.picboxMyProfile.Name = "picboxMyProfile"
-        Me.picboxMyProfile.Size = New System.Drawing.Size(64, 65)
+        Me.picboxMyProfile.Size = New System.Drawing.Size(85, 80)
         Me.picboxMyProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.picboxMyProfile.TabIndex = 4
         Me.picboxMyProfile.TabStop = False
@@ -149,9 +153,10 @@ Partial Class FrmMain
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Vivaldi", 25.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(69, 12)
+        Me.Label1.Location = New System.Drawing.Point(92, 15)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(296, 41)
+        Me.Label1.Size = New System.Drawing.Size(359, 50)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Salon De Elegante"
         '
@@ -178,17 +183,19 @@ Partial Class FrmMain
         Me.panelMenu.Controls.Add(Me.btnAppointment)
         Me.panelMenu.Controls.Add(Me.picBoxMenu)
         Me.panelMenu.Dock = System.Windows.Forms.DockStyle.Left
-        Me.panelMenu.Location = New System.Drawing.Point(0, 65)
+        Me.panelMenu.Location = New System.Drawing.Point(0, 80)
+        Me.panelMenu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panelMenu.Name = "panelMenu"
-        Me.panelMenu.Size = New System.Drawing.Size(273, 723)
+        Me.panelMenu.Size = New System.Drawing.Size(364, 890)
         Me.panelMenu.TabIndex = 4
         '
         'pnlIndicator
         '
         Me.pnlIndicator.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.pnlIndicator.Location = New System.Drawing.Point(0, 64)
+        Me.pnlIndicator.Location = New System.Drawing.Point(0, 79)
+        Me.pnlIndicator.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlIndicator.Name = "pnlIndicator"
-        Me.pnlIndicator.Size = New System.Drawing.Size(10, 38)
+        Me.pnlIndicator.Size = New System.Drawing.Size(13, 47)
         Me.pnlIndicator.TabIndex = 0
         '
         'btnService
@@ -200,9 +207,10 @@ Partial Class FrmMain
         Me.btnService.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.btnService.Image = Global.SalonManagement.Version._3.My.Resources.Resources.service
         Me.btnService.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnService.Location = New System.Drawing.Point(7, 152)
+        Me.btnService.Location = New System.Drawing.Point(9, 187)
+        Me.btnService.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnService.Name = "btnService"
-        Me.btnService.Size = New System.Drawing.Size(266, 38)
+        Me.btnService.Size = New System.Drawing.Size(355, 47)
         Me.btnService.TabIndex = 1
         Me.btnService.Text = "Service"
         Me.btnService.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -218,9 +226,10 @@ Partial Class FrmMain
         Me.btnHome.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.btnHome.Image = Global.SalonManagement.Version._3.My.Resources.Resources.home
         Me.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHome.Location = New System.Drawing.Point(7, 64)
+        Me.btnHome.Location = New System.Drawing.Point(9, 79)
+        Me.btnHome.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnHome.Name = "btnHome"
-        Me.btnHome.Size = New System.Drawing.Size(266, 38)
+        Me.btnHome.Size = New System.Drawing.Size(355, 47)
         Me.btnHome.TabIndex = 15
         Me.btnHome.Text = "Home"
         Me.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -232,9 +241,10 @@ Partial Class FrmMain
         Me.PictureBox6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(7, 560)
+        Me.PictureBox6.Location = New System.Drawing.Point(9, 689)
+        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(260, 21)
+        Me.PictureBox6.Size = New System.Drawing.Size(347, 26)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox6.TabIndex = 14
         Me.PictureBox6.TabStop = False
@@ -244,9 +254,10 @@ Partial Class FrmMain
         Me.PictureBox5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(7, 372)
+        Me.PictureBox5.Location = New System.Drawing.Point(9, 458)
+        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(260, 21)
+        Me.PictureBox5.Size = New System.Drawing.Size(347, 26)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox5.TabIndex = 13
         Me.PictureBox5.TabStop = False
@@ -260,9 +271,10 @@ Partial Class FrmMain
         Me.btnLogout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.btnLogout.Image = Global.SalonManagement.Version._3.My.Resources.Resources.logout
         Me.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnLogout.Location = New System.Drawing.Point(7, 661)
+        Me.btnLogout.Location = New System.Drawing.Point(9, 814)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(266, 38)
+        Me.btnLogout.Size = New System.Drawing.Size(355, 47)
         Me.btnLogout.TabIndex = 12
         Me.btnLogout.Text = "Logout"
         Me.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -278,9 +290,10 @@ Partial Class FrmMain
         Me.btnAccount.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.btnAccount.Image = Global.SalonManagement.Version._3.My.Resources.Resources.account
         Me.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAccount.Location = New System.Drawing.Point(7, 617)
+        Me.btnAccount.Location = New System.Drawing.Point(9, 759)
+        Me.btnAccount.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAccount.Name = "btnAccount"
-        Me.btnAccount.Size = New System.Drawing.Size(266, 38)
+        Me.btnAccount.Size = New System.Drawing.Size(355, 47)
         Me.btnAccount.TabIndex = 11
         Me.btnAccount.Text = "Account"
         Me.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -292,9 +305,10 @@ Partial Class FrmMain
         Me.lblsetting.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.lblsetting.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblsetting.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.lblsetting.Location = New System.Drawing.Point(3, 584)
+        Me.lblsetting.Location = New System.Drawing.Point(4, 719)
+        Me.lblsetting.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblsetting.Name = "lblsetting"
-        Me.lblsetting.Size = New System.Drawing.Size(264, 24)
+        Me.lblsetting.Size = New System.Drawing.Size(352, 30)
         Me.lblsetting.TabIndex = 10
         Me.lblsetting.Text = "Settings"
         '
@@ -307,9 +321,10 @@ Partial Class FrmMain
         Me.btnCustomer.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.btnCustomer.Image = Global.SalonManagement.Version._3.My.Resources.Resources.customer_record
         Me.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCustomer.Location = New System.Drawing.Point(7, 516)
+        Me.btnCustomer.Location = New System.Drawing.Point(9, 635)
+        Me.btnCustomer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCustomer.Name = "btnCustomer"
-        Me.btnCustomer.Size = New System.Drawing.Size(266, 38)
+        Me.btnCustomer.Size = New System.Drawing.Size(355, 47)
         Me.btnCustomer.TabIndex = 9
         Me.btnCustomer.Text = "Customer Record"
         Me.btnCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -325,9 +340,10 @@ Partial Class FrmMain
         Me.btnCollection.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.btnCollection.Image = Global.SalonManagement.Version._3.My.Resources.Resources.collect
         Me.btnCollection.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCollection.Location = New System.Drawing.Point(7, 472)
+        Me.btnCollection.Location = New System.Drawing.Point(9, 581)
+        Me.btnCollection.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCollection.Name = "btnCollection"
-        Me.btnCollection.Size = New System.Drawing.Size(266, 38)
+        Me.btnCollection.Size = New System.Drawing.Size(355, 47)
         Me.btnCollection.TabIndex = 8
         Me.btnCollection.Text = "Collections"
         Me.btnCollection.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -343,9 +359,10 @@ Partial Class FrmMain
         Me.btnPayroll.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.btnPayroll.Image = Global.SalonManagement.Version._3.My.Resources.Resources.payroll
         Me.btnPayroll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnPayroll.Location = New System.Drawing.Point(7, 428)
+        Me.btnPayroll.Location = New System.Drawing.Point(9, 527)
+        Me.btnPayroll.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnPayroll.Name = "btnPayroll"
-        Me.btnPayroll.Size = New System.Drawing.Size(266, 38)
+        Me.btnPayroll.Size = New System.Drawing.Size(355, 47)
         Me.btnPayroll.TabIndex = 7
         Me.btnPayroll.Text = "Payroll"
         Me.btnPayroll.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -357,9 +374,10 @@ Partial Class FrmMain
         Me.lblreport.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.lblreport.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblreport.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.lblreport.Location = New System.Drawing.Point(3, 396)
+        Me.lblreport.Location = New System.Drawing.Point(4, 487)
+        Me.lblreport.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblreport.Name = "lblreport"
-        Me.lblreport.Size = New System.Drawing.Size(264, 24)
+        Me.lblreport.Size = New System.Drawing.Size(352, 30)
         Me.lblreport.TabIndex = 6
         Me.lblreport.Text = "Reports"
         '
@@ -372,9 +390,10 @@ Partial Class FrmMain
         Me.btnAttendance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.btnAttendance.Image = Global.SalonManagement.Version._3.My.Resources.Resources.clockin
         Me.btnAttendance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAttendance.Location = New System.Drawing.Point(7, 328)
+        Me.btnAttendance.Location = New System.Drawing.Point(9, 404)
+        Me.btnAttendance.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAttendance.Name = "btnAttendance"
-        Me.btnAttendance.Size = New System.Drawing.Size(266, 38)
+        Me.btnAttendance.Size = New System.Drawing.Size(355, 47)
         Me.btnAttendance.TabIndex = 5
         Me.btnAttendance.Text = "Attendance"
         Me.btnAttendance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -390,9 +409,10 @@ Partial Class FrmMain
         Me.btnDeduction.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.btnDeduction.Image = Global.SalonManagement.Version._3.My.Resources.Resources.deduction
         Me.btnDeduction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnDeduction.Location = New System.Drawing.Point(7, 284)
+        Me.btnDeduction.Location = New System.Drawing.Point(9, 350)
+        Me.btnDeduction.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnDeduction.Name = "btnDeduction"
-        Me.btnDeduction.Size = New System.Drawing.Size(266, 38)
+        Me.btnDeduction.Size = New System.Drawing.Size(355, 47)
         Me.btnDeduction.TabIndex = 4
         Me.btnDeduction.Text = "Deduction"
         Me.btnDeduction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -408,9 +428,10 @@ Partial Class FrmMain
         Me.btnPosition.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.btnPosition.Image = Global.SalonManagement.Version._3.My.Resources.Resources.position
         Me.btnPosition.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnPosition.Location = New System.Drawing.Point(7, 240)
+        Me.btnPosition.Location = New System.Drawing.Point(9, 295)
+        Me.btnPosition.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnPosition.Name = "btnPosition"
-        Me.btnPosition.Size = New System.Drawing.Size(266, 38)
+        Me.btnPosition.Size = New System.Drawing.Size(355, 47)
         Me.btnPosition.TabIndex = 3
         Me.btnPosition.Text = "Position"
         Me.btnPosition.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -426,9 +447,10 @@ Partial Class FrmMain
         Me.btnEmployee.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.btnEmployee.Image = Global.SalonManagement.Version._3.My.Resources.Resources.employee
         Me.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEmployee.Location = New System.Drawing.Point(7, 196)
+        Me.btnEmployee.Location = New System.Drawing.Point(9, 241)
+        Me.btnEmployee.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnEmployee.Name = "btnEmployee"
-        Me.btnEmployee.Size = New System.Drawing.Size(266, 38)
+        Me.btnEmployee.Size = New System.Drawing.Size(355, 47)
         Me.btnEmployee.TabIndex = 2
         Me.btnEmployee.Text = "Employee"
         Me.btnEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -440,9 +462,10 @@ Partial Class FrmMain
         Me.lblmanage.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.lblmanage.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblmanage.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.lblmanage.Location = New System.Drawing.Point(3, 40)
+        Me.lblmanage.Location = New System.Drawing.Point(4, 49)
+        Me.lblmanage.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblmanage.Name = "lblmanage"
-        Me.lblmanage.Size = New System.Drawing.Size(264, 24)
+        Me.lblmanage.Size = New System.Drawing.Size(352, 30)
         Me.lblmanage.TabIndex = 0
         Me.lblmanage.Text = "Manage"
         '
@@ -455,9 +478,10 @@ Partial Class FrmMain
         Me.btnAppointment.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.btnAppointment.Image = Global.SalonManagement.Version._3.My.Resources.Resources.appointment
         Me.btnAppointment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAppointment.Location = New System.Drawing.Point(7, 108)
+        Me.btnAppointment.Location = New System.Drawing.Point(9, 133)
+        Me.btnAppointment.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAppointment.Name = "btnAppointment"
-        Me.btnAppointment.Size = New System.Drawing.Size(266, 38)
+        Me.btnAppointment.Size = New System.Drawing.Size(355, 47)
         Me.btnAppointment.TabIndex = 0
         Me.btnAppointment.Text = "Appointment"
         Me.btnAppointment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -470,9 +494,10 @@ Partial Class FrmMain
         Me.picBoxMenu.BackColor = System.Drawing.Color.Transparent
         Me.picBoxMenu.Cursor = System.Windows.Forms.Cursors.Hand
         Me.picBoxMenu.Image = Global.SalonManagement.Version._3.My.Resources.Resources.menu
-        Me.picBoxMenu.Location = New System.Drawing.Point(226, 6)
+        Me.picBoxMenu.Location = New System.Drawing.Point(301, 7)
+        Me.picBoxMenu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.picBoxMenu.Name = "picBoxMenu"
-        Me.picBoxMenu.Size = New System.Drawing.Size(47, 31)
+        Me.picBoxMenu.Size = New System.Drawing.Size(63, 38)
         Me.picBoxMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.picBoxMenu.TabIndex = 0
         Me.picBoxMenu.TabStop = False
@@ -484,8 +509,9 @@ Partial Class FrmMain
         Me.panelMain.Controls.Add(Me.pnlTopbar)
         Me.panelMain.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelMain.Location = New System.Drawing.Point(0, 0)
+        Me.panelMain.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panelMain.Name = "panelMain"
-        Me.panelMain.Size = New System.Drawing.Size(1386, 788)
+        Me.panelMain.Size = New System.Drawing.Size(1848, 970)
         Me.panelMain.TabIndex = 0
         '
         'panelContainer
@@ -494,9 +520,10 @@ Partial Class FrmMain
         Me.panelContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.panelContainer.Controls.Add(Me.pnlviewTask)
         Me.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panelContainer.Location = New System.Drawing.Point(273, 65)
+        Me.panelContainer.Location = New System.Drawing.Point(364, 80)
+        Me.panelContainer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panelContainer.Name = "panelContainer"
-        Me.panelContainer.Size = New System.Drawing.Size(1113, 723)
+        Me.panelContainer.Size = New System.Drawing.Size(1484, 890)
         Me.panelContainer.TabIndex = 9
         '
         'pnlviewTask
@@ -508,18 +535,20 @@ Partial Class FrmMain
         Me.pnlviewTask.Controls.Add(Me.pnlVwLeave)
         Me.pnlviewTask.Controls.Add(Me.pnlVwPresnt)
         Me.pnlviewTask.Controls.Add(Me.pnlVwEmploy)
-        Me.pnlviewTask.Location = New System.Drawing.Point(16, 16)
+        Me.pnlviewTask.Location = New System.Drawing.Point(21, 20)
+        Me.pnlviewTask.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlviewTask.Name = "pnlviewTask"
-        Me.pnlviewTask.Size = New System.Drawing.Size(1049, 221)
+        Me.pnlviewTask.Size = New System.Drawing.Size(1399, 272)
         Me.pnlviewTask.TabIndex = 0
         '
         'pnlVwCollct
         '
         Me.pnlVwCollct.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.pnlVwCollct.Controls.Add(Me.btnVwCollect)
-        Me.pnlVwCollct.Location = New System.Drawing.Point(877, 19)
+        Me.pnlVwCollct.Location = New System.Drawing.Point(1169, 23)
+        Me.pnlVwCollct.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlVwCollct.Name = "pnlVwCollct"
-        Me.pnlVwCollct.Size = New System.Drawing.Size(156, 186)
+        Me.pnlVwCollct.Size = New System.Drawing.Size(208, 229)
         Me.pnlVwCollct.TabIndex = 1
         '
         'btnVwCollect
@@ -529,9 +558,10 @@ Partial Class FrmMain
         Me.btnVwCollect.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.btnVwCollect.Image = Global.SalonManagement.Version._3.My.Resources.Resources.collection
         Me.btnVwCollect.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnVwCollect.Location = New System.Drawing.Point(3, 3)
+        Me.btnVwCollect.Location = New System.Drawing.Point(4, 4)
+        Me.btnVwCollect.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnVwCollect.Name = "btnVwCollect"
-        Me.btnVwCollect.Size = New System.Drawing.Size(150, 180)
+        Me.btnVwCollect.Size = New System.Drawing.Size(200, 222)
         Me.btnVwCollect.TabIndex = 1
         Me.btnVwCollect.Text = "#1 Collection"
         Me.btnVwCollect.UseVisualStyleBackColor = True
@@ -540,9 +570,10 @@ Partial Class FrmMain
         '
         Me.pnlVwCustmr.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.pnlVwCustmr.Controls.Add(Me.btnVwCustmr)
-        Me.pnlVwCustmr.Location = New System.Drawing.Point(705, 19)
+        Me.pnlVwCustmr.Location = New System.Drawing.Point(940, 23)
+        Me.pnlVwCustmr.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlVwCustmr.Name = "pnlVwCustmr"
-        Me.pnlVwCustmr.Size = New System.Drawing.Size(156, 186)
+        Me.pnlVwCustmr.Size = New System.Drawing.Size(208, 229)
         Me.pnlVwCustmr.TabIndex = 1
         '
         'btnVwCustmr
@@ -552,9 +583,10 @@ Partial Class FrmMain
         Me.btnVwCustmr.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.btnVwCustmr.Image = Global.SalonManagement.Version._3.My.Resources.Resources.customer
         Me.btnVwCustmr.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnVwCustmr.Location = New System.Drawing.Point(3, 3)
+        Me.btnVwCustmr.Location = New System.Drawing.Point(4, 4)
+        Me.btnVwCustmr.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnVwCustmr.Name = "btnVwCustmr"
-        Me.btnVwCustmr.Size = New System.Drawing.Size(150, 180)
+        Me.btnVwCustmr.Size = New System.Drawing.Size(200, 222)
         Me.btnVwCustmr.TabIndex = 3
         Me.btnVwCustmr.Text = "#1 Customer"
         Me.btnVwCustmr.UseVisualStyleBackColor = True
@@ -563,9 +595,10 @@ Partial Class FrmMain
         '
         Me.pnlVwAbsnt.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.pnlVwAbsnt.Controls.Add(Me.btnVwAbsnt)
-        Me.pnlVwAbsnt.Location = New System.Drawing.Point(533, 19)
+        Me.pnlVwAbsnt.Location = New System.Drawing.Point(711, 23)
+        Me.pnlVwAbsnt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlVwAbsnt.Name = "pnlVwAbsnt"
-        Me.pnlVwAbsnt.Size = New System.Drawing.Size(156, 186)
+        Me.pnlVwAbsnt.Size = New System.Drawing.Size(208, 229)
         Me.pnlVwAbsnt.TabIndex = 1
         '
         'btnVwAbsnt
@@ -575,9 +608,10 @@ Partial Class FrmMain
         Me.btnVwAbsnt.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.btnVwAbsnt.Image = Global.SalonManagement.Version._3.My.Resources.Resources.absent
         Me.btnVwAbsnt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnVwAbsnt.Location = New System.Drawing.Point(3, 3)
+        Me.btnVwAbsnt.Location = New System.Drawing.Point(4, 4)
+        Me.btnVwAbsnt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnVwAbsnt.Name = "btnVwAbsnt"
-        Me.btnVwAbsnt.Size = New System.Drawing.Size(150, 180)
+        Me.btnVwAbsnt.Size = New System.Drawing.Size(200, 222)
         Me.btnVwAbsnt.TabIndex = 2
         Me.btnVwAbsnt.Text = "#1 Absent"
         Me.btnVwAbsnt.UseVisualStyleBackColor = True
@@ -586,9 +620,10 @@ Partial Class FrmMain
         '
         Me.pnlVwLeave.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.pnlVwLeave.Controls.Add(Me.btnVwLeave)
-        Me.pnlVwLeave.Location = New System.Drawing.Point(361, 19)
+        Me.pnlVwLeave.Location = New System.Drawing.Point(481, 23)
+        Me.pnlVwLeave.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlVwLeave.Name = "pnlVwLeave"
-        Me.pnlVwLeave.Size = New System.Drawing.Size(156, 186)
+        Me.pnlVwLeave.Size = New System.Drawing.Size(208, 229)
         Me.pnlVwLeave.TabIndex = 1
         '
         'btnVwLeave
@@ -598,9 +633,10 @@ Partial Class FrmMain
         Me.btnVwLeave.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.btnVwLeave.Image = Global.SalonManagement.Version._3.My.Resources.Resources.position1
         Me.btnVwLeave.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnVwLeave.Location = New System.Drawing.Point(3, 3)
+        Me.btnVwLeave.Location = New System.Drawing.Point(4, 4)
+        Me.btnVwLeave.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnVwLeave.Name = "btnVwLeave"
-        Me.btnVwLeave.Size = New System.Drawing.Size(150, 179)
+        Me.btnVwLeave.Size = New System.Drawing.Size(200, 220)
         Me.btnVwLeave.TabIndex = 1
         Me.btnVwLeave.Text = "#1 Leave"
         Me.btnVwLeave.UseVisualStyleBackColor = True
@@ -609,9 +645,10 @@ Partial Class FrmMain
         '
         Me.pnlVwPresnt.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.pnlVwPresnt.Controls.Add(Me.btnVwPresnt)
-        Me.pnlVwPresnt.Location = New System.Drawing.Point(189, 19)
+        Me.pnlVwPresnt.Location = New System.Drawing.Point(252, 23)
+        Me.pnlVwPresnt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlVwPresnt.Name = "pnlVwPresnt"
-        Me.pnlVwPresnt.Size = New System.Drawing.Size(156, 186)
+        Me.pnlVwPresnt.Size = New System.Drawing.Size(208, 229)
         Me.pnlVwPresnt.TabIndex = 1
         '
         'btnVwPresnt
@@ -621,9 +658,10 @@ Partial Class FrmMain
         Me.btnVwPresnt.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.btnVwPresnt.Image = Global.SalonManagement.Version._3.My.Resources.Resources.attendance
         Me.btnVwPresnt.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnVwPresnt.Location = New System.Drawing.Point(3, 3)
+        Me.btnVwPresnt.Location = New System.Drawing.Point(4, 4)
+        Me.btnVwPresnt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnVwPresnt.Name = "btnVwPresnt"
-        Me.btnVwPresnt.Size = New System.Drawing.Size(150, 180)
+        Me.btnVwPresnt.Size = New System.Drawing.Size(200, 222)
         Me.btnVwPresnt.TabIndex = 1
         Me.btnVwPresnt.Text = "#1 Present"
         Me.btnVwPresnt.UseVisualStyleBackColor = True
@@ -632,9 +670,10 @@ Partial Class FrmMain
         '
         Me.pnlVwEmploy.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
         Me.pnlVwEmploy.Controls.Add(Me.btnVwEmploy)
-        Me.pnlVwEmploy.Location = New System.Drawing.Point(17, 19)
+        Me.pnlVwEmploy.Location = New System.Drawing.Point(23, 23)
+        Me.pnlVwEmploy.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlVwEmploy.Name = "pnlVwEmploy"
-        Me.pnlVwEmploy.Size = New System.Drawing.Size(156, 186)
+        Me.pnlVwEmploy.Size = New System.Drawing.Size(208, 229)
         Me.pnlVwEmploy.TabIndex = 0
         '
         'btnVwEmploy
@@ -644,22 +683,24 @@ Partial Class FrmMain
         Me.btnVwEmploy.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.btnVwEmploy.Image = Global.SalonManagement.Version._3.My.Resources.Resources.employee1
         Me.btnVwEmploy.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnVwEmploy.Location = New System.Drawing.Point(3, 3)
+        Me.btnVwEmploy.Location = New System.Drawing.Point(4, 4)
+        Me.btnVwEmploy.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnVwEmploy.Name = "btnVwEmploy"
-        Me.btnVwEmploy.Size = New System.Drawing.Size(150, 180)
+        Me.btnVwEmploy.Size = New System.Drawing.Size(200, 222)
         Me.btnVwEmploy.TabIndex = 0
         Me.btnVwEmploy.Text = "#1 Employee"
         Me.btnVwEmploy.UseVisualStyleBackColor = True
         '
         'FrmMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1386, 788)
+        Me.ClientSize = New System.Drawing.Size(1848, 970)
         Me.ControlBox = False
         Me.Controls.Add(Me.panelMain)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"

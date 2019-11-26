@@ -41,9 +41,9 @@ Partial Class FrmPayroll
         Me.Column11 = New System.Windows.Forms.DataGridViewLinkColumn()
         Me.panelTop = New System.Windows.Forms.Panel()
         Me.btnGeneratePayroll = New System.Windows.Forms.Button()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpTo = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpFrom = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.panelSearch = New System.Windows.Forms.Panel()
         Me.lblSearch = New System.Windows.Forms.Label()
@@ -225,9 +225,9 @@ Partial Class FrmPayroll
         'panelTop
         '
         Me.panelTop.Controls.Add(Me.btnGeneratePayroll)
-        Me.panelTop.Controls.Add(Me.DateTimePicker2)
+        Me.panelTop.Controls.Add(Me.dtpTo)
         Me.panelTop.Controls.Add(Me.Label1)
-        Me.panelTop.Controls.Add(Me.DateTimePicker1)
+        Me.panelTop.Controls.Add(Me.dtpFrom)
         Me.panelTop.Controls.Add(Me.Label4)
         Me.panelTop.Controls.Add(Me.panelSearch)
         Me.panelTop.Controls.Add(Me.txtSearch)
@@ -253,16 +253,17 @@ Partial Class FrmPayroll
         Me.btnGeneratePayroll.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnGeneratePayroll.UseVisualStyleBackColor = False
         '
-        'DateTimePicker2
+        'dtpTo
         '
-        Me.DateTimePicker2.CalendarFont = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(475, 8)
-        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(133, 32)
-        Me.DateTimePicker2.TabIndex = 55
+        Me.dtpTo.CalendarFont = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.dtpTo.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpTo.Location = New System.Drawing.Point(475, 8)
+        Me.dtpTo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dtpTo.Name = "dtpTo"
+        Me.dtpTo.Size = New System.Drawing.Size(133, 32)
+        Me.dtpTo.TabIndex = 55
+        Me.dtpTo.Value = New Date(2019, 11, 25, 0, 0, 0, 0)
         '
         'Label1
         '
@@ -276,16 +277,17 @@ Partial Class FrmPayroll
         Me.Label1.TabIndex = 53
         Me.Label1.Text = "To"
         '
-        'DateTimePicker1
+        'dtpFrom
         '
-        Me.DateTimePicker1.CalendarFont = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(301, 8)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(133, 32)
-        Me.DateTimePicker1.TabIndex = 54
+        Me.dtpFrom.CalendarFont = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.dtpFrom.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFrom.Location = New System.Drawing.Point(301, 8)
+        Me.dtpFrom.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dtpFrom.Name = "dtpFrom"
+        Me.dtpFrom.Size = New System.Drawing.Size(133, 32)
+        Me.dtpFrom.TabIndex = 54
+        Me.dtpFrom.Value = New Date(2019, 11, 25, 0, 0, 0, 0)
         '
         'Label4
         '
@@ -430,9 +432,9 @@ Partial Class FrmPayroll
     Friend WithEvents gvView As System.Windows.Forms.DataGridView
     Friend WithEvents panelTop As System.Windows.Forms.Panel
     Friend WithEvents btnGeneratePayroll As System.Windows.Forms.Button
-    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dtpTo As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dtpFrom As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents panelSearch As System.Windows.Forms.Panel
     Friend WithEvents lblSearch As System.Windows.Forms.Label

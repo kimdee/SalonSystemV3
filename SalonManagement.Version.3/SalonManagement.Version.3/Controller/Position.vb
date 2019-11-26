@@ -188,13 +188,13 @@ Public Class Position
     Public Sub LoadPositionToCBO(cbo As ComboBox)
         Try
             Dim sql As String
-            sql = "SELECT * FROM Position ORDER BY positionID ASC;"
+            sql = "SELECT DISTINCT positionName FROM Position ORDER BY positionName ASC;"
             If IsConnected() = True Then
                 Dim cmd = New MySqlCommand(sql, getServerConnection)
                 Dim reader As MySqlDataReader = cmd.ExecuteReader()
                 cbo.Items.Clear()
                 While reader.Read()
-                    cbo.Items.Add(reader(1))
+                    cbo.Items.Add(reader("positionName"))
                 End While
                 reader.Close()
             End If
@@ -210,7 +210,7 @@ Public Class Position
                 Dim cmd = New MySqlCommand(sql, getServerConnection)
                 Dim reader As MySqlDataReader = cmd.ExecuteReader()
                 While reader.Read()
-                    cbo.Items.Add(reader(1))
+                    cbo.Text = reader(1)
                     txtStandardPay.Text = reader(2)
                     txtOT.Text = reader(3)
                     txtBasicPay.Text = reader(4)

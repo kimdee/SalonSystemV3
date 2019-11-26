@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsPayroll" targetNamespace="http://tempuri.org/dsPayroll.xsd" xmlns:mstns="http://tempuri.org/dsPayroll.xsd" xmlns="http://tempuri.org/dsPayroll.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsPayroll" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsPayroll" msprop:Generator_UserDSName="dsPayroll">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtPayroll" msprop:Generator_TableClassName="dtPayrollDataTable" msprop:Generator_TableVarName="tabledtPayroll" msprop:Generator_TablePropName="dtPayroll" msprop:Generator_RowDeletingName="dtPayrollRowDeleting" msprop:Generator_RowChangingName="dtPayrollRowChanging" msprop:Generator_RowEvHandlerName="dtPayrollRowChangeEventHandler" msprop:Generator_RowDeletedName="dtPayrollRowDeleted" msprop:Generator_UserTableName="dtPayroll" msprop:Generator_RowChangedName="dtPayrollRowChanged" msprop:Generator_RowEvArgName="dtPayrollRowChangeEvent" msprop:Generator_RowClassName="dtPayrollRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="employeeID" msprop:Generator_ColumnVarNameInTable="columnemployeeID" msprop:Generator_ColumnPropNameInRow="employeeID" msprop:Generator_ColumnPropNameInTable="employeeIDColumn" msprop:Generator_UserColumnName="employeeID" type="xs:string" minOccurs="0" />
+              <xs:element name="payrollCommission" msprop:Generator_ColumnVarNameInTable="columnpayrollCommission" msprop:Generator_ColumnPropNameInRow="payrollCommission" msprop:Generator_ColumnPropNameInTable="payrollCommissionColumn" msprop:Generator_UserColumnName="payrollCommission" type="xs:string" minOccurs="0" />
+              <xs:element name="payrollOvertime" msprop:Generator_ColumnVarNameInTable="columnpayrollOvertime" msprop:Generator_ColumnPropNameInRow="payrollOvertime" msprop:Generator_ColumnPropNameInTable="payrollOvertimeColumn" msprop:Generator_UserColumnName="payrollOvertime" type="xs:string" minOccurs="0" />
+              <xs:element name="payrollGrosspay" msprop:Generator_ColumnVarNameInTable="columnpayrollGrosspay" msprop:Generator_ColumnPropNameInRow="payrollGrosspay" msprop:Generator_ColumnPropNameInTable="payrollGrosspayColumn" msprop:Generator_UserColumnName="payrollGrosspay" type="xs:string" minOccurs="0" />
+              <xs:element name="payrollNnetpay" msprop:Generator_ColumnVarNameInTable="columnpayrollNnetpay" msprop:Generator_ColumnPropNameInRow="payrollNnetpay" msprop:Generator_ColumnPropNameInTable="payrollNnetpayColumn" msprop:Generator_UserColumnName="payrollNnetpay" type="xs:string" minOccurs="0" />
+              <xs:element name="payrollDate" msprop:Generator_ColumnVarNameInTable="columnpayrollDate" msprop:Generator_ColumnPropNameInRow="payrollDate" msprop:Generator_ColumnPropNameInTable="payrollDateColumn" msprop:Generator_UserColumnName="payrollDate" type="xs:string" minOccurs="0" />
+              <xs:element name="payrollTime" msprop:Generator_ColumnVarNameInTable="columnpayrollTime" msprop:Generator_ColumnPropNameInRow="payrollTime" msprop:Generator_ColumnPropNameInTable="payrollTimeColumn" msprop:Generator_UserColumnName="payrollTime" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

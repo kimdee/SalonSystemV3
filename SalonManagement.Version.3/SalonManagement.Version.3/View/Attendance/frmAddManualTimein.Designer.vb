@@ -87,9 +87,8 @@ Partial Class frmAddManualTimein
         Me.panelMain.Controls.Add(Me.panelContainer)
         Me.panelMain.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelMain.Location = New System.Drawing.Point(0, 0)
-        Me.panelMain.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panelMain.Name = "panelMain"
-        Me.panelMain.Size = New System.Drawing.Size(945, 560)
+        Me.panelMain.Size = New System.Drawing.Size(709, 455)
         Me.panelMain.TabIndex = 0
         '
         'Panel6
@@ -97,10 +96,9 @@ Partial Class frmAddManualTimein
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer))
         Me.Panel6.Controls.Add(Me.Label6)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel6.Location = New System.Drawing.Point(0, 43)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel6.Location = New System.Drawing.Point(0, 35)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(945, 41)
+        Me.Panel6.Size = New System.Drawing.Size(709, 33)
         Me.Panel6.TabIndex = 24
         '
         'Label6
@@ -110,10 +108,9 @@ Partial Class frmAddManualTimein
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 24.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(283, -32)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(212, -26)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(359, 57)
+        Me.Label6.Size = New System.Drawing.Size(285, 45)
         Me.Label6.TabIndex = 19
         Me.Label6.Text = "MANUAL TIME-IN"
         '
@@ -124,9 +121,8 @@ Partial Class frmAddManualTimein
         Me.panelTop.Controls.Add(Me.PictureBox1)
         Me.panelTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.panelTop.Location = New System.Drawing.Point(0, 0)
-        Me.panelTop.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panelTop.Name = "panelTop"
-        Me.panelTop.Size = New System.Drawing.Size(945, 43)
+        Me.panelTop.Size = New System.Drawing.Size(709, 35)
         Me.panelTop.TabIndex = 23
         '
         'Label8
@@ -136,10 +132,9 @@ Partial Class frmAddManualTimein
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 24.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(283, 11)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(212, 9)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(359, 57)
+        Me.Label8.Size = New System.Drawing.Size(285, 45)
         Me.Label8.TabIndex = 20
         Me.Label8.Text = "MANUAL TIME-IN"
         '
@@ -147,10 +142,9 @@ Partial Class frmAddManualTimein
         '
         Me.PictureBox1.BackgroundImage = Global.SalonManagement.Version._3.My.Resources.Resources.x_button1
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(917, 4)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(688, 3)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(24, 22)
+        Me.PictureBox1.Size = New System.Drawing.Size(18, 18)
         Me.PictureBox1.TabIndex = 16
         Me.PictureBox1.TabStop = False
         '
@@ -159,10 +153,9 @@ Partial Class frmAddManualTimein
         Me.panelContainer.BackColor = System.Drawing.Color.WhiteSmoke
         Me.panelContainer.Controls.Add(Me.Panel4)
         Me.panelContainer.Controls.Add(Me.panel)
-        Me.panelContainer.Location = New System.Drawing.Point(16, 91)
-        Me.panelContainer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.panelContainer.Location = New System.Drawing.Point(12, 74)
         Me.panelContainer.Name = "panelContainer"
-        Me.panelContainer.Size = New System.Drawing.Size(913, 454)
+        Me.panelContainer.Size = New System.Drawing.Size(685, 369)
         Me.panelContainer.TabIndex = 20
         '
         'Panel4
@@ -172,10 +165,9 @@ Partial Class frmAddManualTimein
         Me.Panel4.Controls.Add(Me.btnCancel)
         Me.Panel4.Controls.Add(Me.btnSave)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel4.Location = New System.Drawing.Point(629, 0)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel4.Location = New System.Drawing.Point(472, 0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(284, 454)
+        Me.Panel4.Size = New System.Drawing.Size(213, 369)
         Me.Panel4.TabIndex = 4
         '
         'btnBrowseEmployee
@@ -183,10 +175,10 @@ Partial Class frmAddManualTimein
         Me.btnBrowseEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBrowseEmployee.Font = New System.Drawing.Font("Segoe UI", 15.0!)
         Me.btnBrowseEmployee.ForeColor = System.Drawing.Color.Black
-        Me.btnBrowseEmployee.Location = New System.Drawing.Point(13, 9)
-        Me.btnBrowseEmployee.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnBrowseEmployee.Location = New System.Drawing.Point(10, 7)
+        Me.btnBrowseEmployee.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnBrowseEmployee.Name = "btnBrowseEmployee"
-        Me.btnBrowseEmployee.Size = New System.Drawing.Size(259, 58)
+        Me.btnBrowseEmployee.Size = New System.Drawing.Size(194, 47)
         Me.btnBrowseEmployee.TabIndex = 133
         Me.btnBrowseEmployee.Text = "Browse Employee"
         Me.btnBrowseEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -197,10 +189,10 @@ Partial Class frmAddManualTimein
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.Font = New System.Drawing.Font("Segoe UI", 15.0!)
         Me.btnCancel.ForeColor = System.Drawing.Color.Black
-        Me.btnCancel.Location = New System.Drawing.Point(13, 377)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnCancel.Location = New System.Drawing.Point(10, 306)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(259, 58)
+        Me.btnCancel.Size = New System.Drawing.Size(194, 47)
         Me.btnCancel.TabIndex = 135
         Me.btnCancel.Text = "Close"
         Me.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -212,10 +204,10 @@ Partial Class frmAddManualTimein
         Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSave.Font = New System.Drawing.Font("Segoe UI", 15.0!)
         Me.btnSave.ForeColor = System.Drawing.Color.White
-        Me.btnSave.Location = New System.Drawing.Point(13, 314)
-        Me.btnSave.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnSave.Location = New System.Drawing.Point(10, 255)
+        Me.btnSave.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(259, 58)
+        Me.btnSave.Size = New System.Drawing.Size(194, 47)
         Me.btnSave.TabIndex = 134
         Me.btnSave.Text = "Save"
         Me.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -229,9 +221,9 @@ Partial Class frmAddManualTimein
         Me.panel.Controls.Add(Me.TabControl1)
         Me.panel.Dock = System.Windows.Forms.DockStyle.Left
         Me.panel.Location = New System.Drawing.Point(0, 0)
-        Me.panel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.panel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.panel.Name = "panel"
-        Me.panel.Size = New System.Drawing.Size(629, 454)
+        Me.panel.Size = New System.Drawing.Size(472, 369)
         Me.panel.TabIndex = 3
         '
         'TabControl3
@@ -239,21 +231,21 @@ Partial Class frmAddManualTimein
         Me.TabControl3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.TabControl3.Controls.Add(Me.TabPage3)
         Me.TabControl3.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.TabControl3.Location = New System.Drawing.Point(351, 9)
-        Me.TabControl3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabControl3.Location = New System.Drawing.Point(263, 7)
+        Me.TabControl3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabControl3.Name = "TabControl3"
         Me.TabControl3.SelectedIndex = 0
-        Me.TabControl3.Size = New System.Drawing.Size(267, 217)
+        Me.TabControl3.Size = New System.Drawing.Size(200, 176)
         Me.TabControl3.TabIndex = 127
         '
         'TabPage3
         '
         Me.TabPage3.Controls.Add(Me.Panel2)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 40)
-        Me.TabPage3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 34)
+        Me.TabPage3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TabPage3.Size = New System.Drawing.Size(259, 173)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage3.Size = New System.Drawing.Size(192, 138)
         Me.TabPage3.TabIndex = 0
         Me.TabPage3.Text = "Remarks"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -265,10 +257,10 @@ Partial Class frmAddManualTimein
         Me.Panel2.Controls.Add(Me.rdbPmTimeIn)
         Me.Panel2.Controls.Add(Me.rdbAmTimeOut)
         Me.Panel2.Controls.Add(Me.rdbAmTimeIn)
-        Me.Panel2.Location = New System.Drawing.Point(5, 4)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel2.Location = New System.Drawing.Point(4, 3)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(245, 161)
+        Me.Panel2.Size = New System.Drawing.Size(184, 131)
         Me.Panel2.TabIndex = 0
         '
         'rdbPmTimeOut
@@ -276,10 +268,10 @@ Partial Class frmAddManualTimein
         Me.rdbPmTimeOut.AutoSize = True
         Me.rdbPmTimeOut.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.rdbPmTimeOut.ForeColor = System.Drawing.Color.Black
-        Me.rdbPmTimeOut.Location = New System.Drawing.Point(15, 123)
-        Me.rdbPmTimeOut.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.rdbPmTimeOut.Location = New System.Drawing.Point(11, 100)
+        Me.rdbPmTimeOut.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.rdbPmTimeOut.Name = "rdbPmTimeOut"
-        Me.rdbPmTimeOut.Size = New System.Drawing.Size(181, 36)
+        Me.rdbPmTimeOut.Size = New System.Drawing.Size(143, 29)
         Me.rdbPmTimeOut.TabIndex = 122
         Me.rdbPmTimeOut.Text = "PM Time-Out"
         Me.rdbPmTimeOut.UseVisualStyleBackColor = True
@@ -289,10 +281,10 @@ Partial Class frmAddManualTimein
         Me.rdbPmTimeIn.AutoSize = True
         Me.rdbPmTimeIn.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.rdbPmTimeIn.ForeColor = System.Drawing.Color.Black
-        Me.rdbPmTimeIn.Location = New System.Drawing.Point(15, 85)
-        Me.rdbPmTimeIn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.rdbPmTimeIn.Location = New System.Drawing.Point(11, 69)
+        Me.rdbPmTimeIn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.rdbPmTimeIn.Name = "rdbPmTimeIn"
-        Me.rdbPmTimeIn.Size = New System.Drawing.Size(161, 36)
+        Me.rdbPmTimeIn.Size = New System.Drawing.Size(128, 29)
         Me.rdbPmTimeIn.TabIndex = 121
         Me.rdbPmTimeIn.Text = "PM Time-In"
         Me.rdbPmTimeIn.UseVisualStyleBackColor = True
@@ -302,10 +294,10 @@ Partial Class frmAddManualTimein
         Me.rdbAmTimeOut.AutoSize = True
         Me.rdbAmTimeOut.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.rdbAmTimeOut.ForeColor = System.Drawing.Color.Black
-        Me.rdbAmTimeOut.Location = New System.Drawing.Point(15, 44)
-        Me.rdbAmTimeOut.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.rdbAmTimeOut.Location = New System.Drawing.Point(11, 36)
+        Me.rdbAmTimeOut.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.rdbAmTimeOut.Name = "rdbAmTimeOut"
-        Me.rdbAmTimeOut.Size = New System.Drawing.Size(183, 36)
+        Me.rdbAmTimeOut.Size = New System.Drawing.Size(144, 29)
         Me.rdbAmTimeOut.TabIndex = 120
         Me.rdbAmTimeOut.Text = "AM Time-Out"
         Me.rdbAmTimeOut.UseVisualStyleBackColor = True
@@ -316,10 +308,10 @@ Partial Class frmAddManualTimein
         Me.rdbAmTimeIn.Checked = True
         Me.rdbAmTimeIn.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.rdbAmTimeIn.ForeColor = System.Drawing.Color.Black
-        Me.rdbAmTimeIn.Location = New System.Drawing.Point(15, 4)
-        Me.rdbAmTimeIn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.rdbAmTimeIn.Location = New System.Drawing.Point(11, 3)
+        Me.rdbAmTimeIn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.rdbAmTimeIn.Name = "rdbAmTimeIn"
-        Me.rdbAmTimeIn.Size = New System.Drawing.Size(163, 36)
+        Me.rdbAmTimeIn.Size = New System.Drawing.Size(129, 29)
         Me.rdbAmTimeIn.TabIndex = 119
         Me.rdbAmTimeIn.TabStop = True
         Me.rdbAmTimeIn.Text = "AM Time-In"
@@ -330,21 +322,21 @@ Partial Class frmAddManualTimein
         Me.TabControl2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.TabControl2.Controls.Add(Me.TabPage2)
         Me.TabControl2.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.TabControl2.Location = New System.Drawing.Point(351, 230)
-        Me.TabControl2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabControl2.Location = New System.Drawing.Point(263, 187)
+        Me.TabControl2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabControl2.Name = "TabControl2"
         Me.TabControl2.SelectedIndex = 0
-        Me.TabControl2.Size = New System.Drawing.Size(267, 212)
+        Me.TabControl2.Size = New System.Drawing.Size(200, 172)
         Me.TabControl2.TabIndex = 126
         '
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.Panel3)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 40)
-        Me.TabPage2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 34)
+        Me.TabPage2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TabPage2.Size = New System.Drawing.Size(259, 168)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage2.Size = New System.Drawing.Size(192, 134)
         Me.TabPage2.TabIndex = 0
         Me.TabPage2.Text = "Date & Time"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -356,43 +348,46 @@ Partial Class frmAddManualTimein
         Me.Panel3.Controls.Add(Me.dtpTime)
         Me.Panel3.Controls.Add(Me.Label7)
         Me.Panel3.Controls.Add(Me.Label1)
-        Me.Panel3.Location = New System.Drawing.Point(5, 4)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel3.Location = New System.Drawing.Point(4, 3)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(245, 159)
+        Me.Panel3.Size = New System.Drawing.Size(184, 129)
         Me.Panel3.TabIndex = 0
         '
         'dtpDate
         '
+        Me.dtpDate.CustomFormat = "MM/dd/yyy"
         Me.dtpDate.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpDate.Location = New System.Drawing.Point(20, 108)
-        Me.dtpDate.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpDate.Location = New System.Drawing.Point(15, 88)
+        Me.dtpDate.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dtpDate.Name = "dtpDate"
-        Me.dtpDate.Size = New System.Drawing.Size(184, 39)
+        Me.dtpDate.Size = New System.Drawing.Size(139, 32)
         Me.dtpDate.TabIndex = 30
         Me.dtpDate.Value = New Date(2019, 10, 14, 0, 0, 0, 0)
         '
         'dtpTime
         '
+        Me.dtpTime.CustomFormat = "h:mm tt"
         Me.dtpTime.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.dtpTime.Location = New System.Drawing.Point(19, 34)
-        Me.dtpTime.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpTime.Location = New System.Drawing.Point(14, 28)
+        Me.dtpTime.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dtpTime.Name = "dtpTime"
         Me.dtpTime.ShowUpDown = True
-        Me.dtpTime.Size = New System.Drawing.Size(187, 39)
+        Me.dtpTime.Size = New System.Drawing.Size(141, 32)
         Me.dtpTime.TabIndex = 29
-        Me.dtpTime.Value = New Date(2019, 10, 14, 1, 17, 30, 0)
+        Me.dtpTime.Value = New Date(2019, 10, 14, 0, 0, 0, 0)
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 15.0!)
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(13, 78)
+        Me.Label7.Location = New System.Drawing.Point(10, 63)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(67, 35)
+        Me.Label7.Size = New System.Drawing.Size(53, 28)
         Me.Label7.TabIndex = 33
         Me.Label7.Text = "Date"
         '
@@ -401,9 +396,10 @@ Partial Class frmAddManualTimein
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.0!)
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(13, 2)
+        Me.Label1.Location = New System.Drawing.Point(10, 2)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(69, 35)
+        Me.Label1.Size = New System.Drawing.Size(54, 28)
         Me.Label1.TabIndex = 32
         Me.Label1.Text = "Time"
         '
@@ -412,21 +408,21 @@ Partial Class frmAddManualTimein
         Me.TabControl1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.TabControl1.Location = New System.Drawing.Point(8, 9)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabControl1.Location = New System.Drawing.Point(6, 7)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(337, 433)
+        Me.TabControl1.Size = New System.Drawing.Size(253, 352)
         Me.TabControl1.TabIndex = 22
         '
         'TabPage1
         '
         Me.TabPage1.Controls.Add(Me.Panel5)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 40)
-        Me.TabPage1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 34)
+        Me.TabPage1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TabPage1.Size = New System.Drawing.Size(329, 389)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPage1.Size = New System.Drawing.Size(245, 314)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Employee Information"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -446,10 +442,10 @@ Partial Class frmAddManualTimein
         Me.Panel5.Controls.Add(Me.Label3)
         Me.Panel5.Controls.Add(Me.txtLName)
         Me.Panel5.Controls.Add(Me.Label2)
-        Me.Panel5.Location = New System.Drawing.Point(5, 6)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel5.Location = New System.Drawing.Point(4, 5)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(315, 377)
+        Me.Panel5.Size = New System.Drawing.Size(237, 307)
         Me.Panel5.TabIndex = 0
         '
         'txtPosition
@@ -457,10 +453,10 @@ Partial Class frmAddManualTimein
         Me.txtPosition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtPosition.Enabled = False
         Me.txtPosition.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.txtPosition.Location = New System.Drawing.Point(9, 329)
-        Me.txtPosition.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtPosition.Location = New System.Drawing.Point(7, 267)
+        Me.txtPosition.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtPosition.Name = "txtPosition"
-        Me.txtPosition.Size = New System.Drawing.Size(259, 39)
+        Me.txtPosition.Size = New System.Drawing.Size(195, 32)
         Me.txtPosition.TabIndex = 120
         '
         'Label11
@@ -468,9 +464,10 @@ Partial Class frmAddManualTimein
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 15.0!)
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(7, 299)
+        Me.Label11.Location = New System.Drawing.Point(5, 243)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(103, 35)
+        Me.Label11.Size = New System.Drawing.Size(83, 28)
         Me.Label11.TabIndex = 119
         Me.Label11.Text = "Position"
         '
@@ -480,10 +477,10 @@ Partial Class frmAddManualTimein
         Me.rdbFemale.Enabled = False
         Me.rdbFemale.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.rdbFemale.ForeColor = System.Drawing.Color.Black
-        Me.rdbFemale.Location = New System.Drawing.Point(115, 261)
-        Me.rdbFemale.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.rdbFemale.Location = New System.Drawing.Point(86, 212)
+        Me.rdbFemale.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.rdbFemale.Name = "rdbFemale"
-        Me.rdbFemale.Size = New System.Drawing.Size(113, 36)
+        Me.rdbFemale.Size = New System.Drawing.Size(90, 29)
         Me.rdbFemale.TabIndex = 118
         Me.rdbFemale.Text = "Female"
         Me.rdbFemale.UseVisualStyleBackColor = True
@@ -495,10 +492,10 @@ Partial Class frmAddManualTimein
         Me.rdbMale.Enabled = False
         Me.rdbMale.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.rdbMale.ForeColor = System.Drawing.Color.Black
-        Me.rdbMale.Location = New System.Drawing.Point(13, 261)
-        Me.rdbMale.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.rdbMale.Location = New System.Drawing.Point(10, 212)
+        Me.rdbMale.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.rdbMale.Name = "rdbMale"
-        Me.rdbMale.Size = New System.Drawing.Size(89, 36)
+        Me.rdbMale.Size = New System.Drawing.Size(72, 29)
         Me.rdbMale.TabIndex = 117
         Me.rdbMale.TabStop = True
         Me.rdbMale.Text = "Male"
@@ -509,9 +506,10 @@ Partial Class frmAddManualTimein
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 15.0!)
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(7, 229)
+        Me.Label5.Location = New System.Drawing.Point(5, 186)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(96, 35)
+        Me.Label5.Size = New System.Drawing.Size(76, 28)
         Me.Label5.TabIndex = 116
         Me.Label5.Text = "Gender"
         '
@@ -520,10 +518,10 @@ Partial Class frmAddManualTimein
         Me.txtMName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtMName.Enabled = False
         Me.txtMName.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.txtMName.Location = New System.Drawing.Point(13, 187)
-        Me.txtMName.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtMName.Location = New System.Drawing.Point(10, 152)
+        Me.txtMName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtMName.Name = "txtMName"
-        Me.txtMName.Size = New System.Drawing.Size(259, 39)
+        Me.txtMName.Size = New System.Drawing.Size(195, 32)
         Me.txtMName.TabIndex = 115
         '
         'txtFName
@@ -531,10 +529,10 @@ Partial Class frmAddManualTimein
         Me.txtFName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtFName.Enabled = False
         Me.txtFName.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.txtFName.Location = New System.Drawing.Point(9, 114)
-        Me.txtFName.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtFName.Location = New System.Drawing.Point(7, 93)
+        Me.txtFName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtFName.Name = "txtFName"
-        Me.txtFName.Size = New System.Drawing.Size(259, 39)
+        Me.txtFName.Size = New System.Drawing.Size(195, 32)
         Me.txtFName.TabIndex = 114
         '
         'Label4
@@ -542,9 +540,10 @@ Partial Class frmAddManualTimein
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 15.0!)
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(3, 156)
+        Me.Label4.Location = New System.Drawing.Point(2, 127)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(166, 35)
+        Me.Label4.Size = New System.Drawing.Size(131, 28)
         Me.Label4.TabIndex = 113
         Me.Label4.Text = "Middle Name"
         '
@@ -553,9 +552,10 @@ Partial Class frmAddManualTimein
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 15.0!)
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(3, 84)
+        Me.Label3.Location = New System.Drawing.Point(2, 68)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(135, 35)
+        Me.Label3.Size = New System.Drawing.Size(106, 28)
         Me.Label3.TabIndex = 112
         Me.Label3.Text = "First Name"
         '
@@ -564,10 +564,10 @@ Partial Class frmAddManualTimein
         Me.txtLName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtLName.Enabled = False
         Me.txtLName.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.txtLName.Location = New System.Drawing.Point(9, 42)
-        Me.txtLName.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtLName.Location = New System.Drawing.Point(7, 34)
+        Me.txtLName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtLName.Name = "txtLName"
-        Me.txtLName.Size = New System.Drawing.Size(259, 39)
+        Me.txtLName.Size = New System.Drawing.Size(195, 32)
         Me.txtLName.TabIndex = 111
         '
         'Label2
@@ -575,22 +575,22 @@ Partial Class frmAddManualTimein
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 15.0!)
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(3, 11)
+        Me.Label2.Location = New System.Drawing.Point(2, 9)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(133, 35)
+        Me.Label2.Size = New System.Drawing.Size(103, 28)
         Me.Label2.TabIndex = 110
         Me.Label2.Text = "Last Name"
         '
         'frmAddManualTimein
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(945, 560)
+        Me.ClientSize = New System.Drawing.Size(709, 455)
         Me.ControlBox = False
         Me.Controls.Add(Me.panelMain)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmAddManualTimein"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.panelMain.ResumeLayout(False)

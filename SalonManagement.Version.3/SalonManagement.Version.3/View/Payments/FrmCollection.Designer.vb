@@ -22,7 +22,7 @@ Partial Class FrmCollection
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.panelMain = New System.Windows.Forms.Panel()
         Me.panelContainer = New System.Windows.Forms.Panel()
         Me.panelGv = New System.Windows.Forms.Panel()
@@ -35,9 +35,9 @@ Partial Class FrmCollection
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewLinkColumn()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpTo = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpFrom = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.panelSearch = New System.Windows.Forms.Panel()
         Me.lblSearch = New System.Windows.Forms.Label()
@@ -65,7 +65,7 @@ Partial Class FrmCollection
         Me.panelMain.Controls.Add(Me.Panel1)
         Me.panelMain.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelMain.Location = New System.Drawing.Point(0, 0)
-        Me.panelMain.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.panelMain.Margin = New System.Windows.Forms.Padding(2)
         Me.panelMain.Name = "panelMain"
         Me.panelMain.Size = New System.Drawing.Size(1085, 715)
         Me.panelMain.TabIndex = 0
@@ -75,7 +75,7 @@ Partial Class FrmCollection
         Me.panelContainer.Controls.Add(Me.panelGv)
         Me.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelContainer.Location = New System.Drawing.Point(0, 63)
-        Me.panelContainer.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.panelContainer.Margin = New System.Windows.Forms.Padding(2)
         Me.panelContainer.Name = "panelContainer"
         Me.panelContainer.Size = New System.Drawing.Size(1085, 605)
         Me.panelContainer.TabIndex = 4
@@ -88,7 +88,7 @@ Partial Class FrmCollection
         Me.panelGv.Controls.Add(Me.Panel4)
         Me.panelGv.Font = New System.Drawing.Font("Segoe UI", 15.0!)
         Me.panelGv.Location = New System.Drawing.Point(11, 5)
-        Me.panelGv.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.panelGv.Margin = New System.Windows.Forms.Padding(2)
         Me.panelGv.Name = "panelGv"
         Me.panelGv.Size = New System.Drawing.Size(1063, 595)
         Me.panelGv.TabIndex = 30
@@ -110,15 +110,15 @@ Partial Class FrmCollection
         Me.gvView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gvView.EnableHeadersVisualStyles = False
         Me.gvView.Location = New System.Drawing.Point(0, 47)
-        Me.gvView.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gvView.Margin = New System.Windows.Forms.Padding(2)
         Me.gvView.Name = "gvView"
         Me.gvView.ReadOnly = True
         Me.gvView.RowHeadersVisible = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
-        Me.gvView.RowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black
+        Me.gvView.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.gvView.RowTemplate.Height = 24
         Me.gvView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.gvView.Size = New System.Drawing.Size(1061, 546)
@@ -176,29 +176,30 @@ Partial Class FrmCollection
         '
         'Panel4
         '
-        Me.Panel4.Controls.Add(Me.DateTimePicker2)
+        Me.Panel4.Controls.Add(Me.dtpTo)
         Me.Panel4.Controls.Add(Me.Label1)
-        Me.Panel4.Controls.Add(Me.DateTimePicker1)
+        Me.Panel4.Controls.Add(Me.dtpFrom)
         Me.Panel4.Controls.Add(Me.Label4)
         Me.Panel4.Controls.Add(Me.panelSearch)
         Me.Panel4.Controls.Add(Me.txtSearch)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel4.Location = New System.Drawing.Point(0, 0)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(1061, 47)
         Me.Panel4.TabIndex = 26
         '
-        'DateTimePicker2
+        'dtpTo
         '
-        Me.DateTimePicker2.CalendarFont = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(259, 8)
-        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(142, 32)
-        Me.DateTimePicker2.TabIndex = 55
+        Me.dtpTo.CalendarFont = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.dtpTo.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpTo.Location = New System.Drawing.Point(259, 8)
+        Me.dtpTo.Margin = New System.Windows.Forms.Padding(2)
+        Me.dtpTo.Name = "dtpTo"
+        Me.dtpTo.Size = New System.Drawing.Size(142, 32)
+        Me.dtpTo.TabIndex = 55
+        Me.dtpTo.Value = New Date(2019, 11, 25, 0, 0, 0, 0)
         '
         'Label1
         '
@@ -212,16 +213,17 @@ Partial Class FrmCollection
         Me.Label1.TabIndex = 53
         Me.Label1.Text = "To"
         '
-        'DateTimePicker1
+        'dtpFrom
         '
-        Me.DateTimePicker1.CalendarFont = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(76, 8)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(142, 32)
-        Me.DateTimePicker1.TabIndex = 54
+        Me.dtpFrom.CalendarFont = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.dtpFrom.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFrom.Location = New System.Drawing.Point(76, 8)
+        Me.dtpFrom.Margin = New System.Windows.Forms.Padding(2)
+        Me.dtpFrom.Name = "dtpFrom"
+        Me.dtpFrom.Size = New System.Drawing.Size(142, 32)
+        Me.dtpFrom.TabIndex = 54
+        Me.dtpFrom.Value = New Date(2019, 11, 25, 0, 0, 0, 0)
         '
         'Label4
         '
@@ -266,7 +268,7 @@ Partial Class FrmCollection
         Me.txtSearch.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.txtSearch.ForeColor = System.Drawing.Color.Gray
         Me.txtSearch.Location = New System.Drawing.Point(696, 8)
-        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(276, 32)
         Me.txtSearch.TabIndex = 44
@@ -364,9 +366,9 @@ Partial Class FrmCollection
     Friend WithEvents panelGv As System.Windows.Forms.Panel
     Friend WithEvents gvView As System.Windows.Forms.DataGridView
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
-    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dtpTo As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dtpFrom As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents panelSearch As System.Windows.Forms.Panel
     Friend WithEvents lblSearch As System.Windows.Forms.Label

@@ -25,6 +25,12 @@ Partial Class frmEmployeeDeduction
         Me.panelMain = New System.Windows.Forms.Panel()
         Me.panelGv = New System.Windows.Forms.Panel()
         Me.gvView = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewLinkColumn()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.btnAddEmployee = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -32,12 +38,6 @@ Partial Class frmEmployeeDeduction
         Me.panelTop = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewLinkColumn()
         Me.panelMain.SuspendLayout()
         Me.panelGv.SuspendLayout()
         CType(Me.gvView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,19 +54,20 @@ Partial Class frmEmployeeDeduction
         Me.panelMain.Controls.Add(Me.btnClose)
         Me.panelMain.Controls.Add(Me.btnAddEmployee)
         Me.panelMain.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.panelMain.Location = New System.Drawing.Point(11, 73)
-        Me.panelMain.Margin = New System.Windows.Forms.Padding(2)
+        Me.panelMain.Location = New System.Drawing.Point(15, 90)
+        Me.panelMain.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.panelMain.Name = "panelMain"
-        Me.panelMain.Size = New System.Drawing.Size(398, 451)
+        Me.panelMain.Size = New System.Drawing.Size(530, 555)
         Me.panelMain.TabIndex = 3
         '
         'panelGv
         '
         Me.panelGv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.panelGv.Controls.Add(Me.gvView)
-        Me.panelGv.Location = New System.Drawing.Point(3, 3)
+        Me.panelGv.Location = New System.Drawing.Point(4, 4)
+        Me.panelGv.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.panelGv.Name = "panelGv"
-        Me.panelGv.Size = New System.Drawing.Size(390, 398)
+        Me.panelGv.Size = New System.Drawing.Size(519, 489)
         Me.panelGv.TabIndex = 35
         '
         'gvView
@@ -86,98 +87,14 @@ Partial Class frmEmployeeDeduction
         Me.gvView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gvView.EnableHeadersVisualStyles = False
         Me.gvView.Location = New System.Drawing.Point(0, 0)
-        Me.gvView.Margin = New System.Windows.Forms.Padding(2)
+        Me.gvView.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.gvView.Name = "gvView"
         Me.gvView.ReadOnly = True
         Me.gvView.RowHeadersVisible = False
         Me.gvView.RowTemplate.Height = 24
         Me.gvView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.gvView.Size = New System.Drawing.Size(388, 396)
+        Me.gvView.Size = New System.Drawing.Size(517, 487)
         Me.gvView.TabIndex = 36
-        '
-        'btnClose
-        '
-        Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClose.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btnClose.ForeColor = System.Drawing.Color.Black
-        Me.btnClose.Location = New System.Drawing.Point(270, 406)
-        Me.btnClose.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(122, 32)
-        Me.btnClose.TabIndex = 33
-        Me.btnClose.Text = "Cancel"
-        Me.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnClose.UseVisualStyleBackColor = True
-        '
-        'btnAddEmployee
-        '
-        Me.btnAddEmployee.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddEmployee.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.btnAddEmployee.ForeColor = System.Drawing.Color.White
-        Me.btnAddEmployee.Location = New System.Drawing.Point(144, 406)
-        Me.btnAddEmployee.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnAddEmployee.Name = "btnAddEmployee"
-        Me.btnAddEmployee.Size = New System.Drawing.Size(122, 32)
-        Me.btnAddEmployee.TabIndex = 34
-        Me.btnAddEmployee.Text = "OK"
-        Me.btnAddEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAddEmployee.UseVisualStyleBackColor = False
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(0, 35)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(420, 33)
-        Me.Panel2.TabIndex = 31
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 20.0!)
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(28, -26)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(364, 37)
-        Me.Label1.TabIndex = 19
-        Me.Label1.Text = "ADD EMPLOYEE DEDUCTION"
-        '
-        'panelTop
-        '
-        Me.panelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.panelTop.Controls.Add(Me.Label3)
-        Me.panelTop.Controls.Add(Me.PictureBox1)
-        Me.panelTop.Dock = System.Windows.Forms.DockStyle.Top
-        Me.panelTop.Location = New System.Drawing.Point(0, 0)
-        Me.panelTop.Name = "panelTop"
-        Me.panelTop.Size = New System.Drawing.Size(420, 35)
-        Me.panelTop.TabIndex = 30
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 20.0!)
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(28, 9)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(364, 37)
-        Me.Label3.TabIndex = 18
-        Me.Label3.Text = "ADD EMPLOYEE DEDUCTION"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.SalonManagement.Version._3.My.Resources.Resources.x_button1
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Location = New System.Drawing.Point(401, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(18, 18)
-        Me.PictureBox1.TabIndex = 16
-        Me.PictureBox1.TabStop = False
         '
         'Column1
         '
@@ -225,17 +142,106 @@ Partial Class frmEmployeeDeduction
         Me.Column6.Visible = False
         Me.Column6.VisitedLinkColor = System.Drawing.Color.DodgerBlue
         '
+        'btnClose
+        '
+        Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClose.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.btnClose.ForeColor = System.Drawing.Color.Black
+        Me.btnClose.Location = New System.Drawing.Point(360, 500)
+        Me.btnClose.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(163, 39)
+        Me.btnClose.TabIndex = 33
+        Me.btnClose.Text = "Cancel"
+        Me.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnClose.UseVisualStyleBackColor = True
+        '
+        'btnAddEmployee
+        '
+        Me.btnAddEmployee.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAddEmployee.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.btnAddEmployee.ForeColor = System.Drawing.Color.White
+        Me.btnAddEmployee.Location = New System.Drawing.Point(192, 500)
+        Me.btnAddEmployee.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnAddEmployee.Name = "btnAddEmployee"
+        Me.btnAddEmployee.Size = New System.Drawing.Size(163, 39)
+        Me.btnAddEmployee.TabIndex = 34
+        Me.btnAddEmployee.Text = "OK"
+        Me.btnAddEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAddEmployee.UseVisualStyleBackColor = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 43)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(560, 41)
+        Me.Panel2.TabIndex = 31
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 20.0!)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(37, -32)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(455, 46)
+        Me.Label1.TabIndex = 19
+        Me.Label1.Text = "ADD EMPLOYEE DEDUCTION"
+        '
+        'panelTop
+        '
+        Me.panelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.panelTop.Controls.Add(Me.Label3)
+        Me.panelTop.Controls.Add(Me.PictureBox1)
+        Me.panelTop.Dock = System.Windows.Forms.DockStyle.Top
+        Me.panelTop.Location = New System.Drawing.Point(0, 0)
+        Me.panelTop.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.panelTop.Name = "panelTop"
+        Me.panelTop.Size = New System.Drawing.Size(560, 43)
+        Me.panelTop.TabIndex = 30
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 20.0!)
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(37, 11)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(455, 46)
+        Me.Label3.TabIndex = 18
+        Me.Label3.Text = "ADD EMPLOYEE DEDUCTION"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.SalonManagement.Version._3.My.Resources.Resources.x_button1
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Location = New System.Drawing.Point(535, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(24, 22)
+        Me.PictureBox1.TabIndex = 16
+        Me.PictureBox1.TabStop = False
+        '
         'frmEmployeeDeduction
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(420, 535)
+        Me.ClientSize = New System.Drawing.Size(560, 658)
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.panelTop)
         Me.Controls.Add(Me.panelMain)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmEmployeeDeduction"

@@ -25,14 +25,17 @@
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         If txtName.Text = "" Then
-            MessageBox.Show("Name required.", "Message",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Name is required.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         ElseIf txtStandardPay.Text = "" Then
-            MessageBox.Show("Name required.", "Message",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Standard pay is required.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         ElseIf IsTextBoxEmpty(txtName, txtStandardPay) = True Then
-            MessageBox.Show("Name and Basic Pay are required.", "Message",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Name and Basic Pay are required.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        ElseIf txtStandardPay.Text >= 1001 Then
+            MessageBox.Show("Maximum standard pay is 1000.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        ElseIf txtStandardPay.Text <= 99 Then
+            MessageBox.Show("Minimum standard pay is 100.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        ElseIf txtOT.Text > txtStandardPay.Text * 0.2 Then
+            MessageBox.Show("Maximum overtime is 20% of standard pay.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
 
             With position

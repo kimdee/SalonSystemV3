@@ -1,7 +1,7 @@
 ﻿Public Class frmEditEmployee
     Public employee As Employee
 
-    Private post As New Position
+    Private position As New Position
     Private emp As New Employee
 
     Private msg As String = ""
@@ -10,26 +10,31 @@
 
 
     Private Sub frmEditEmployee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        post.LoadPositionToCBO(cboPosition)
+        Try
+            position.LoadPositionToCBO(cboPosition)
+            With employee
+                txtLName.Text = .EmployeeLN
+                txtFName.Text = .EmployeeFN
+                txtMName.Text = .EmployeeMN
 
-        With employee
-            txtLName.Text = .EmployeeLN
-            txtFName.Text = .EmployeeFN
-            txtMName.Text = .EmployeeMN
-            dtpDob.Value = .EmployeeBirthDate
-            If .EmployeeGender = "Male" Then
-                rdbMale.Checked = True
-            ElseIf .EmployeeGender = "Female" Then
-                rdbFemale.Checked = True
-            End If
-            txtCN.Text = .EmployeeCN
-            txtPasscode.Text = .EmployeePasscode
+                dtpDob.Value = .EmployeeBirthDate
 
-            PictureImage.BackgroundImage = .Base64ToImage(.EmployeePicture)
+                If .EmployeeGender = "Male" Then
+                    rdbMale.Checked = True
+                ElseIf .EmployeeGender = "Female" Then
+                    rdbFemale.Checked = True
+                End If
 
-            cboPosition.Text = .EmployeePosition
+                cboPosition.SelectedIndex = cboPosition.FindString(.EmployeePosition)
 
-        End With
+                txtCN.Text = .EmployeeCN
+                txtPasscode.Text = .EmployeePasscode
+
+                PictureImage.BackgroundImage = .Base64ToImage(.EmployeePicture)
+            End With
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     ''---------Uploading Picture---------
@@ -80,8 +85,8 @@
 
     ''---------Validation---------
     Private Function ValidateRequired() As Boolean
-        If IsTextBoxEmpty(txtLName, txtFName, txtCN, txtPasscode) = True Or PictureImage.BackgroundImage Is PictureNoImage.BackgroundImage = True Then
-            msg = "Picture And Fields with asterisk symbol are required."
+        If IsTextBoxEmpty(txtLName, txtFName, txtCN, txtPasscode) = True Then
+            msg = "Fields with asterisk symbol are required."
             Return False
         Else
             msg = ""
@@ -97,76 +102,80 @@
             Return False
         End If
     End Function
-    Private Function PasscodeLimit() As Boolean
-        If txtPasscode.MaxLength <= 8 Then
-            msg = "Passcode must be 8 characters or more"
-            Return True
-        Else
-            msg = ""
-            Return False
-        End If
-    End Function
-
-
-    Private Sub doEdit()
-        If ValidateRequired() = True Then
-            If ValidateAge() = False Then
-                If PasscodeLimit() = True Then
-                    With employee
-                        .EmployeeFN = txtFName.Text.Trim
-                        .EmployeeLN = txtLName.Text.Trim
-                        .EmployeeMN = txtMName.Text.Trim
-
-                        .EmployeeBirthDate = dtpDob.Value.Date
-                        .EmployeeGender = gender
-
-                        .EmployeeCN = txtCN.Text.Trim
-                        .EmployeePosition = cboPosition.Text.Trim
-                        .EmployeePasscode = txtPasscode.Text.Trim
-
-                        .EmployeePicture = .ConvertImageTo64(PictureImage.BackgroundImage)
-                        .EmployeeStatus = 0
-
-                        If .EditEmployee() = True Then
-                            Dim ok As New OKMessage
-                            ok = New OKMessage
-                            ok.lblMsg.Text = "Employee has been update."
-                            ok.ShowDialog()
-                            Me.Close()
-
-                        Else
-                            Dim err As ErrorMessage
-                            err = New ErrorMessage
-                            err.lblMsg.Text = "Failed to update Employee."
-                            err.ShowDialog()
-                        End If
-                    End With
-                End If
-            End If
-        End If
-    End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        doEdit()
+        Try
+            If ValidateRequired() = True Then
+                '    If ValidateAge() = False Then
+                With employee
+                    .EmployeeLN = txtLName.Text
+                    .EmployeeFN = txtFName.Text
+                    .EmployeeMN = txtMName.Text
+
+                    .EmployeeBirthDate = dtpDob.Value.ToString("d")
+
+                    If rdbMale.Checked = True Then
+                        .EmployeeGender = "Male"
+                    ElseIf rdbFemale.Checked = True Then
+                        .EmployeeGender = "Female"
+                    End If
+
+
+                    .EmployeeCN = txtCN.Text
+                    .EmployeePosition = cboPosition.Text
+                    .EmployeePasscode = txtPasscode.Text
+
+                    .EmployeePicture = .ConvertImageTo64(PictureImage.BackgroundImage)
+                    .EmployeeStatus = 0
+
+                    If .EditEmployee() = True Then
+                        Dim ok As New OKMessage
+                        ok = New OKMessage
+                        ok.lblMsg.Text = "Employee has been update."
+                        ok.ShowDialog()
+                        Me.Close()
+
+                    Else
+                        Dim err As ErrorMessage
+                        err = New ErrorMessage
+                        err.lblMsg.Text = "Failed to update Employee."
+                        err.ShowDialog()
+                    End If
+                End With
+                '    End If
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
 
+    Private Sub picboxAddPosition_Click(sender As Object, e As EventArgs) Handles picboxAddPosition.Click
+        Dim obj As New frmAddPosition
+        If obj.ShowDialog = DialogResult.OK Then
+            position.LoadPositionToCBO(cboPosition)
+        End If
+    End Sub
+
     Private Sub txtLName_TextChanged(sender As Object, e As EventArgs) Handles txtLName.TextChanged
         AllowedOnly(LetterOnly, txtLName)
-        txtLName.MaxLength = 20
+        txtLName.MaxLength = 15
+        SentenceCase(txtLName)
     End Sub
 
     Private Sub txtFName_TextChanged(sender As Object, e As EventArgs) Handles txtFName.TextChanged
         AllowedOnly(LetterOnly, txtFName)
-        txtFName.MaxLength = 20
+        txtFName.MaxLength = 15
+        SentenceCase(txtFName)
     End Sub
 
     Private Sub txtMName_TextChanged(sender As Object, e As EventArgs) Handles txtMName.TextChanged
         AllowedOnly(LetterWDot, txtMName)
-        txtMName.MaxLength = 20
+        txtMName.MaxLength = 15
+        SentenceCase(txtMName)
     End Sub
 
     Private Sub txtCN_TextChanged(sender As Object, e As EventArgs) Handles txtCN.TextChanged
@@ -178,30 +187,55 @@
 
     Private Sub txtPasscode_TextChanged(sender As Object, e As EventArgs) Handles txtPasscode.TextChanged
         AllowedOnly(ForUserPass, txtPasscode)
-        txtPasscode.MaxLength = 30
-    End Sub
-
-    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        Dim obj As New frmSearchEmployee
-        obj.ShowDialog()
-    End Sub
-
-    Private Sub dtpDob_ValueChanged(sender As Object, e As EventArgs) Handles dtpDob.ValueChanged
-        txtAge.Text = emp.GetCurrentAge(dtpDob.Value, FrmMain.dtServer)
-    End Sub
-
-    Private Sub cboPosition_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboPosition.SelectedIndexChanged
-        With post
-            .LoadPositionCboTextBox(cboPosition, txtStandardPay, txtOT, txtBasicPays)
-        End With
+        txtPasscode.MaxLength = 6
     End Sub
 
     Private Sub PictureShowPasword_Click(sender As Object, e As EventArgs) Handles PictureShowPasword.Click
         If txtPasscode.UseSystemPasswordChar = True Then
+            PictureNotShowPassword.Show()
+            PictureShowPasword.Hide()
             txtPasscode.UseSystemPasswordChar = False
         Else
             txtPasscode.UseSystemPasswordChar = True
+            PictureShowPasword.Show()
+            PictureNotShowPassword.Hide()
         End If
+    End Sub
+
+    Private Sub PictureNotShowPassword_Click(sender As Object, e As EventArgs) Handles PictureNotShowPassword.Click
+        If txtPasscode.UseSystemPasswordChar = True Then
+            PictureNotShowPassword.Show()
+            PictureShowPasword.Hide()
+            txtPasscode.UseSystemPasswordChar = False
+        Else
+            txtPasscode.UseSystemPasswordChar = True
+            PictureShowPasword.Show()
+            PictureNotShowPassword.Hide()
+        End If
+    End Sub
+
+    Private Sub cboPosition_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboPosition.SelectedIndexChanged
+        With position
+            .LoadPositionCboTextBox(cboPosition, txtStandardPay, txtOT, txtBasicPays)
+        End With
+    End Sub
+
+    Private Sub rdbMale_CheckedChanged(sender As Object, e As EventArgs) Handles rdbMale.CheckedChanged
+        If rdbMale.Checked = True Then
+            gender = "Male"
+        End If
+    End Sub
+
+    Private Sub rdbFemale_CheckedChanged(sender As Object, e As EventArgs) Handles rdbFemale.CheckedChanged
+        If rdbFemale.Checked = True Then
+            gender = "Female"
+        End If
+    End Sub
+
+    Private Sub dtpDob_ValueChanged(sender As Object, e As EventArgs) Handles dtpDob.ValueChanged
+        txtAge.Text = emp.GetCurrentAge(dtpDob.Value, FrmMain.dtServer)
+        dtpDob.MinDate = Date.Now.AddYears(-71)
+        dtpDob.MaxDate = Date.Now.ToString
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click

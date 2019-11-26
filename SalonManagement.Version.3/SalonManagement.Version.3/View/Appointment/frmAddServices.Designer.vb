@@ -31,10 +31,8 @@ Partial Class frmAddServices
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnNewService = New System.Windows.Forms.Button()
         Me.chckboxSelectAll = New System.Windows.Forms.CheckBox()
-        Me.panelbl = New System.Windows.Forms.Panel()
-        Me.lblSearch = New System.Windows.Forms.Label()
-        Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.btnAddService = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
@@ -47,7 +45,6 @@ Partial Class frmAddServices
         Me.panelContainer.SuspendLayout()
         CType(Me.gvView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        Me.panelbl.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.panelTop.SuspendLayout()
@@ -151,62 +148,39 @@ Partial Class frmAddServices
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Panel1.Controls.Add(Me.btnNewService)
         Me.Panel1.Controls.Add(Me.chckboxSelectAll)
-        Me.Panel1.Controls.Add(Me.panelbl)
-        Me.Panel1.Controls.Add(Me.txtSearch)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(396, 46)
         Me.Panel1.TabIndex = 42
         '
+        'btnNewService
+        '
+        Me.btnNewService.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.btnNewService.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNewService.Font = New System.Drawing.Font("Segoe UI", 15.0!)
+        Me.btnNewService.ForeColor = System.Drawing.Color.White
+        Me.btnNewService.Location = New System.Drawing.Point(207, 4)
+        Me.btnNewService.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnNewService.Name = "btnNewService"
+        Me.btnNewService.Size = New System.Drawing.Size(182, 36)
+        Me.btnNewService.TabIndex = 49
+        Me.btnNewService.Text = "New Service"
+        Me.btnNewService.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnNewService.UseVisualStyleBackColor = False
+        '
         'chckboxSelectAll
         '
         Me.chckboxSelectAll.AutoSize = True
-        Me.chckboxSelectAll.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.chckboxSelectAll.Location = New System.Drawing.Point(3, 13)
+        Me.chckboxSelectAll.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.chckboxSelectAll.Location = New System.Drawing.Point(8, 8)
         Me.chckboxSelectAll.Name = "chckboxSelectAll"
-        Me.chckboxSelectAll.Size = New System.Drawing.Size(92, 25)
+        Me.chckboxSelectAll.Size = New System.Drawing.Size(108, 29)
         Me.chckboxSelectAll.TabIndex = 48
         Me.chckboxSelectAll.Text = "Select All"
         Me.chckboxSelectAll.UseVisualStyleBackColor = True
-        '
-        'panelbl
-        '
-        Me.panelbl.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.panelbl.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.panelbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.panelbl.Controls.Add(Me.lblSearch)
-        Me.panelbl.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.panelbl.Location = New System.Drawing.Point(312, 9)
-        Me.panelbl.Name = "panelbl"
-        Me.panelbl.Size = New System.Drawing.Size(81, 32)
-        Me.panelbl.TabIndex = 47
-        '
-        'lblSearch
-        '
-        Me.lblSearch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblSearch.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.lblSearch.ForeColor = System.Drawing.Color.White
-        Me.lblSearch.Location = New System.Drawing.Point(0, 0)
-        Me.lblSearch.Name = "lblSearch"
-        Me.lblSearch.Size = New System.Drawing.Size(79, 30)
-        Me.lblSearch.TabIndex = 42
-        Me.lblSearch.Text = "Search"
-        '
-        'txtSearch
-        '
-        Me.txtSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtSearch.BackColor = System.Drawing.Color.White
-        Me.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtSearch.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.txtSearch.ForeColor = System.Drawing.Color.Gray
-        Me.txtSearch.Location = New System.Drawing.Point(124, 9)
-        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(188, 32)
-        Me.txtSearch.TabIndex = 46
-        Me.txtSearch.Text = "Search Service"
         '
         'Panel3
         '
@@ -323,7 +297,6 @@ Partial Class frmAddServices
         CType(Me.gvView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.panelbl.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -352,8 +325,6 @@ Partial Class frmAddServices
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents btnAddService As System.Windows.Forms.Button
     Friend WithEvents btnClose As System.Windows.Forms.Button
-    Friend WithEvents panelbl As System.Windows.Forms.Panel
-    Friend WithEvents lblSearch As System.Windows.Forms.Label
-    Friend WithEvents txtSearch As System.Windows.Forms.TextBox
     Friend WithEvents chckboxSelectAll As System.Windows.Forms.CheckBox
+    Friend WithEvents btnNewService As System.Windows.Forms.Button
 End Class

@@ -37,13 +37,13 @@
                 .EmployeeID = employee.EmployeeID
                 .AttendanceDate = dtpDate.Value.ToString
                 If rdbAmTimeIn.Checked = True Then
-                    .AttendanceMornIn = dtpTime.Value.TimeOfDay.ToString
+                    .AttendanceMornIn = dtpTime.Value.ToString("t")
                 ElseIf rdbAmTimeOut.Checked = True Then
-                    .AttendanceMornIn = dtpTime.Value.TimeOfDay.ToString
+                    .AttendanceMornIn = dtpTime.Value.ToString("t")
                 ElseIf rdbPmTimeIn.Checked = True Then
-                    .AttendanceMornIn = dtpTime.Value.TimeOfDay.ToString
+                    .AttendanceMornIn = dtpTime.Value.ToString("t")
                 ElseIf rdbPmTimeOut.Checked = True Then
-                    .AttendanceMornIn = dtpTime.Value.TimeOfDay.ToString
+                    .AttendanceMornIn = dtpTime.Value.ToString("t")
                 End If
             End With
 

@@ -55,9 +55,8 @@ Partial Class FrmAttendanceTimein
         Me.panelMain.Controls.Add(Me.Panel1)
         Me.panelMain.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelMain.Location = New System.Drawing.Point(0, 0)
-        Me.panelMain.Margin = New System.Windows.Forms.Padding(4)
         Me.panelMain.Name = "panelMain"
-        Me.panelMain.Size = New System.Drawing.Size(1137, 721)
+        Me.panelMain.Size = New System.Drawing.Size(853, 586)
         Me.panelMain.TabIndex = 0
         '
         'panelContainer
@@ -68,19 +67,17 @@ Partial Class FrmAttendanceTimein
         Me.panelContainer.Controls.Add(Me.Label1)
         Me.panelContainer.Controls.Add(Me.lblTodayTime)
         Me.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.panelContainer.Location = New System.Drawing.Point(0, 96)
-        Me.panelContainer.Margin = New System.Windows.Forms.Padding(4)
+        Me.panelContainer.Location = New System.Drawing.Point(0, 78)
         Me.panelContainer.Name = "panelContainer"
-        Me.panelContainer.Size = New System.Drawing.Size(1137, 554)
+        Me.panelContainer.Size = New System.Drawing.Size(853, 450)
         Me.panelContainer.TabIndex = 9
         '
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.SalonManagement.Version._3.My.Resources.Resources.comb1
-        Me.PictureBox2.Location = New System.Drawing.Point(435, 15)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox2.Location = New System.Drawing.Point(326, 12)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(267, 196)
+        Me.PictureBox2.Size = New System.Drawing.Size(200, 159)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 18
         Me.PictureBox2.TabStop = False
@@ -89,11 +86,10 @@ Partial Class FrmAttendanceTimein
         '
         Me.lblTodayDate.AutoSize = True
         Me.lblTodayDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Bold)
-        Me.lblTodayDate.ForeColor = System.Drawing.Color.Red
-        Me.lblTodayDate.Location = New System.Drawing.Point(228, 214)
-        Me.lblTodayDate.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTodayDate.ForeColor = System.Drawing.Color.White
+        Me.lblTodayDate.Location = New System.Drawing.Point(171, 174)
         Me.lblTodayDate.Name = "lblTodayDate"
-        Me.lblTodayDate.Size = New System.Drawing.Size(636, 58)
+        Me.lblTodayDate.Size = New System.Drawing.Size(510, 46)
         Me.lblTodayDate.TabIndex = 17
         Me.lblTodayDate.Text = "Saturday, Monday 4, 2020"
         Me.lblTodayDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -101,10 +97,9 @@ Partial Class FrmAttendanceTimein
         'txtPasscode
         '
         Me.txtPasscode.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPasscode.Location = New System.Drawing.Point(233, 459)
-        Me.txtPasscode.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtPasscode.Location = New System.Drawing.Point(175, 373)
         Me.txtPasscode.Name = "txtPasscode"
-        Me.txtPasscode.Size = New System.Drawing.Size(668, 41)
+        Me.txtPasscode.Size = New System.Drawing.Size(502, 35)
         Me.txtPasscode.TabIndex = 16
         Me.txtPasscode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txtPasscode.UseSystemPasswordChar = True
@@ -114,10 +109,9 @@ Partial Class FrmAttendanceTimein
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(195, Byte), Integer), CType(CType(199, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(424, 410)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(318, 333)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(287, 54)
+        Me.Label1.Size = New System.Drawing.Size(234, 45)
         Me.Label1.TabIndex = 15
         Me.Label1.Text = "Enter Passcode"
         '
@@ -125,11 +119,10 @@ Partial Class FrmAttendanceTimein
         '
         Me.lblTodayTime.AutoSize = True
         Me.lblTodayTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 75.0!, System.Drawing.FontStyle.Bold)
-        Me.lblTodayTime.ForeColor = System.Drawing.Color.Red
-        Me.lblTodayTime.Location = New System.Drawing.Point(149, 271)
-        Me.lblTodayTime.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTodayTime.ForeColor = System.Drawing.Color.White
+        Me.lblTodayTime.Location = New System.Drawing.Point(112, 220)
         Me.lblTodayTime.Name = "lblTodayTime"
-        Me.lblTodayTime.Size = New System.Drawing.Size(781, 142)
+        Me.lblTodayTime.Size = New System.Drawing.Size(628, 113)
         Me.lblTodayTime.TabIndex = 14
         Me.lblTodayTime.Text = "44:46:00 AM"
         Me.lblTodayTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -138,10 +131,9 @@ Partial Class FrmAttendanceTimein
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 650)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel2.Location = New System.Drawing.Point(0, 528)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1137, 71)
+        Me.Panel2.Size = New System.Drawing.Size(853, 58)
         Me.Panel2.TabIndex = 8
         '
         'Panel1
@@ -151,19 +143,17 @@ Partial Class FrmAttendanceTimein
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1137, 96)
+        Me.Panel1.Size = New System.Drawing.Size(853, 78)
         Me.Panel1.TabIndex = 7
         '
         'PictureBox3
         '
         Me.PictureBox3.BackgroundImage = Global.SalonManagement.Version._3.My.Resources.Resources.x_button1
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox3.Location = New System.Drawing.Point(1109, 0)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox3.Location = New System.Drawing.Point(832, 0)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(24, 22)
+        Me.PictureBox3.Size = New System.Drawing.Size(18, 18)
         Me.PictureBox3.TabIndex = 17
         Me.PictureBox3.TabStop = False
         '
@@ -171,23 +161,21 @@ Partial Class FrmAttendanceTimein
         '
         Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox1.Image = Global.SalonManagement.Version._3.My.Resources.Resources.x_button1
-        Me.PictureBox1.Location = New System.Drawing.Point(1759, 15)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox1.Location = New System.Drawing.Point(1319, 12)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(47, 38)
+        Me.PictureBox1.Size = New System.Drawing.Size(35, 31)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
         'FrmAttendanceTimein
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1137, 721)
+        Me.ClientSize = New System.Drawing.Size(853, 586)
         Me.Controls.Add(Me.panelMain)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmAttendanceTimein"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmAttendance"

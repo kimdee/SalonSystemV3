@@ -48,14 +48,14 @@
         If IsTextBoxEmpty(txtName, txtLastName, txtUserName, txtPw) = True Then
             MessageBox.Show("First Name, Last Name, username and password are required.", "Message",
                             MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        ElseIf txtUserName.TextLength < 6 Then
-            MessageBox.Show("Username must be atleast 6 characters long.", "Message",
+        ElseIf txtUserName.TextLength < 5 Then
+            MessageBox.Show("Username must be atleast 5 characters long.", "Message",
                            MessageBoxButtons.OK, MessageBoxIcon.Warning)
         ElseIf acc.IsAccountExist(txtUserName.Text) Then
             MessageBox.Show("Username already exist.", "Message",
                            MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        ElseIf txtPw.TextLength < 6 Then
-            MessageBox.Show("Password must be atleast 6 characters long.", "Message",
+        ElseIf txtPw.TextLength < 5 Then
+            MessageBox.Show("Password must be atleast 5 characters long.", "Message",
                            MessageBoxButtons.OK, MessageBoxIcon.Warning)
         ElseIf txtPw.Text <> txtRetype.Text Then
             MessageBox.Show("Password did not match.", "Message",

@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Drawing.Imaging
 Public Class Employee
-    Private _employeeID As Integer = 0
+    Private _employeeID As Integer
     Public Property EmployeeID As Integer
         Set(value As Integer)
             _employeeID = value
@@ -41,9 +41,9 @@ Public Class Employee
         End Get
     End Property
 
-    Private Shared _birthDate As Date
-    Public Property EmployeeBirthDate As Date
-        Set(value As Date)
+    Private Shared _birthDate As String
+    Public Property EmployeeBirthDate As String
+        Set(value As String)
             _birthDate = value
         End Set
         Get
@@ -201,19 +201,17 @@ Public Class Employee
     Public Function EditEmployee() As Boolean
         Try
             Dim bool As Boolean = False
-            Dim sql As String = "UPDATE employee SET employeeLN=@0,employeeFN=@1,employeeMN=@2,employeeBirthDate=@3," _
-                               & "employeeGender=@4,employeeCN=@5,employeePosition=@6,employeePasscode=@7," _
-                               & "employeePicture=@8,employeeStatus=@9 WHERE employeeID=@10;"
+            Dim sql As String = "UPDATE employee SET employeeLN=@0,employeeFN=@1,employeeMN=@2,employeeBirthDate=@3,employeeGender=@4,employeeCN=@5,employeePosition=@6," _
+                                & "employeePasscode=@7,employeePicture=@8,employeeStatus=@9 WHERE employeeID=@10;"
             If IsConnected() = True Then
-                ServerExecuteSQL(sql, EmployeeLN, EmployeeFN, EmployeeMN, EmployeeBirthDate, EmployeeGender,
-                                  EmployeeCN, EmployeePosition, EmployeePasscode, EmployeePicture,
-                                 0, EmployeeID)
+                ServerExecuteSQL(sql, EmployeeLN, EmployeeFN, EmployeeMN, EmployeeBirthDate, EmployeeGender, EmployeeCN, EmployeePosition, EmployeePasscode, EmployeePicture, EmployeeStatus, EmployeeID)
                 Commit()
                 bool = True
             End If
             Return bool
         Catch ex As Exception
             Rollback()
+            MsgBox(ex.ToString, vbCritical, "Error")
             Return False
         End Try
     End Function

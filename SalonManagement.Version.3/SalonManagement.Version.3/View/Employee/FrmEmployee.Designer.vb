@@ -26,21 +26,8 @@ Partial Class frmEmployee
         Me.panelMain = New System.Windows.Forms.Panel()
         Me.panelContainer = New System.Windows.Forms.Panel()
         Me.panelGv = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.lblResult = New System.Windows.Forms.Label()
         Me.gvView = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column12 = New System.Windows.Forms.DataGridViewLinkColumn()
-        Me.Column13 = New System.Windows.Forms.DataGridViewLinkColumn()
         Me.panelTop = New System.Windows.Forms.Panel()
         Me.panelSearch = New System.Windows.Forms.Panel()
         Me.lblSearch = New System.Windows.Forms.Label()
@@ -51,6 +38,18 @@ Partial Class frmEmployee
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.lblEmploy = New System.Windows.Forms.Label()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column11 = New System.Windows.Forms.DataGridViewLinkColumn()
+        Me.Column12 = New System.Windows.Forms.DataGridViewLinkColumn()
         Me.panelMain.SuspendLayout()
         Me.panelContainer.SuspendLayout()
         Me.panelGv.SuspendLayout()
@@ -89,7 +88,6 @@ Partial Class frmEmployee
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.panelGv.BackColor = System.Drawing.Color.White
         Me.panelGv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.panelGv.Controls.Add(Me.Label2)
         Me.panelGv.Controls.Add(Me.lblResult)
         Me.panelGv.Controls.Add(Me.gvView)
         Me.panelGv.Controls.Add(Me.panelTop)
@@ -98,18 +96,6 @@ Partial Class frmEmployee
         Me.panelGv.Name = "panelGv"
         Me.panelGv.Size = New System.Drawing.Size(1062, 595)
         Me.panelGv.TabIndex = 18
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.SystemColors.Control
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(848, 51)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(74, 28)
-        Me.Label2.TabIndex = 298
-        Me.Label2.Text = "Option"
         '
         'lblResult
         '
@@ -132,19 +118,20 @@ Partial Class frmEmployee
         '
         Me.gvView.AllowUserToAddRows = False
         Me.gvView.AllowUserToDeleteRows = False
+        Me.gvView.AllowUserToResizeColumns = False
         Me.gvView.AllowUserToResizeRows = False
-        Me.gvView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.gvView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.gvView.BackgroundColor = System.Drawing.Color.White
         Me.gvView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.gvView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.gvView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.gvView.ColumnHeadersHeight = 35
         Me.gvView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.gvView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column13})
+        Me.gvView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12})
         Me.gvView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gvView.EnableHeadersVisualStyles = False
         Me.gvView.Location = New System.Drawing.Point(0, 50)
-        Me.gvView.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gvView.Margin = New System.Windows.Forms.Padding(2)
         Me.gvView.MultiSelect = False
         Me.gvView.Name = "gvView"
         Me.gvView.ReadOnly = True
@@ -160,92 +147,6 @@ Partial Class frmEmployee
         Me.gvView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.gvView.Size = New System.Drawing.Size(1060, 543)
         Me.gvView.TabIndex = 296
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = ""
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Visible = False
-        '
-        'Column2
-        '
-        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Column2.HeaderText = "No."
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 35
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Name"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Birth Date"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Gender"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Contact No"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        '
-        'Column8
-        '
-        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Column8.HeaderText = "Position"
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
-        Me.Column8.Width = 220
-        '
-        'Column9
-        '
-        Me.Column9.HeaderText = "UserID"
-        Me.Column9.Name = "Column9"
-        Me.Column9.ReadOnly = True
-        Me.Column9.Visible = False
-        '
-        'Column10
-        '
-        Me.Column10.HeaderText = "Passcode"
-        Me.Column10.Name = "Column10"
-        Me.Column10.ReadOnly = True
-        Me.Column10.Visible = False
-        '
-        'Column11
-        '
-        Me.Column11.HeaderText = "Picture"
-        Me.Column11.Name = "Column11"
-        Me.Column11.ReadOnly = True
-        Me.Column11.Visible = False
-        '
-        'Column12
-        '
-        Me.Column12.ActiveLinkColor = System.Drawing.Color.DodgerBlue
-        Me.Column12.HeaderText = ""
-        Me.Column12.LinkColor = System.Drawing.Color.DodgerBlue
-        Me.Column12.Name = "Column12"
-        Me.Column12.ReadOnly = True
-        Me.Column12.VisitedLinkColor = System.Drawing.Color.DodgerBlue
-        '
-        'Column13
-        '
-        Me.Column13.ActiveLinkColor = System.Drawing.Color.Crimson
-        Me.Column13.HeaderText = ""
-        Me.Column13.LinkColor = System.Drawing.Color.Crimson
-        Me.Column13.Name = "Column13"
-        Me.Column13.ReadOnly = True
-        Me.Column13.VisitedLinkColor = System.Drawing.Color.Crimson
         '
         'panelTop
         '
@@ -288,7 +189,7 @@ Partial Class frmEmployee
         Me.btnAddEmployee.Font = New System.Drawing.Font("Segoe UI", 17.0!)
         Me.btnAddEmployee.ForeColor = System.Drawing.Color.White
         Me.btnAddEmployee.Location = New System.Drawing.Point(7, 5)
-        Me.btnAddEmployee.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnAddEmployee.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAddEmployee.Name = "btnAddEmployee"
         Me.btnAddEmployee.Size = New System.Drawing.Size(229, 39)
         Me.btnAddEmployee.TabIndex = 26
@@ -304,7 +205,7 @@ Partial Class frmEmployee
         Me.txtSearch.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.txtSearch.ForeColor = System.Drawing.Color.Gray
         Me.txtSearch.Location = New System.Drawing.Point(700, 8)
-        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(276, 32)
         Me.txtSearch.TabIndex = 42
@@ -365,6 +266,102 @@ Partial Class frmEmployee
         Me.lblEmploy.TabIndex = 3
         Me.lblEmploy.Text = "Manage Employee"
         '
+        'Column1
+        '
+        Me.Column1.HeaderText = ""
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Visible = False
+        Me.Column1.Width = 17
+        '
+        'Column2
+        '
+        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Column2.HeaderText = "No."
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 35
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Name"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 87
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Birth Date"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 122
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Gender"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 99
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Contact No"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Width = 135
+        '
+        'Column7
+        '
+        Me.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Column7.HeaderText = "Position"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.Width = 220
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Passcode"
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Visible = False
+        Me.Column8.Width = 115
+        '
+        'Column9
+        '
+        Me.Column9.HeaderText = "Picture"
+        Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
+        Me.Column9.Visible = False
+        Me.Column9.Width = 95
+        '
+        'Column10
+        '
+        Me.Column10.HeaderText = "Status"
+        Me.Column10.Name = "Column10"
+        Me.Column10.ReadOnly = True
+        Me.Column10.Visible = False
+        Me.Column10.Width = 89
+        '
+        'Column11
+        '
+        Me.Column11.ActiveLinkColor = System.Drawing.Color.DodgerBlue
+        Me.Column11.HeaderText = "           Option"
+        Me.Column11.LinkColor = System.Drawing.Color.DodgerBlue
+        Me.Column11.Name = "Column11"
+        Me.Column11.ReadOnly = True
+        Me.Column11.VisitedLinkColor = System.Drawing.Color.DodgerBlue
+        Me.Column11.Width = 133
+        '
+        'Column12
+        '
+        Me.Column12.ActiveLinkColor = System.Drawing.Color.Crimson
+        Me.Column12.HeaderText = ""
+        Me.Column12.LinkColor = System.Drawing.Color.Crimson
+        Me.Column12.Name = "Column12"
+        Me.Column12.ReadOnly = True
+        Me.Column12.VisitedLinkColor = System.Drawing.Color.Crimson
+        Me.Column12.Width = 5
+        '
         'frmEmployee
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -380,7 +377,6 @@ Partial Class frmEmployee
         Me.panelMain.ResumeLayout(False)
         Me.panelContainer.ResumeLayout(False)
         Me.panelGv.ResumeLayout(False)
-        Me.panelGv.PerformLayout()
         CType(Me.gvView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelTop.ResumeLayout(False)
         Me.panelTop.PerformLayout()
@@ -408,17 +404,16 @@ Partial Class frmEmployee
     Friend WithEvents lblSearch As Label
     Friend WithEvents btnAddEmployee As Button
     Friend WithEvents txtSearch As TextBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column7 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column8 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column9 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column10 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column11 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column11 As System.Windows.Forms.DataGridViewLinkColumn
     Friend WithEvents Column12 As System.Windows.Forms.DataGridViewLinkColumn
-    Friend WithEvents Column13 As System.Windows.Forms.DataGridViewLinkColumn
 End Class

@@ -10,14 +10,16 @@ Public Class frmAddEmployee
     Private msg As String = ""
 
     Private add As Boolean = False
-    Private edit As Boolean = False
 
     Private deleteExprtise As New ArrayList
 
     Dim gender As String = "Male"
     Private Sub frmEmployee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtLName.Focus()
+
         OnActionButton()
         position.LoadPositionToCBO(cboPosition)
+        add = True
     End Sub
 
     ''---------Inputs Enable---------
@@ -96,30 +98,27 @@ Public Class frmAddEmployee
     ''---------Buttons Enable/Color---------
     Private Sub ResetButton()
         btnNew.Enabled = True
-        btnEdit.Enabled = False
-        btnDelete.Enabled = False
         btnSave.Enabled = False
         btnCancel.Enabled = False
         btnClose.Enabled = True
         btnUpload.Enabled = False
 
 
-        picboxShowPassword.Enabled = False
-        picboxShowPassword.BackColor = Color.WhiteSmoke
+        PictureShowPasword.Enabled = False
+        PictureShowPasword.BackColor = Color.WhiteSmoke
         picboxAddPosition.Enabled = False
         picboxAddPosition.BackColor = Color.WhiteSmoke
     End Sub
     Private Sub OnActionButton()
         btnNew.Enabled = False
-        btnEdit.Enabled = False
-        btnDelete.Enabled = False
+
         btnSave.Enabled = True
         btnCancel.Enabled = True
         btnClose.Enabled = False
         btnUpload.Enabled = True
 
-        picboxShowPassword.Enabled = True
-        picboxShowPassword.BackColor = Color.White
+        PictureShowPasword.Enabled = True
+        PictureShowPasword.BackColor = Color.White
         picboxAddPosition.Enabled = True
         picboxAddPosition.BackColor = Color.WhiteSmoke
     End Sub
@@ -158,7 +157,7 @@ Public Class frmAddEmployee
                     Dim PhotoFile As New IO.FileInfo(ofd.FileName)
                     If PhotoFile.Length <= 3500000 Then
                         Dim EmployeePhoto As New Bitmap(ofd.FileName)
-                        PictureImage.BackgroundImageLayout = ImageLayout.Stretch
+                        PictureImage.BackgroundImageLayout = ImageLayout.Zoom
                         PictureImage.BackgroundImage = ResizeImage(EmployeePhoto)
                     Else
                         MessageBox.Show("File Size Too Large", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -172,8 +171,9 @@ Public Class frmAddEmployee
 
     ''---------Validation---------
     Private Function ValidateRequired() As Boolean
-        If IsTextBoxEmpty(txtLName, txtFName, txtCN, txtPasscode) = True Or PictureImage.BackgroundImage Is PictureNoImage.BackgroundImage = True Then
-            msg = "Picture And Fields with asterisk symbol are required."
+        ''Or PictureImage.BackgroundImage Is PictureNoImage.BackgroundImage = True
+        If IsTextBoxEmpty(txtLName, txtFName, txtCN, txtPasscode) = True Then
+            msg = "Fields with asterisk symbol are required."
             Return False
         Else
             msg = ""
@@ -181,7 +181,7 @@ Public Class frmAddEmployee
         End If
     End Function
     Private Function ValidateAge() As Boolean
-        If employee.GetCurrentAge(dtpDob.Value.Date, FrmMain.dtServer.Date) < 18 Then
+        If employee.GetCurrentAge(dtpDob.Value.ToString("d"), FrmMain.dtServer.Date) < 18 Then
             msg = "You are less than 18 years old"
             Return True
         Else
@@ -190,8 +190,8 @@ Public Class frmAddEmployee
         End If
     End Function
     Private Function PasscodeLimit() As Boolean
-        If txtPasscode.MaxLength <= 8 Then
-            msg = "Passcode must be 8 characters or more"
+        If txtPasscode.MaxLength <= 6 Then
+            msg = "Passcode must be 6 characters"
             Return True
         Else
             msg = ""
@@ -203,53 +203,13 @@ Public Class frmAddEmployee
     Private Sub doAdd()
         Try
             If ValidateRequired() = True Then
-                'If ValidateAge() = True Then
-                'If PasscodeLimit() = True Then
-                With employee
-                    .EmployeeFN = txtFName.Text.Trim
-                    .EmployeeLN = txtLName.Text.Trim
-                    .EmployeeMN = txtMName.Text.Trim
-
-                    .EmployeeBirthDate = dtpDob.Value.Date
-                    .EmployeeGender = gender
-
-                    .EmployeeCN = txtCN.Text.Trim
-                    .EmployeePosition = cboPosition.Text.Trim
-                    .EmployeePasscode = txtPasscode.Text.Trim
-
-                    .EmployeePicture = .ConvertImageTo64(PictureImage.BackgroundImage)
-                    .EmployeeStatus = 0
-
-                    If .AddEmployee() = True Then
-                        Dim ok As New OKMessage
-                        ok = New OKMessage
-                        ok.lblMsg.Text = "Succesfully Save New Employee."
-                        ok.ShowDialog()
-                        OnDone()
-                    Else
-                        Dim err As ErrorMessage
-                        err = New ErrorMessage
-                        err.lblMsg.Text = "Failed To Save Employee."
-                        err.ShowDialog()
-                    End If
-                End With
-            End If
-            'End If
-            'End If
-        Catch ex As Exception
-
-        End Try
-    End Sub
-    Private Sub doEdit()
-        If ValidateRequired() = True Then
-            If ValidateAge() = False Then
-                If PasscodeLimit() = True Then
+                If ValidateAge() = False Then
                     With employee
                         .EmployeeFN = txtFName.Text.Trim
                         .EmployeeLN = txtLName.Text.Trim
                         .EmployeeMN = txtMName.Text.Trim
 
-                        .EmployeeBirthDate = dtpDob.Value.Date
+                        .EmployeeBirthDate = dtpDob.Value.ToString("d")
                         .EmployeeGender = gender
 
                         .EmployeeCN = txtCN.Text.Trim
@@ -259,28 +219,36 @@ Public Class frmAddEmployee
                         .EmployeePicture = .ConvertImageTo64(PictureImage.BackgroundImage)
                         .EmployeeStatus = 0
 
-                        If .EditEmployee() = True Then
+                        If .AddEmployee() = True Then
                             Dim ok As New OKMessage
                             ok = New OKMessage
-                            ok.lblMsg.Text = "Employee has been update."
+                            ok.lblMsg.Text = "Succesfully Save New Employee."
                             ok.ShowDialog()
                             OnDone()
                         Else
                             Dim err As ErrorMessage
                             err = New ErrorMessage
-                            err.lblMsg.Text = "Failed to update Employee."
+                            err.lblMsg.Text = "Failed To Save Employee."
                             err.ShowDialog()
                         End If
                     End With
+
+                Else
+                    Dim err As ErrorMessage
+                    err = New ErrorMessage
+                    err.lblMsg.Text = msg
+                    err.ShowDialog()
                 End If
             End If
-        End If
+        Catch ex As Exception
+
+        End Try
     End Sub
+
     Private Sub OnDone()
         ResetButton()
         DisableInput(Me)
         add = False
-        edit = False
         ClearInput(Me)
         PictureImage.BackgroundImage = PictureNoImage.BackgroundImage
     End Sub
@@ -311,7 +279,6 @@ Public Class frmAddEmployee
         position.LoadPositionToCBO(cboPosition)
 
         add = True
-        edit = True
         deleteExprtise.Clear()
         PictureImage.BackgroundImage = PictureNoImage.BackgroundImage
     End Sub
@@ -319,19 +286,16 @@ Public Class frmAddEmployee
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         If add = True Then
             doAdd()
-        ElseIf edit = True Then
-            doEdit()
         End If
     End Sub
 
-    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+    Private Sub btnEdit_Click(sender As Object, e As EventArgs)
         EnableInput(Me)
         OnActionButton()
         add = False
-        edit = True
     End Sub
 
-    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs)
         If FrmMain.userType = 0 Then
             MessageBox.Show("You cannot delete a record.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
@@ -345,7 +309,6 @@ Public Class frmAddEmployee
                     DisableInput(Me)
                     ResetButton()
                     add = False
-                    edit = False
                     deleteExprtise.Clear()
                     PictureImage.BackgroundImage = PictureNoImage.BackgroundImage
                 End If
@@ -358,23 +321,28 @@ Public Class frmAddEmployee
         ClearInput(Me)
         rdbMale.Checked = True
         dtpDob.ResetText()
-        picboxShowPassword.BackColor = Color.WhiteSmoke
+        PictureNotShowPassword.Hide()
+        PictureShowPasword.Show()
+        PictureShowPasword.Enabled = False
         PictureImage.BackgroundImage = PictureNoImage.BackgroundImage
     End Sub
 
     Private Sub txtLName_TextChanged(sender As Object, e As EventArgs) Handles txtLName.TextChanged
         AllowedOnly(LetterOnly, txtLName)
-        txtLName.MaxLength = 20
+        txtLName.MaxLength = 15
+        SentenceCase(txtLName)
     End Sub
 
     Private Sub txtFName_TextChanged(sender As Object, e As EventArgs) Handles txtFName.TextChanged
         AllowedOnly(LetterOnly, txtFName)
-        txtFName.MaxLength = 20
+        txtFName.MaxLength = 15
+        SentenceCase(txtFName)
     End Sub
 
     Private Sub txtMName_TextChanged(sender As Object, e As EventArgs) Handles txtMName.TextChanged
         AllowedOnly(LetterWDot, txtMName)
-        txtMName.MaxLength = 20
+        txtMName.MaxLength = 15
+        SentenceCase(txtMName)
     End Sub
 
     Private Sub txtCN_TextChanged(sender As Object, e As EventArgs) Handles txtCN.TextChanged
@@ -400,6 +368,7 @@ Public Class frmAddEmployee
 
     Private Sub dtpDob_ValueChanged(sender As Object, e As EventArgs) Handles dtpDob.ValueChanged
         txtAge.Text = employee.GetCurrentAge(dtpDob.Value, FrmMain.dtServer)
+        dtpDob.MinDate = Date.Now.AddYears(-71)
         dtpDob.MaxDate = Date.Now.ToString
     End Sub
 
@@ -407,15 +376,6 @@ Public Class frmAddEmployee
         With position
             .LoadPositionCboTextBox(cboPosition, txtStandardPay, txtOT, txtBasicPays)
         End With
-    End Sub
-
-    Private Sub PictureShowPasword_Click(sender As Object, e As EventArgs) Handles picboxShowPassword.Click
-        If txtPasscode.UseSystemPasswordChar = True Then
-            txtPasscode.UseSystemPasswordChar = False
-        Else
-            txtPasscode.UseSystemPasswordChar = True
-        End If
-
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
@@ -428,4 +388,29 @@ Public Class frmAddEmployee
             position.LoadPositionToCBO(cboPosition)
         End If
     End Sub
+
+    Private Sub PictureShowPasword_Click(sender As Object, e As EventArgs) Handles PictureShowPasword.Click
+        If txtPasscode.UseSystemPasswordChar = True Then
+            PictureNotShowPassword.Show()
+            PictureShowPasword.Hide()
+            txtPasscode.UseSystemPasswordChar = False
+        Else
+            txtPasscode.UseSystemPasswordChar = True
+            PictureShowPasword.Show()
+            PictureNotShowPassword.Hide()
+        End If
+    End Sub
+
+    Private Sub PictureNotShowPassword_Click(sender As Object, e As EventArgs) Handles PictureNotShowPassword.Click
+        If txtPasscode.UseSystemPasswordChar = True Then
+            PictureNotShowPassword.Show()
+            PictureShowPasword.Hide()
+            txtPasscode.UseSystemPasswordChar = False
+        Else
+            txtPasscode.UseSystemPasswordChar = True
+            PictureShowPasword.Show()
+            PictureNotShowPassword.Hide()
+        End If
+    End Sub
+
 End Class

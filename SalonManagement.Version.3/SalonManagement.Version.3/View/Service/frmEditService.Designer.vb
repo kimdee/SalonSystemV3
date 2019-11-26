@@ -27,10 +27,8 @@ Partial Class frmEditService
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtName = New System.Windows.Forms.TextBox()
-        Me.nudPrice = New System.Windows.Forms.NumericUpDown()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtDescription = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -40,9 +38,9 @@ Partial Class frmEditService
         Me.panelTop = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.txtAmount = New System.Windows.Forms.TextBox()
         Me.panelMain.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.nudPrice, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.panelTop.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,13 +60,12 @@ Partial Class frmEditService
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.txtAmount)
         Me.Panel1.Controls.Add(Me.btnCancel)
         Me.Panel1.Controls.Add(Me.btnUpdate)
         Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.txtName)
-        Me.Panel1.Controls.Add(Me.nudPrice)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.txtDescription)
         Me.Panel1.Controls.Add(Me.Label7)
@@ -123,17 +120,6 @@ Partial Class frmEditService
         Me.Label6.TabIndex = 74
         Me.Label6.Text = "*"
         '
-        'Label4
-        '
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(2, 53)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(13, 18)
-        Me.Label4.TabIndex = 73
-        Me.Label4.Text = "*"
-        '
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.Color.Transparent
@@ -154,19 +140,6 @@ Partial Class frmEditService
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(248, 32)
         Me.txtName.TabIndex = 66
-        '
-        'nudPrice
-        '
-        Me.nudPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.nudPrice.DecimalPlaces = 2
-        Me.nudPrice.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.nudPrice.Location = New System.Drawing.Point(16, 209)
-        Me.nudPrice.Margin = New System.Windows.Forms.Padding(2)
-        Me.nudPrice.Maximum = New Decimal(New Integer() {1000000, 0, 0, 0})
-        Me.nudPrice.Name = "nudPrice"
-        Me.nudPrice.Size = New System.Drawing.Size(248, 32)
-        Me.nudPrice.TabIndex = 68
-        Me.nudPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label2
         '
@@ -277,6 +250,16 @@ Partial Class frmEditService
         Me.PictureBox1.TabIndex = 16
         Me.PictureBox1.TabStop = False
         '
+        'txtAmount
+        '
+        Me.txtAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtAmount.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAmount.Location = New System.Drawing.Point(16, 205)
+        Me.txtAmount.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtAmount.Name = "txtAmount"
+        Me.txtAmount.Size = New System.Drawing.Size(247, 34)
+        Me.txtAmount.TabIndex = 75
+        '
         'frmEditService
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -290,7 +273,6 @@ Partial Class frmEditService
         Me.panelMain.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.nudPrice, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.panelTop.ResumeLayout(False)
@@ -305,10 +287,8 @@ Partial Class frmEditService
     Friend WithEvents btnCancel As Button
     Friend WithEvents btnUpdate As Button
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents txtName As TextBox
-    Friend WithEvents nudPrice As NumericUpDown
     Friend WithEvents Label2 As Label
     Friend WithEvents txtDescription As TextBox
     Friend WithEvents Label7 As Label
@@ -318,4 +298,5 @@ Partial Class frmEditService
     Friend WithEvents panelTop As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents txtAmount As System.Windows.Forms.TextBox
 End Class

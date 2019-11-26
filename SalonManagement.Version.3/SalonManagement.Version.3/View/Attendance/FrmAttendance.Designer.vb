@@ -44,9 +44,9 @@ Partial Class FrmAttendance
         Me.Column14 = New System.Windows.Forms.DataGridViewLinkColumn()
         Me.panelTop = New System.Windows.Forms.Panel()
         Me.btnManualAttendance = New System.Windows.Forms.Button()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpTo = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpFrom = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.panelSearch = New System.Windows.Forms.Panel()
         Me.lblSearch = New System.Windows.Forms.Label()
@@ -74,7 +74,7 @@ Partial Class FrmAttendance
         Me.panelMain.Controls.Add(Me.Panel1)
         Me.panelMain.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelMain.Location = New System.Drawing.Point(0, 0)
-        Me.panelMain.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.panelMain.Margin = New System.Windows.Forms.Padding(2)
         Me.panelMain.Name = "panelMain"
         Me.panelMain.Size = New System.Drawing.Size(1085, 715)
         Me.panelMain.TabIndex = 0
@@ -84,7 +84,7 @@ Partial Class FrmAttendance
         Me.panelContainer.Controls.Add(Me.panelGv)
         Me.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.panelContainer.Location = New System.Drawing.Point(0, 63)
-        Me.panelContainer.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.panelContainer.Margin = New System.Windows.Forms.Padding(2)
         Me.panelContainer.Name = "panelContainer"
         Me.panelContainer.Size = New System.Drawing.Size(1085, 605)
         Me.panelContainer.TabIndex = 4
@@ -97,7 +97,7 @@ Partial Class FrmAttendance
         Me.panelGv.Controls.Add(Me.panelTop)
         Me.panelGv.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.panelGv.Location = New System.Drawing.Point(11, 5)
-        Me.panelGv.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.panelGv.Margin = New System.Windows.Forms.Padding(2)
         Me.panelGv.Name = "panelGv"
         Me.panelGv.Size = New System.Drawing.Size(1063, 595)
         Me.panelGv.TabIndex = 29
@@ -108,7 +108,7 @@ Partial Class FrmAttendance
         Me.gvView.AllowUserToDeleteRows = False
         Me.gvView.AllowUserToResizeColumns = False
         Me.gvView.AllowUserToResizeRows = False
-        Me.gvView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.gvView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.gvView.BackgroundColor = System.Drawing.Color.White
         Me.gvView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.gvView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
@@ -127,7 +127,7 @@ Partial Class FrmAttendance
         Me.gvView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gvView.EnableHeadersVisualStyles = False
         Me.gvView.Location = New System.Drawing.Point(0, 50)
-        Me.gvView.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gvView.Margin = New System.Windows.Forms.Padding(2)
         Me.gvView.Name = "gvView"
         Me.gvView.ReadOnly = True
         Me.gvView.RowHeadersVisible = False
@@ -163,6 +163,7 @@ Partial Class FrmAttendance
         Me.Column4.HeaderText = "Name"
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
+        Me.Column4.Width = 75
         '
         'Column5
         '
@@ -176,48 +177,56 @@ Partial Class FrmAttendance
         Me.Column6.HeaderText = "Morning Time In"
         Me.Column6.Name = "Column6"
         Me.Column6.ReadOnly = True
+        Me.Column6.Width = 123
         '
         'Column2
         '
         Me.Column2.HeaderText = "Morning Time Out"
         Me.Column2.Name = "Column2"
         Me.Column2.ReadOnly = True
+        Me.Column2.Width = 123
         '
         'Column7
         '
         Me.Column7.HeaderText = "Afternoon Time In"
         Me.Column7.Name = "Column7"
         Me.Column7.ReadOnly = True
+        Me.Column7.Width = 129
         '
         'Column8
         '
         Me.Column8.HeaderText = "Afternoon Time Out"
         Me.Column8.Name = "Column8"
         Me.Column8.ReadOnly = True
+        Me.Column8.Width = 132
         '
         'Column9
         '
         Me.Column9.HeaderText = "Official Hours Work"
         Me.Column9.Name = "Column9"
         Me.Column9.ReadOnly = True
+        Me.Column9.Width = 121
         '
         'Column10
         '
         Me.Column10.HeaderText = "Hours Work"
         Me.Column10.Name = "Column10"
         Me.Column10.ReadOnly = True
+        Me.Column10.Width = 107
         '
         'Column11
         '
         Me.Column11.HeaderText = "Overtime Work"
         Me.Column11.Name = "Column11"
         Me.Column11.ReadOnly = True
+        Me.Column11.Width = 128
         '
         'Column12
         '
         Me.Column12.HeaderText = "Undertime Work"
         Me.Column12.Name = "Column12"
         Me.Column12.ReadOnly = True
+        Me.Column12.Width = 136
         '
         'Column13
         '
@@ -235,19 +244,20 @@ Partial Class FrmAttendance
         Me.Column14.ReadOnly = True
         Me.Column14.Text = ""
         Me.Column14.VisitedLinkColor = System.Drawing.Color.DodgerBlue
+        Me.Column14.Width = 62
         '
         'panelTop
         '
         Me.panelTop.Controls.Add(Me.btnManualAttendance)
-        Me.panelTop.Controls.Add(Me.DateTimePicker2)
+        Me.panelTop.Controls.Add(Me.dtpTo)
         Me.panelTop.Controls.Add(Me.Label1)
-        Me.panelTop.Controls.Add(Me.DateTimePicker1)
+        Me.panelTop.Controls.Add(Me.dtpFrom)
         Me.panelTop.Controls.Add(Me.Label4)
         Me.panelTop.Controls.Add(Me.panelSearch)
         Me.panelTop.Controls.Add(Me.txtSearch)
         Me.panelTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.panelTop.Location = New System.Drawing.Point(0, 0)
-        Me.panelTop.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.panelTop.Margin = New System.Windows.Forms.Padding(2)
         Me.panelTop.Name = "panelTop"
         Me.panelTop.Size = New System.Drawing.Size(1061, 50)
         Me.panelTop.TabIndex = 26
@@ -259,7 +269,7 @@ Partial Class FrmAttendance
         Me.btnManualAttendance.Font = New System.Drawing.Font("Segoe UI", 17.0!)
         Me.btnManualAttendance.ForeColor = System.Drawing.Color.White
         Me.btnManualAttendance.Location = New System.Drawing.Point(7, 5)
-        Me.btnManualAttendance.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnManualAttendance.Margin = New System.Windows.Forms.Padding(2)
         Me.btnManualAttendance.Name = "btnManualAttendance"
         Me.btnManualAttendance.Size = New System.Drawing.Size(229, 39)
         Me.btnManualAttendance.TabIndex = 56
@@ -267,16 +277,17 @@ Partial Class FrmAttendance
         Me.btnManualAttendance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnManualAttendance.UseVisualStyleBackColor = False
         '
-        'DateTimePicker2
+        'dtpTo
         '
-        Me.DateTimePicker2.CalendarFont = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(475, 8)
-        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(133, 32)
-        Me.DateTimePicker2.TabIndex = 55
+        Me.dtpTo.CalendarFont = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.dtpTo.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpTo.Location = New System.Drawing.Point(475, 8)
+        Me.dtpTo.Margin = New System.Windows.Forms.Padding(2)
+        Me.dtpTo.Name = "dtpTo"
+        Me.dtpTo.Size = New System.Drawing.Size(133, 32)
+        Me.dtpTo.TabIndex = 55
+        Me.dtpTo.Value = New Date(2019, 11, 25, 0, 0, 0, 0)
         '
         'Label1
         '
@@ -290,16 +301,17 @@ Partial Class FrmAttendance
         Me.Label1.TabIndex = 53
         Me.Label1.Text = "To"
         '
-        'DateTimePicker1
+        'dtpFrom
         '
-        Me.DateTimePicker1.CalendarFont = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(301, 8)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(133, 32)
-        Me.DateTimePicker1.TabIndex = 54
+        Me.dtpFrom.CalendarFont = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.dtpFrom.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFrom.Location = New System.Drawing.Point(301, 8)
+        Me.dtpFrom.Margin = New System.Windows.Forms.Padding(2)
+        Me.dtpFrom.Name = "dtpFrom"
+        Me.dtpFrom.Size = New System.Drawing.Size(133, 32)
+        Me.dtpFrom.TabIndex = 54
+        Me.dtpFrom.Value = New Date(2019, 11, 25, 0, 0, 0, 0)
         '
         'Label4
         '
@@ -344,7 +356,7 @@ Partial Class FrmAttendance
         Me.txtSearch.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.txtSearch.ForeColor = System.Drawing.Color.Gray
         Me.txtSearch.Location = New System.Drawing.Point(731, 8)
-        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(245, 32)
         Me.txtSearch.TabIndex = 44
@@ -442,9 +454,9 @@ Partial Class FrmAttendance
     Friend WithEvents panelGv As System.Windows.Forms.Panel
     Friend WithEvents panelTop As System.Windows.Forms.Panel
     Friend WithEvents btnManualAttendance As System.Windows.Forms.Button
-    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dtpTo As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dtpFrom As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents panelSearch As System.Windows.Forms.Panel
     Friend WithEvents lblSearch As System.Windows.Forms.Label

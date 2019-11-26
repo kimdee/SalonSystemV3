@@ -34,4 +34,13 @@ Public Class frmAddServices
         Me.Close()
     End Sub
 
+    Private Sub btnNewService_Click(sender As Object, e As EventArgs) Handles btnNewService.Click
+        Dim obj As New frmAddService
+        If obj.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+            service.SelectService(gvView)
+        Else
+            service.SelectService(gvView)
+        End If
+    End Sub
+
 End Class

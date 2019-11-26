@@ -26,16 +26,8 @@ Partial Class FrmService
         Me.panelMain = New System.Windows.Forms.Panel()
         Me.panelContainer = New System.Windows.Forms.Panel()
         Me.panelGv = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.lblResult = New System.Windows.Forms.Label()
         Me.gvView = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewLinkColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewLinkColumn()
         Me.panelTop = New System.Windows.Forms.Panel()
         Me.panelSearch = New System.Windows.Forms.Panel()
         Me.lblSearch = New System.Windows.Forms.Label()
@@ -46,6 +38,13 @@ Partial Class FrmService
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.lblmanage = New System.Windows.Forms.Label()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewLinkColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewLinkColumn()
         Me.panelMain.SuspendLayout()
         Me.panelContainer.SuspendLayout()
         Me.panelGv.SuspendLayout()
@@ -85,28 +84,15 @@ Partial Class FrmService
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.panelGv.BackColor = System.Drawing.Color.White
         Me.panelGv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.panelGv.Controls.Add(Me.Label2)
         Me.panelGv.Controls.Add(Me.lblResult)
         Me.panelGv.Controls.Add(Me.gvView)
         Me.panelGv.Controls.Add(Me.panelTop)
         Me.panelGv.Font = New System.Drawing.Font("Segoe UI", 15.0!)
         Me.panelGv.Location = New System.Drawing.Point(11, 5)
-        Me.panelGv.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.panelGv.Margin = New System.Windows.Forms.Padding(2)
         Me.panelGv.Name = "panelGv"
         Me.panelGv.Size = New System.Drawing.Size(1063, 595)
         Me.panelGv.TabIndex = 2
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.SystemColors.Control
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(782, 51)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(74, 28)
-        Me.Label2.TabIndex = 50
-        Me.Label2.Text = "Option"
         '
         'lblResult
         '
@@ -137,7 +123,7 @@ Partial Class FrmService
         Me.gvView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.gvView.EnableHeadersVisualStyles = False
         Me.gvView.Location = New System.Drawing.Point(0, 50)
-        Me.gvView.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gvView.Margin = New System.Windows.Forms.Padding(2)
         Me.gvView.Name = "gvView"
         Me.gvView.ReadOnly = True
         Me.gvView.RowHeadersVisible = False
@@ -150,55 +136,6 @@ Partial Class FrmService
         Me.gvView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.gvView.Size = New System.Drawing.Size(1061, 543)
         Me.gvView.TabIndex = 48
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = ""
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Visible = False
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "No."
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Name"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Description"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Price"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        '
-        'Column6
-        '
-        Me.Column6.ActiveLinkColor = System.Drawing.Color.DodgerBlue
-        Me.Column6.HeaderText = ""
-        Me.Column6.LinkColor = System.Drawing.Color.DodgerBlue
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        Me.Column6.VisitedLinkColor = System.Drawing.Color.DodgerBlue
-        '
-        'Column7
-        '
-        Me.Column7.ActiveLinkColor = System.Drawing.Color.Crimson
-        Me.Column7.HeaderText = ""
-        Me.Column7.LinkColor = System.Drawing.Color.Crimson
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        Me.Column7.VisitedLinkColor = System.Drawing.Color.Crimson
         '
         'panelTop
         '
@@ -241,7 +178,7 @@ Partial Class FrmService
         Me.btnAddService.Font = New System.Drawing.Font("Segoe UI", 17.0!)
         Me.btnAddService.ForeColor = System.Drawing.Color.White
         Me.btnAddService.Location = New System.Drawing.Point(7, 5)
-        Me.btnAddService.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnAddService.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAddService.Name = "btnAddService"
         Me.btnAddService.Size = New System.Drawing.Size(229, 39)
         Me.btnAddService.TabIndex = 26
@@ -257,7 +194,7 @@ Partial Class FrmService
         Me.txtSearch.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.txtSearch.ForeColor = System.Drawing.Color.Gray
         Me.txtSearch.Location = New System.Drawing.Point(701, 8)
-        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(276, 32)
         Me.txtSearch.TabIndex = 42
@@ -320,6 +257,55 @@ Partial Class FrmService
         Me.lblmanage.TabIndex = 3
         Me.lblmanage.Text = "Manage Service"
         '
+        'Column1
+        '
+        Me.Column1.HeaderText = ""
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Visible = False
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "No."
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Name"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Description"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Price"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.ActiveLinkColor = System.Drawing.Color.DodgerBlue
+        Me.Column6.HeaderText = "             Option"
+        Me.Column6.LinkColor = System.Drawing.Color.DodgerBlue
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.VisitedLinkColor = System.Drawing.Color.DodgerBlue
+        '
+        'Column7
+        '
+        Me.Column7.ActiveLinkColor = System.Drawing.Color.Crimson
+        Me.Column7.HeaderText = ""
+        Me.Column7.LinkColor = System.Drawing.Color.Crimson
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.VisitedLinkColor = System.Drawing.Color.Crimson
+        '
         'FrmService
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -363,7 +349,6 @@ Partial Class FrmService
     Friend WithEvents txtSearch As TextBox
     Friend WithEvents lblResult As Label
     Friend WithEvents gvView As DataGridView
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn

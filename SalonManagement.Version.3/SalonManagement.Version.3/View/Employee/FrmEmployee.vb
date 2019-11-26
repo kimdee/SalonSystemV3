@@ -28,7 +28,9 @@
             employee.SetEmployeeDetails(gvView.SelectedRows(0).Cells(0).Value)
             Dim obj As New frmEditEmployee
             obj.employee = Me.employee
-            If obj.ShowDialog = DialogResult.OK Then
+            If obj.ShowDialog = System.Windows.Forms.DialogResult.OK Then
+                employee.ViewEmployee(gvView, lblResult)
+            Else
                 employee.ViewEmployee(gvView, lblResult)
             End If
         End If

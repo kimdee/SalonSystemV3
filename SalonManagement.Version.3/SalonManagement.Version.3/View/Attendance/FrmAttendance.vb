@@ -16,13 +16,23 @@
     Private Sub gvView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles gvView.CellContentClick
         If e.ColumnIndex = 13 Then
             attendance.SetAttendanceDetails(gvView.SelectedRows(0).Cells(0).Value)
+            employee.SetEmployeeDetails(gvView.SelectedRows(0).Cells(0).Value)
             Dim obj As New frmEditManualTimein
             obj.attendance = Me.attendance
             obj.employee = Me.employee
-            If obj.ShowDialog = DialogResult.OK Then
+            If obj.ShowDialog = System.Windows.Forms.DialogResult.OK Then
+                attendance.ViewAttendance(gvView)
+            Else
                 attendance.ViewAttendance(gvView)
             End If
         End If
     End Sub
 
+    Private Sub dtpFrom_ValueChanged(sender As Object, e As EventArgs) Handles dtpFrom.ValueChanged
+        dtpFrom.MaxDate = Date.Now.ToString
+    End Sub
+
+    Private Sub dtpTo_ValueChanged(sender As Object, e As EventArgs) Handles dtpTo.ValueChanged
+        dtpTo.MaxDate = Date.Now.ToString
+    End Sub
 End Class

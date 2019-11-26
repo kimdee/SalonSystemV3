@@ -3,8 +3,11 @@
     Private deduction As New Deduction
     Private position As New Position
     Private payroll As New Payroll
+
     Private Sub frmAddEmployeePayroll_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         employee.SelectEmployee(gvViewEmployee)
+        position.LoadPositionToCBO(cboPosition)
+
         'For yy = DateTime.Now.Year To DateTime.Now.Year
         '    cboYear.Items.Add(yy)
         'Next
@@ -48,25 +51,25 @@
     End Sub
 
     Private Sub gvViewEmployee_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles gvViewEmployee.CellContentClick
-        'If e.ColumnIndex = 1 And gvViewEmployee.SelectedRows.Count > 0 Then
-        '    If gvViewEmployee.SelectedRows(0).Cells(1).Value = False Then
-        '        gvViewEmployee.SelectedRows(0).Cells(1).Value = True
-        '        txtPosition.Text = gvViewEmployee.SelectedRows(0).Cells(5).Value.ToString
-        '        position.LoadPositionTextBox(txtPosition, txtStandardPay, txtOvertime, txtBasicPay)
-        '    Else
-        '        gvViewEmployee.SelectedRows(0).Cells(1).Value = False
-        '        txtPosition.Text = ""
-        '    End If
-        'ElseIf gvViewEmployee.SelectedRows.Count And gvViewEmployee.SelectedRows.Count > 0 Then
-        '    If gvViewEmployee.SelectedRows(0).Cells(1).Value = False Then
-        '        gvViewEmployee.SelectedRows(0).Cells(1).Value = True
-        '        txtPosition.Text = gvViewEmployee.SelectedRows(0).Cells(5).Value.ToString
-        '        position.LoadPositionTextBox(txtPosition, txtStandardPay, txtOvertime, txtBasicPay)
-        '    Else
-        '        gvViewEmployee.SelectedRows(0).Cells(1).Value = False
-        '        txtPosition.Text = ""
-        '    End If
-        'End If
+        If e.ColumnIndex = 1 And gvViewEmployee.SelectedRows.Count > 0 Then
+            If gvViewEmployee.SelectedRows(0).Cells(1).Value = False Then
+                gvViewEmployee.SelectedRows(0).Cells(1).Value = True
+                txtPosition.Text = gvViewEmployee.SelectedRows(0).Cells(5).Value.ToString
+                position.LoadPositionTextBox(txtPosition, txtStandardPay, txtOvertime, txtBasicPay)
+            Else
+                gvViewEmployee.SelectedRows(0).Cells(1).Value = False
+                txtPosition.Text = ""
+            End If
+        ElseIf gvViewEmployee.SelectedRows.Count And gvViewEmployee.SelectedRows.Count > 0 Then
+            If gvViewEmployee.SelectedRows(0).Cells(1).Value = False Then
+                gvViewEmployee.SelectedRows(0).Cells(1).Value = True
+                txtPosition.Text = gvViewEmployee.SelectedRows(0).Cells(5).Value.ToString
+                position.LoadPositionTextBox(txtPosition, txtStandardPay, txtOvertime, txtBasicPay)
+            Else
+                gvViewEmployee.SelectedRows(0).Cells(1).Value = False
+                txtPosition.Text = ""
+            End If
+        End If
     End Sub
 
     Public Sub ClearInput(root As Control)
@@ -114,15 +117,15 @@
         End Try
     End Sub
 
-    Private Sub btnSave_Click(sender As Object, e As EventArgs)
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         doAdd()
     End Sub
 
-    'Private Sub txtPosition_TextChanged(sender As Object, e As EventArgs)
-    '    position.LoadPositionTextBox(txtPosition, txtStandardPay, txtOvertime, txtBasicPay)
-    'End Sub
+    Private Sub txtPosition_TextChanged(sender As Object, e As EventArgs) Handles txtPosition.TextChanged
+        position.LoadPositionTextBox(txtPosition, txtStandardPay, txtOvertime, txtBasicPay)
+    End Sub
 
-    Private Sub txtBasicPay_TextChanged(sender As Object, e As EventArgs)
+    Private Sub txtBasicPay_TextChanged(sender As Object, e As EventArgs) Handles txtBasicPay.TextChanged
         txtGrossPay.Text = Val(txtBasicPay.Text) + Val(txtOvertime.Text)
     End Sub
 
@@ -137,9 +140,32 @@
         End If
     End Sub
 
-
     Private Sub dtpYear_ValueChanged_1(sender As Object, e As EventArgs) Handles dtpYear.ValueChanged
         dtpYear.MinDate = Date.Now
         dtpYear.MaxDate = Date.Now
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Me.Close()
+    End Sub
+
+    Private Sub cboPosition_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboPosition.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub chckboxSelectAll_Click(sender As Object, e As EventArgs) Handles chckboxSelectAll.Click
+        If chckboxSelectAll.Checked = True Then
+            For Each row As DataGridViewRow In gvViewEmployee.Rows
+                row.Cells(1).Value = True
+            Next
+        Else
+            For Each row As DataGridViewRow In gvViewEmployee.Rows
+                row.Cells(1).Value = False
+            Next
+        End If
     End Sub
 End Class

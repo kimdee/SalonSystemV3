@@ -34,16 +34,16 @@
                 End If
             End If
         ElseIf e.ColumnIndex = 6 Then
-            appointment.SetAppointmentDetails(gvView.SelectedRows(0).Cells(0).Value)
-            customer.SetCustomerDetails(gvView.SelectedRows(0).Cells(0).Value)
-            Dim obj As New frmEditAppointment
-            obj.appointment = Me.appointment
-            obj.customer = Me.customer
-            obj.customerservice = Me.customerservice
-            obj.billing = Me.billing
-            If obj.ShowDialog = DialogResult.OK Then
-                appointment.ViewAppointment(gvView)
-            End If
+            'appointment.SetAppointmentDetails(gvView.SelectedRows(0).Cells(0).Value)
+            'customer.SetCustomerDetails(gvView.SelectedRows(0).Cells(0).Value)
+            'Dim obj As New frmEditAppointment
+            'obj.appointment = Me.appointment
+            'obj.customer = Me.customer
+            'obj.customerservice = Me.customerservice
+            'obj.billing = Me.billing
+            'If obj.ShowDialog = DialogResult.OK Then
+            '    appointment.ViewAppointment(gvView)
+            'End If
 
         End If
     End Sub

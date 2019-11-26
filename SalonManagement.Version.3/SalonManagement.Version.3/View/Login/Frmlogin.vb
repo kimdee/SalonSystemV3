@@ -47,6 +47,9 @@ Public Class Frmlogin
 
         EnableButton()
         TextReset()
+
+        Me.KeyPreview = True
+
     End Sub
 
     Private Sub frmLogin_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
@@ -218,10 +221,11 @@ Public Class Frmlogin
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         Dim obj As New FrmAttendanceTimein
+        obj.timerAttendance.Start()
         obj.ShowDialog()
     End Sub
 
-    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
+    Private Sub PictureBox6_Click(sender As Object, e As EventArgs)
         Dim obj As New frmConnection
         obj.ShowDialog()
     End Sub
@@ -232,10 +236,32 @@ Public Class Frmlogin
 
     Private Sub PictureShowPasword_Click(sender As Object, e As EventArgs) Handles PictureShowPasword.Click
         If txtPassword.UseSystemPasswordChar = True Then
+            PictureNotShowPassword.Show()
+            PictureShowPasword.Hide()
             txtPassword.UseSystemPasswordChar = False
         Else
             txtPassword.UseSystemPasswordChar = True
+            PictureShowPasword.Show()
+            PictureNotShowPassword.Hide()
         End If
     End Sub
 
+    Private Sub PictureNotShowPassword_Click(sender As Object, e As EventArgs) Handles PictureNotShowPassword.Click
+        If txtPassword.UseSystemPasswordChar = True Then
+            PictureNotShowPassword.Show()
+            PictureShowPasword.Hide()
+            txtPassword.UseSystemPasswordChar = False
+        Else
+            txtPassword.UseSystemPasswordChar = True
+            PictureShowPasword.Show()
+            PictureNotShowPassword.Hide()
+        End If
+    End Sub
+
+    Private Sub Frmlogin_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        Dim obj As New frmConnection
+        If e.KeyCode = Keys.F1 Then
+            obj.ShowDialog()
+        End If
+    End Sub
 End Class

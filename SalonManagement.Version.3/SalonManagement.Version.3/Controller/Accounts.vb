@@ -118,7 +118,7 @@ Public Class Accounts
             Dim bool As Boolean = False
             Dim sql As String = "INSERT INTO Account (firstname,lastname,usertype,UserName,Password,Status) VALUES (@0,@1,@2,@3,@4,@5);"
             If IsConnected() = True Then
-                ServerExecuteSQL(sql, FirstName, LastName, AccountRole, UserName, Password, 0)
+                ServerExecuteSQL(sql, FirstName, LastName, AccountRole, UserName, Password, LoginStatus)
                 Commit()
                 bool = True
             End If

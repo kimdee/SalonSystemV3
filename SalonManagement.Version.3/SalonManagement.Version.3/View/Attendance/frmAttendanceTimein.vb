@@ -33,7 +33,7 @@ Public Class FrmAttendanceTimein
     End Sub
 
     Private Sub AttendanceForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        TimerAttendance.Start()
+        'TimerAttendance.Start()
     End Sub
 
     Private Sub txtPasscode_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPasscode.KeyDown
@@ -47,7 +47,7 @@ Public Class FrmAttendanceTimein
 
                     attendance.EmployeeID = employee.EmployeeID
                     attendance.AttendanceDate = dtserver
-                    attendance.AttendanceMornIn = dtserver.ToString("hh:mm:ss tt")
+                    attendance.AttendanceMornIn = dtserver.ToString("hh:mm tt")
 
                     If attendance.IsInMorningIn(attendance.EmployeeID) = True Then
                         ms = "Morning Time-out"
@@ -55,10 +55,10 @@ Public Class FrmAttendanceTimein
                         Dim obj As New frmAttendanceInfo
                         obj.lblT.Text = ms
                         obj.lblName.Text = employee.EmployeeLN + " " + employee.EmployeeFN
-                        obj.lblTime.Text = dtserver.ToString("hh:mm:ss tt")
+                        obj.lblTime.Text = dtserver.ToString("hh:mm tt")
                         obj.ShowDialog()
 
-                        attendance.AttendanceMornOut = dtserver.ToString("hh:mm:ss tt")
+                        attendance.AttendanceMornOut = dtserver.ToString("hh:mm tt")
                         attendance.UpdateMorningOut()
 
                     ElseIf attendance.IsInMorningOut(attendance.EmployeeID) = True Then
@@ -67,10 +67,10 @@ Public Class FrmAttendanceTimein
                         Dim obj As New frmAttendanceInfo
                         obj.lblT.Text = ms
                         obj.lblName.Text = employee.EmployeeLN + " " + employee.EmployeeFN
-                        obj.lblTime.Text = dtserver.ToString("hh:mm:ss tt")
+                        obj.lblTime.Text = dtserver.ToString("hh:mm tt")
                         obj.ShowDialog()
 
-                        attendance.AttendanceAftIn = dtserver.ToString("hh:mm:ss tt")
+                        attendance.AttendanceAftIn = dtserver.ToString("hh:mm tt")
                         attendance.UpdateAfternoonIn()
 
                     ElseIf attendance.IsInAfternoonIn(attendance.EmployeeID) = True Then
@@ -79,10 +79,10 @@ Public Class FrmAttendanceTimein
                         Dim obj As New frmAttendanceInfo
                         obj.lblT.Text = ms
                         obj.lblName.Text = employee.EmployeeLN + " " + employee.EmployeeFN
-                        obj.lblTime.Text = dtserver.ToString("hh:mm:ss tt")
+                        obj.lblTime.Text = dtserver.ToString("hh:mm tt")
                         obj.ShowDialog()
 
-                        attendance.AttendanceAftOut = dtserver.ToString("hh:mm:ss tt")
+                        attendance.AttendanceAftOut = dtserver.ToString("hh:mm tt")
                         attendance.UpdateAfternoonOut()
 
                     Else
@@ -124,6 +124,7 @@ Public Class FrmAttendanceTimein
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         Me.Close()
     End Sub
+
 
     Private Sub txtPasscode_TextChanged(sender As Object, e As EventArgs) Handles txtPasscode.TextChanged
 

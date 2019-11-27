@@ -132,8 +132,8 @@ Public Class frmAddAppointment
         add = True
         edit = True
 
-        'dtpDate.Value = dtServer.ToShortDateString
-        'dtpTime.Value = dtServer.ToString("h:mm tt")
+        dtpDate.Value = Date.Now.ToString
+        dtpTime.Value = dtServer
     End Sub
 
     Private Sub btnNewCustomer_Click(sender As Object, e As EventArgs) Handles btnNewCustomer.Click
@@ -466,6 +466,5 @@ Public Class frmAddAppointment
         dtpDate.MinDate = Date.Now.ToString
         dtpDate.MaxDate = Date.Now.AddMonths(1)
     End Sub
-
 
 End Class

@@ -166,7 +166,6 @@ Public Class Billing
         End Try
     End Function
 
-
     Public Sub ViewBillings(gv As DataGridView, lbl As Label, status As String, startDate As Date, endDate As Date, filter As String)
         Try
             Dim sql As String
@@ -189,6 +188,29 @@ Public Class Billing
 
         Catch ex As Exception
 
+        End Try
+    End Sub
+
+    Public Sub ViewEmployeeServe(gv As DataGridView)
+        Try
+            Dim sql As String
+            Dim i As Integer = 0
+            sql = "SELECT * FROM billing INNER JOIN employee ON billing.employeeID=employee.employeeID WHERE appointmentID= " & AppointmentID & " ORDER BY employee.employeeLN,employee.employeeFN ASC;"
+            If IsConnected() = True Then
+                Dim cmd = New MySqlCommand(sql, getServerConnection)
+                Dim reader As MySqlDataReader = cmd.ExecuteReader()
+                gv.Rows.Clear()
+                While reader.Read()
+                    i = i + 1
+                    With gv
+                        .Rows.Add(reader(0), i, reader("employeeLN") + ", " + reader("employeeFN") + " " + reader("employeeMN"), "Remove")
+                    End With
+                End While
+                reader.Close()
+                gv.ClearSelection()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
         End Try
     End Sub
 

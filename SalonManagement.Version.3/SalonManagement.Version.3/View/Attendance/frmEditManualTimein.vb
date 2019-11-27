@@ -16,30 +16,20 @@
             txtPosition.Text = .EmployeePosition
         End With
 
+        With attendance
+            .SetAttendanceDetails(attendance.EmployeeID)
+            dtpDate.Text = .AttendanceDate
+        End With
+
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Try
             With attendance
-                .EmployeeID = .EmployeeID
+                .EmployeeID = employee.EmployeeID
                 .AttendanceDate = dtpDate.Value.ToString
-                .AttendanceMornOut = dtpTime.Value.ToString
+                .AttendanceMornOut = dtpTime.Value.ToString("hh:mm tt")
                 .UpdateMorningOut()
-
-                'If attendance.IsInMorningIn(attendance.EmployeeID) = True Then
-                '    MessageBox.Show(employee.EmployeeLN + "," + employee.EmployeeFN + "has already Time-In.", "Message",
-                '       MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                'ElseIf attendance.IsInMorningOut(attendance.EmployeeID) = True Then
-                '    MessageBox.Show(employee.EmployeeLN + "," + employee.EmployeeFN + "has already Time-Out.", "Message",
-                '       MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                'ElseIf attendance.IsInAfternoonIn(attendance.EmployeeID) = True Then
-                '    MessageBox.Show(employee.EmployeeLN + "," + employee.EmployeeFN + "has already Time-In.", "Message",
-                '       MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                'Else
-                '    MessageBox.Show("Successfully Update.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                '    Me.DialogResult = DialogResult.OK
-                '    Me.Close()
-                'End If
             End With
         Catch ex As Exception
             MsgBox(ex.Message)

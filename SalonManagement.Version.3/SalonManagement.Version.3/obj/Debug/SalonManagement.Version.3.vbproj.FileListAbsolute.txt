@@ -351,3 +351,4 @@ C:\Users\Administrator\Desktop\SalonManagement.Version.3\SalonManagement.Version
 C:\Users\Administrator\Desktop\SalonManagement.Version.3\SalonManagement.Version.3\obj\Debug\SalonManagement.Version._3.Resources.resources
 C:\Users\Administrator\Desktop\SalonManagement.Version.3\SalonManagement.Version.3\obj\Debug\SalonManagement.Version.3.vbproj.GenerateResource.Cache
 C:\Users\Administrator\Desktop\SalonManagement.Version.3\SalonManagement.Version.3\obj\Debug\SalonManagement.Version._3.frmAddCommission.resources
+C:\Users\TheGlitch\Desktop\Kim Files\SalonSystemV3\SalonManagement.Version.3\SalonManagement.Version.3\obj\Debug\SalonManagement.Version._3.frmAddSettings.resources

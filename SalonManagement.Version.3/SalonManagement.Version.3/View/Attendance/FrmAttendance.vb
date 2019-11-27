@@ -20,7 +20,7 @@
             Dim obj As New frmEditManualTimein
             obj.attendance = Me.attendance
             obj.employee = Me.employee
-            If obj.ShowDialog = System.Windows.Forms.DialogResult.OK Then
+            If obj.ShowDialog = DialogResult.OK Then
                 attendance.ViewAttendance(gvView)
             Else
                 attendance.ViewAttendance(gvView)

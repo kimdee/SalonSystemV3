@@ -57,7 +57,7 @@ Public Class CustomerService
     Public Sub SetCustomerServiceDetails(id As Integer)
         Try
             Dim sql As String
-            sql = "SELECT * FROM Appointment WHERE appointmentID =" & id & ";"
+            sql = "SELECT * FROM CustomerService WHERE CustomerServiceID =" & id & ";"
             If IsConnected() = True Then
                 Dim cmd = New MySqlCommand(sql, getServerConnection)
                 Dim reader As MySqlDataReader = cmd.ExecuteReader()
@@ -119,4 +119,26 @@ Public Class CustomerService
             Return False
         End Try
     End Function
+    Public Sub ViewCustomerService(gv As DataGridView)
+        Try
+            Dim sql As String
+            Dim i As Integer = 0
+            sql = "SELECT * FROM customerservice INNER JOIN customer ON customerservice.customerID=customer.customerID INNER JOIN service ON customerservice.serviceID=service.serviceID WHERE appointmentID= " & AppointmentID & " ORDER BY service.serviceName ASC;"
+            If IsConnected() = True Then
+                Dim cmd = New MySqlCommand(sql, getServerConnection)
+                Dim reader As MySqlDataReader = cmd.ExecuteReader()
+                gv.Rows.Clear()
+                While reader.Read()
+                    i = i + 1
+                    With gv
+                        .Rows.Add(reader(0), i, reader("serviceName"), reader("serviceDescription"), reader("servicePrice"), "Remove")
+                    End With
+                End While
+                reader.Close()
+                gv.ClearSelection()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 End Class

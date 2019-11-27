@@ -213,10 +213,10 @@
     <Compile Include="View\Attendance\frmReadPasscode.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Commission\frmAddCommission.Designer.vb">
-      <DependentUpon>frmAddCommission.vb</DependentUpon>
+    <Compile Include="View\Settings\frmAddSettings.Designer.vb">
+      <DependentUpon>frmAddSettings.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Commission\frmAddCommission.vb">
+    <Compile Include="View\Settings\frmAddSettings.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Customer\frmAddCustomer.Designer.vb">
@@ -507,8 +507,8 @@
     <EmbeddedResource Include="View\Attendance\frmReadPasscode.resx">
       <DependentUpon>frmReadPasscode.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Commission\frmAddCommission.resx">
-      <DependentUpon>frmAddCommission.vb</DependentUpon>
+    <EmbeddedResource Include="View\Settings\frmAddSettings.resx">
+      <DependentUpon>frmAddSettings.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Customer\frmAddCustomer.resx">
       <DependentUpon>frmAddCustomer.vb</DependentUpon>

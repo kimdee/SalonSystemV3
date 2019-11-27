@@ -35,6 +35,7 @@ Partial Class frmEditAppointment
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnNewCustomer = New System.Windows.Forms.Button()
         Me.btnPayments = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.lblStatus = New System.Windows.Forms.Label()
@@ -93,7 +94,6 @@ Partial Class frmEditAppointment
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.rdbMale = New System.Windows.Forms.RadioButton()
-        Me.btnNewCustomer = New System.Windows.Forms.Button()
         Me.panelMain.SuspendLayout()
         Me.Panel9.SuspendLayout()
         Me.Panel10.SuspendLayout()
@@ -288,6 +288,22 @@ Partial Class frmEditAppointment
         Me.Panel2.Size = New System.Drawing.Size(274, 172)
         Me.Panel2.TabIndex = 29
         '
+        'btnNewCustomer
+        '
+        Me.btnNewCustomer.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnNewCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNewCustomer.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.btnNewCustomer.ForeColor = System.Drawing.Color.Black
+        Me.btnNewCustomer.Location = New System.Drawing.Point(7, 17)
+        Me.btnNewCustomer.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnNewCustomer.Name = "btnNewCustomer"
+        Me.btnNewCustomer.Size = New System.Drawing.Size(261, 47)
+        Me.btnNewCustomer.TabIndex = 29
+        Me.btnNewCustomer.Text = "Edit Customer"
+        Me.btnNewCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnNewCustomer.UseVisualStyleBackColor = True
+        '
         'btnPayments
         '
         Me.btnPayments.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -333,9 +349,9 @@ Partial Class frmEditAppointment
         Me.lblStatus.Location = New System.Drawing.Point(878, 585)
         Me.lblStatus.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(96, 30)
+        Me.lblStatus.Size = New System.Drawing.Size(71, 30)
         Me.lblStatus.TabIndex = 94
-        Me.lblStatus.Text = "Not Paid"
+        Me.lblStatus.Text = "Status"
         '
         'Label8
         '
@@ -506,6 +522,7 @@ Partial Class frmEditAppointment
         'txtTotalAmount
         '
         Me.txtTotalAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtTotalAmount.Enabled = False
         Me.txtTotalAmount.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTotalAmount.Location = New System.Drawing.Point(48, 34)
         Me.txtTotalAmount.Name = "txtTotalAmount"
@@ -536,6 +553,7 @@ Partial Class frmEditAppointment
         'txtRecieve
         '
         Me.txtRecieve.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtRecieve.Enabled = False
         Me.txtRecieve.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRecieve.Location = New System.Drawing.Point(48, 98)
         Me.txtRecieve.Name = "txtRecieve"
@@ -928,6 +946,7 @@ Partial Class frmEditAppointment
         'txtCN
         '
         Me.txtCN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCN.Enabled = False
         Me.txtCN.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.txtCN.ForeColor = System.Drawing.Color.Black
         Me.txtCN.Location = New System.Drawing.Point(48, 158)
@@ -951,6 +970,7 @@ Partial Class frmEditAppointment
         'txtName
         '
         Me.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtName.Enabled = False
         Me.txtName.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.txtName.ForeColor = System.Drawing.Color.Black
         Me.txtName.Location = New System.Drawing.Point(48, 36)
@@ -963,6 +983,7 @@ Partial Class frmEditAppointment
         '
         Me.rdbFemale.AutoSize = True
         Me.rdbFemale.BackColor = System.Drawing.Color.Transparent
+        Me.rdbFemale.Enabled = False
         Me.rdbFemale.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.rdbFemale.ForeColor = System.Drawing.Color.Black
         Me.rdbFemale.Location = New System.Drawing.Point(125, 100)
@@ -1002,6 +1023,7 @@ Partial Class frmEditAppointment
         Me.rdbMale.AutoSize = True
         Me.rdbMale.BackColor = System.Drawing.Color.Transparent
         Me.rdbMale.Checked = True
+        Me.rdbMale.Enabled = False
         Me.rdbMale.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.rdbMale.ForeColor = System.Drawing.Color.Black
         Me.rdbMale.Location = New System.Drawing.Point(49, 100)
@@ -1012,22 +1034,6 @@ Partial Class frmEditAppointment
         Me.rdbMale.TabStop = True
         Me.rdbMale.Text = "Male"
         Me.rdbMale.UseVisualStyleBackColor = False
-        '
-        'btnNewCustomer
-        '
-        Me.btnNewCustomer.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnNewCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnNewCustomer.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.btnNewCustomer.ForeColor = System.Drawing.Color.Black
-        Me.btnNewCustomer.Location = New System.Drawing.Point(7, 17)
-        Me.btnNewCustomer.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnNewCustomer.Name = "btnNewCustomer"
-        Me.btnNewCustomer.Size = New System.Drawing.Size(261, 47)
-        Me.btnNewCustomer.TabIndex = 29
-        Me.btnNewCustomer.Text = "Edit Customer"
-        Me.btnNewCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNewCustomer.UseVisualStyleBackColor = True
         '
         'frmEditAppointment
         '

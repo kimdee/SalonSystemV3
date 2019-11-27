@@ -3,7 +3,8 @@
     Private employee As New Employee
 
     Private Sub frmAddManualTimein_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        dtpTime.Value = DateTime.Now
+        dtpDate.Value = Date.Now.ToString
     End Sub
 
     Private Sub btnBrowseEmployee_Click(sender As Object, e As EventArgs) Handles btnBrowseEmployee.Click
@@ -35,7 +36,7 @@
 
             With attendance
                 .EmployeeID = employee.EmployeeID
-                .AttendanceDate = dtpDate.Value.ToString
+                .AttendanceDate = dtpDate.Value.ToString("d")
                 If rdbAmTimeIn.Checked = True Then
                     .AttendanceMornIn = dtpTime.Value.ToString("t")
                 ElseIf rdbAmTimeOut.Checked = True Then
@@ -48,13 +49,13 @@
             End With
 
             If attendance.IsInMorningIn(attendance.EmployeeID) = True Then
-                MessageBox.Show(employee.EmployeeLN + "," + employee.EmployeeFN + "has already Time-In.", "Message",
+                MessageBox.Show(employee.EmployeeLN + "," + employee.EmployeeFN + " has already Time-In.", "Message",
                    MessageBoxButtons.OK, MessageBoxIcon.Warning)
             ElseIf attendance.IsInMorningOut(attendance.EmployeeID) = True Then
-                MessageBox.Show(employee.EmployeeLN + "," + employee.EmployeeFN + "has already Time-Out.", "Message",
+                MessageBox.Show(employee.EmployeeLN + "," + employee.EmployeeFN + " has already Time-Out.", "Message",
                    MessageBoxButtons.OK, MessageBoxIcon.Warning)
             ElseIf attendance.IsInAfternoonIn(attendance.EmployeeID) = True Then
-                MessageBox.Show(employee.EmployeeLN + "," + employee.EmployeeFN + "has already Time-In.", "Message",
+                MessageBox.Show(employee.EmployeeLN + "," + employee.EmployeeFN + " has already Time-In.", "Message",
                    MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
                 MessageBox.Show("Successfully Time-In.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information)

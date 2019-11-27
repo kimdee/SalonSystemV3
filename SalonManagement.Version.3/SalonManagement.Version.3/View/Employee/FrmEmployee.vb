@@ -1,5 +1,6 @@
 ﻿Public Class frmEmployee
     Private employee As New Employee
+    Private position As New Position
 
     Private Sub btnAddEmployee_Click(sender As Object, e As EventArgs) Handles btnAddEmployee.Click
         Dim obj As New frmAddEmployee
@@ -26,8 +27,10 @@
             End If
         ElseIf e.ColumnIndex = 10 Then
             employee.SetEmployeeDetails(gvView.SelectedRows(0).Cells(0).Value)
+            position.SetPositionDetails(gvView.SelectedRows(0).Cells(0).Value)
             Dim obj As New frmEditEmployee
             obj.employee = Me.employee
+            obj.position = Me.position
             If obj.ShowDialog = System.Windows.Forms.DialogResult.OK Then
                 employee.ViewEmployee(gvView, lblResult)
             Else

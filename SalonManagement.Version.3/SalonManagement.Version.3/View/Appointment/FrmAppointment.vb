@@ -17,9 +17,9 @@
     Private Sub btnAddAppointment_Click(sender As Object, e As EventArgs) Handles btnAddAppointment.Click
         Dim obj As New frmAddAppointment
         If obj.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-            Appointment.ViewAppointment(gvView)
+            appointment.ViewAppointment(gvView)
         Else
-            Appointment.ViewAppointment(gvView)
+            appointment.ViewAppointment(gvView)
         End If
     End Sub
 
@@ -34,16 +34,18 @@
                 End If
             End If
         ElseIf e.ColumnIndex = 6 Then
-            'appointment.SetAppointmentDetails(gvView.SelectedRows(0).Cells(0).Value)
-            'customer.SetCustomerDetails(gvView.SelectedRows(0).Cells(0).Value)
-            'Dim obj As New frmEditAppointment
-            'obj.appointment = Me.appointment
-            'obj.customer = Me.customer
-            'obj.customerservice = Me.customerservice
-            'obj.billing = Me.billing
-            'If obj.ShowDialog = DialogResult.OK Then
-            '    appointment.ViewAppointment(gvView)
-            'End If
+            appointment.SetAppointmentDetails(gvView.SelectedRows(0).Cells(0).Value)
+            customer.SetCustomerDetails(gvView.SelectedRows(0).Cells(0).Value)
+            billing.SetBillingDetails(gvView.SelectedRows(0).Cells(0).Value)
+            customerservice.SetCustomerServiceDetails(gvView.SelectedRows(0).Cells(0).Value)
+            Dim obj As New frmEditAppointment
+            obj.appointment = Me.appointment
+            obj.customer = Me.customer
+            obj.customerservice = Me.customerservice
+            obj.billing = Me.billing
+            If obj.ShowDialog = System.Windows.Forms.DialogResult.OK Then
+                appointment.ViewAppointment(gvView)
+            End If
 
         End If
     End Sub

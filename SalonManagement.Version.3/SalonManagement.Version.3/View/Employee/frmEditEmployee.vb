@@ -1,7 +1,8 @@
 ﻿Public Class frmEditEmployee
     Public employee As Employee
+    Public position As Position
 
-    Private position As New Position
+    Private post As New Position
     Private emp As New Employee
 
     Private msg As String = ""
@@ -11,7 +12,8 @@
 
     Private Sub frmEditEmployee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            position.LoadPositionToCBO(cboPosition)
+            post.LoadPositionToCBO(cboPosition)
+
             With employee
                 txtLName.Text = .EmployeeLN
                 txtFName.Text = .EmployeeFN

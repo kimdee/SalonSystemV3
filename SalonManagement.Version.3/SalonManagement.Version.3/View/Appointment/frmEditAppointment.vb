@@ -25,13 +25,27 @@
                 lblDateNow.Text = .AppointmentDate
             ElseIf .AppointmentType = "Reservation" Then
                 rdbReservation.Checked = True
-                dtpTime.Value = .AppointmentTime
-                dtpDate.Value = .AppointmentDate
+                dtpTime.Text = .AppointmentTime
+                dtpDate.Text = .AppointmentDate
             End If
+        End With
+
+        With customerservice
+            .AppointmentID = appointment.AppointmentID
+            .CustomerID = customer.CustomerID
+            .ViewCustomerService(gvViewService)
+        End With
+
+        With billing
+            .BillingAmount = txtTotalAmount.Text
+            .BillingStatus = lblStatus.Text
+
+            .AppointmentID = appointment.AppointmentID
+            .ViewEmployeeServe(gvViewEmployee)
         End With
     End Sub
 
-    Private Sub btnEdit_Click_1(sender As Object, e As EventArgs)
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Try
             ''Edit CustomerTable
             With customer
@@ -80,20 +94,8 @@
         End Try
     End Sub
 
-    Private Sub btnClose_Click_1(sender As Object, e As EventArgs)
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Close()
-    End Sub
-
-    Private Sub btnSearch_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub btnAddservice_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub btnPayments_Click(sender As Object, e As EventArgs)
-
     End Sub
 
     Private Sub rdbWalkin_CheckedChanged(sender As Object, e As EventArgs) Handles rdbWalkin.CheckedChanged
@@ -126,5 +128,10 @@
             lblTimeNow.Hide()
             lblDateNow.Hide()
         End If
+    End Sub
+
+    Private Sub dtpDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpDate.TextChanged
+        dtpDate.MinDate = Date.Now.ToString
+        dtpDate.MaxDate = Date.Now.AddMonths(1)
     End Sub
 End Class

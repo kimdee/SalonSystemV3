@@ -354,6 +354,7 @@ Partial Class frmEditManualTimein
         'dtpDate
         '
         Me.dtpDate.CustomFormat = "MM/dd/yyy"
+        Me.dtpDate.Enabled = False
         Me.dtpDate.Font = New System.Drawing.Font("Segoe UI", 14.0!)
         Me.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtpDate.Location = New System.Drawing.Point(15, 88)

@@ -171,8 +171,8 @@ Public Class Employee
                     EmployeeMN = reader(3)
                     EmployeeBirthDate = reader(4)
                     EmployeeGender = reader(5)
-                    EmployeeCN = reader(6)
-                    EmployeePosition = reader(7)
+                    EmployeePosition = reader(6)
+                    EmployeeCN = reader(7)
                     EmployeePasscode = reader(8)
                     EmployeePicture = reader(9)
                     EmployeeStatus = reader(10)
@@ -185,9 +185,9 @@ Public Class Employee
     Public Function AddEmployee() As Boolean
         Try
             Dim bool As Boolean = False
-            Dim sql As String = "INSERT INTO employee (employeeLN,employeeFN,employeeMN,employeeBirthDate,employeeGender,employeeCN,employeePosition,employeePasscode,employeePicture) VALUES (@0,@1,@2,@3,@4,@5,@6,@7,@8);"
+            Dim sql As String = "INSERT INTO employee (employeeLN,employeeFN,employeeMN,employeeBirthDate,employeeGender,employeePosition,employeeCN,employeePasscode,employeePicture) VALUES (@0,@1,@2,@3,@4,@5,@6,@7,@8);"
             If IsConnected() = True Then
-                ServerExecuteSQL(sql, EmployeeLN, EmployeeFN, EmployeeMN, EmployeeBirthDate, EmployeeGender, EmployeeCN, EmployeePosition, EmployeePasscode, EmployeePicture)
+                ServerExecuteSQL(sql, EmployeeLN, EmployeeFN, EmployeeMN, EmployeeBirthDate, EmployeeGender, EmployeePosition, EmployeeCN, EmployeePasscode, EmployeePicture)
                 Commit()
                 bool = True
             End If

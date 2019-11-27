@@ -244,14 +244,13 @@ Public Class Accounts
     ''----VALIDATION-----
     Public Function IsCountAccount() As Integer
         Try
-            Dim cnt As Integer
             Dim sql As String
             sql = "SELECT COUNT(accountID) FROM account;"
             If IsConnected() = True Then
                 Dim cmd = New MySqlCommand(sql, getServerConnection)
                 Dim reader As MySqlDataReader = cmd.ExecuteReader
             End If
-            Return cnt
+            Return IsCountAccount
         Catch ex As Exception
             Return True
         End Try

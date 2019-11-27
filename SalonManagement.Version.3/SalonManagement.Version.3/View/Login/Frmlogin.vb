@@ -19,27 +19,9 @@ Public Class Frmlogin
     End Sub
 
     Private Sub Frmlogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Dim frmConnection As New frmConnectionFirst
-        'Dim frmAddaccount As New frmAddAccountFirst
-
-        'If My.Settings.IsRemembered = "True" Then
-        '    If frmConnection.ShowDialog = System.Windows.Forms.DialogResult.OK Then
-        '        If account.IsCountAccount Then
-        '            If frmAddaccount.ShowDialog = System.Windows.Forms.DialogResult.OK Then
-
-        '            Else
-        '                Me.Dispose()
-        '            End If
-        '        End If
-        '    Else
-        '        Me.Dispose()
-        '    End If
-        'ElseIf account.IsCountAccount = 0 Then
-        '    If frmAddaccount.ShowDialog = System.Windows.Forms.DialogResult.OK Then
-
-        '    Else
-        '        Me.Dispose()
-        '    End If
+        Dim frmAddaccount As New frmAddAccountFirst
+        'If account.IsCountAccount() = 0 Then
+        '    frmAddaccount.ShowDialog()
         'Else
         '    EnableButton()
         '    TextReset()
